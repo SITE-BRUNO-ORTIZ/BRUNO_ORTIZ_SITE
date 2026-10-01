@@ -129,17 +129,21 @@
         .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(255, 255, 255, 0.2); background: linear-gradient(135deg, var(--accent-dark), var(--accent-light)); }
 
         /* ==========================================
-           3. HERO & AÇÃO MAGNÉTICA
+           3. HERO & MARCA D'ÁGUA GIGANTE
         ========================================== */
         section { position: relative; z-index: 1; padding: 120px 5% 80px; scroll-margin-top: 80px; }
-        .container { max-width: 1200px; margin: 0 auto; width: 100%; }
+        .container { max-width: 1200px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
         
         .section-header { text-align: center; margin-bottom: 4.5rem; width: 100%; }
         .section-header h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 1rem; line-height: 1.2; color: #ffffff; }
         .section-header p { color: var(--text-muted); font-size: 1.15rem; max-width: 850px; margin: 0 auto; line-height: 1.7; }
 
-        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-top: 150px; width: 100%; }
-        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 30%, rgba(11, 30, 54, 0.8) 0%, var(--navy-darkest) 85%), url('https://images.unsplash.com/photo-1505664177922-928383a51980?auto=format&fit=crop&w=1920&q=80') center/cover; z-index: -1; }
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-top: 150px; width: 100%; overflow: hidden; position: relative; }
+        
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 30%, rgba(11, 30, 54, 0.8) 0%, var(--navy-darkest) 85%), url('https://images.unsplash.com/photo-1505664177922-928383a51980?auto=format&fit=crop&w=1920&q=80') center/cover; z-index: -2; }
+        
+        /* A NOVA MARCA D'ÁGUA GIGANTE DOURADA */
+        .hero-watermark { position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%); width: 150vw; max-width: 1100px; opacity: 0.04; pointer-events: none; z-index: -1; }
         
         /* BADGE DINÂMICA (CAINDO E FLUTUANDO) */
         .hero-badge-container {
@@ -160,7 +164,7 @@
         
         .hero h1 { font-size: clamp(1.8rem, 4.2vw, 3.8rem); line-height: 1.15; margin-bottom: 1.5rem; font-weight: 900; max-width: 1000px; color: #ffffff; }
         
-        /* AÇÃO MAGNÉTICA PARA DESCER O OLHAR (FIXA NO DESKTOP E MOBILE) */
+        /* AÇÃO MAGNÉTICA PARA DESCER O OLHAR */
         .hero-sub-action { 
             display: block;
             font-size: clamp(1.1rem, 2.5vw, 1.3rem); 
@@ -395,9 +399,13 @@
     <!-- VIEW: HOME -->
     <div id="view-home">
         
-        <!-- HERO SEGURA COM AÇÃO MAGNÉTICA NO DESKTOP E MOBILE -->
+        <!-- HERO COM MARCA D'ÁGUA GIGANTE -->
         <section id="home" class="hero">
             <div class="hero-bg"></div>
+            
+            <!-- A MARCA D'ÁGUA DO CHAPÉU DOURADO -->
+            <img src="image_19.png" class="hero-watermark" alt="">
+            
             <div class="container reveal active">
                 
                 <div class="hero-badge-container">
@@ -410,7 +418,7 @@
 
                 <h1>Conquiste ou resolva a sua pendência acadêmica<br><span>se não o seu dinheiro de volta.</span></h1>
                 
-                <!-- AÇÃO MAGNÉTICA (AGORA FORÇADA NO DESKTOP TAMBÉM) -->
+                <!-- AÇÃO MAGNÉTICA (AGORA FORÇADA NO DESKTOP E MOBILE) -->
                 <div class="hero-sub-action reveal delay-1">
                     Assista ao nosso vídeo, leia as informações e fale com um de nossos consultores.
                     <i class="fa-solid fa-angles-down hero-arrow"></i>
