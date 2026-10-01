@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- SEO E AUTORIDADE -->
+    <link rel="canonical" href="https://brunoaprovaconcursos.com.br/">
+    <title>Bruno Ortiz | Graduações e Facilitação para Concursos</title>
+    <meta name="description" content="A mais robusta assessoria educacional para viabilização de diplomas reconhecidos pelo MEC. Garanta sua posse em concursos públicos e editais.">
+    <meta name="robots" content="index, follow">
+
+    <!-- ÍCONE DO SITE -->
+    <link rel="icon" href="imagem_19.png" type="image/png">
+
+    <!-- FONTES PREMIUM MODERNAS E À PROVA DE BUGS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bruno Ortiz | Graduações & Concursos">
+    <meta property="og:description" content="Assessoria educacional executiva. Conquiste sua titulação acadêmica homologada no e-MEC com total amparo legal.">
+    <meta property="og:url" content="https://brunoaprovaconcursos.com.br/">
+    <meta property="og:image" content="imagem_18.png">
+
+    <!-- SCHEMA.ORG INSTITUCIONAL -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Bruno Ortiz Graduações e Concursos",
+          "description": "Assessoria especializada em habilitação e aproveitamento acadêmico para ingresso célere em cargos públicos e conselhos de classe.",
+          "url": "https://brunoaprovaconcursos.com.br/",
+          "logo": "https://brunoaprovaconcursos.com.br/imagem_19.png"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "Comprar diploma falso é crime?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. A fabricação ou comercialização de papéis falsos sem acervo acadêmico configura crime previsto no Artigo 297 do Código Penal. A consultoria Bruno Ortiz opera estritamente sob amparo da Lei de Diretrizes e Bases (LDB 9.394/96), garantindo registros homologados no MEC, publicação em Diário Oficial e prontidão jurídica para posse em editais."
+            }
+          }]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* ==========================================
+           1. VARIÁVEIS MASTER (PALETA BRUNO ORTIZ)
+        ========================================== */
+        :root {
+            --navy-darkest: #030811; 
+            --navy-dark: #071224; 
+            --navy-main: #0B1E36;
+            --navy-card: #102a4a;
+            --gold-light: #f5df9e; 
+            --gold-main: #C3A052; 
+            --gold-dark: #9e7f36;
+            --text-light: #f1f5f9;
+            --text-muted: #94a3b8;
+            --font-head: 'Montserrat', sans-serif; 
+            --font-body: 'Inter', sans-serif;
+        }
+
+        /* PROTEÇÕES GERAIS */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: var(--font-body); 
+            background-color: var(--navy-darkest); 
+            color: var(--text-light); 
+            line-height: 1.6; 
+            overflow-x: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            padding-top: 85px; /* Espaço do header fixo */
+        }
+        
+        @media print { body { display: none !important; } }
+        
+        h1, h2, h3, h4 { font-family: var(--font-head); color: #ffffff; }
+
+        /* MARCA D'ÁGUA ANTI-CLONE */
+        .watermark-global { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-image: linear-gradient(45deg, rgba(195, 160, 82, 0.015) 25%, transparent 25%, transparent 75%, rgba(195, 160, 82, 0.015) 75%, rgba(195, 160, 82, 0.015)), linear-gradient(45deg, rgba(195, 160, 82, 0.015) 25%, transparent 25%, transparent 75%, rgba(195, 160, 82, 0.015) 75%, rgba(195, 160, 82, 0.015)); background-size: 70px 70px; background-position: 0 0, 35px 35px; pointer-events: none; z-index: 0; }
+
+        /* REVEAL ANIMATIONS */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .delay-1 { transition-delay: 0.15s; } .delay-2 { transition-delay: 0.3s; }
+
+        /* ==========================================
+           2. HEADER E MENU
+        ========================================== */
+        .site-header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; display: flex; flex-direction: column; box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+        .topbar { background: linear-gradient(90deg, var(--gold-dark), var(--gold-main)); color: var(--navy-darkest); text-align: center; padding: 6px 15px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; }
+        
+        nav { background: rgba(7, 18, 36, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 12px 5%; border-bottom: 1px solid rgba(195, 160, 82, 0.2); display: flex; justify-content: space-between; align-items: center; transition: 0.3s; }
+        .nav-brand img { height: 50px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+        
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: #cbd5e1; font-size: 0.82rem; font-weight: 600; text-transform: uppercase; transition: 0.3s; font-family: var(--font-head); letter-spacing: 1px; position: relative; padding: 0.5rem 0; cursor: pointer; }
+        .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0%; height: 2px; background: var(--gold-main); transition: 0.3s; }
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        .nav-links a:hover, .nav-links a.active { color: var(--gold-main); }
+        
+        .btn-destaque { border: 1px solid var(--gold-main) !important; padding: 0.6rem 1.4rem !important; border-radius: 4px; color: var(--gold-main) !important; }
+        .btn-destaque::after { display: none !important; }
+        .btn-destaque:hover { background: var(--gold-main); color: var(--navy-darkest) !important; box-shadow: 0 0 20px rgba(195, 160, 82, 0.4); }
+        
+        .mobile-toggle { display: none; color: var(--gold-main); font-size: 1.8rem; cursor: pointer; }
+
+        @media (max-width: 1050px) {
+            .mobile-toggle { display: block; }
+            .nav-links { position: absolute; top: 100%; left: 0; width: 100%; background: rgba(7, 18, 36, 0.98); backdrop-filter: blur(15px); flex-direction: column; padding: 0; gap: 0; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; border-bottom: 2px solid var(--gold-main); }
+            .nav-links.menu-aberto { max-height: 500px; padding: 1.5rem 0; }
+            .nav-links a { width: 100%; text-align: center; padding: 1.2rem 0; }
+            .btn-destaque { margin: 1rem 0; width: 85%; text-align: center; border-radius: 6px !important; }
+        }
+
+        /* BOTOES GERAIS */
+        .btn-gold { background: linear-gradient(135deg, var(--gold-main), var(--gold-dark)); color: var(--navy-darkest) !important; font-family: var(--font-head); font-weight: 800; padding: 1.2rem 2.5rem; border-radius: 6px; text-decoration: none; text-transform: uppercase; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: none; cursor: pointer; transition: all 0.3s; box-shadow: 0 10px 25px -5px rgba(195, 160, 82, 0.3); font-size: 0.95rem; letter-spacing: 1px; }
+        .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 15px 35px -5px rgba(195, 160, 82, 0.5); }
+
+        /* ==========================================
+           3. VIEW HOME (SPA)
+        ========================================== */
+        section { position: relative; z-index: 1; padding: 100px 5%; scroll-margin-top: 100px; }
+        .container { max-width: 1250px; margin: 0 auto; }
+        
+        .section-header { text-align: center; margin-bottom: 4.5rem; }
+        .section-header h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 1.2rem; line-height: 1.2; color: var(--gold-main); }
+        .section-header p { color: var(--text-muted); font-size: 1.15rem; max-width: 800px; margin: 0 auto; line-height: 1.7; }
+
+        /* HERO */
+        .hero { min-height: 85vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-bottom: 1px solid rgba(195, 160, 82, 0.2); position: relative; }
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 30%, rgba(11, 30, 54, 0.9) 0%, var(--navy-darkest) 85%), url('https://images.unsplash.com/photo-1505664177922-928383a51980?auto=format&fit=crop&w=1920&q=80') center/cover; z-index: -1; }
+        
+        .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 0.5rem 1.5rem; background: rgba(195, 160, 82, 0.1); border: 1px solid rgba(195, 160, 82, 0.3); border-radius: 50px; color: var(--gold-main); font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.8rem; }
+        
+        .hero h1 { font-size: clamp(1.8rem, 4.5vw, 3.8rem); line-height: 1.2; margin-bottom: 1.5rem; font-weight: 800; max-width: 1000px; }
+        .hero h1 span { color: var(--gold-main); }
+        
+        .vsl-wrapper { width: 100%; max-width: 850px; margin: 30px auto 40px; position: relative; border-radius: 12px; overflow: hidden; border: 3px solid var(--gold-main); box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 40px rgba(195,160,82,0.2); background: #000; padding-bottom: 56.25%; height: 0; }
+        .vsl-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        /* COMO FUNCIONA */
+        #como-funciona { background: var(--navy-dark); }
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .step-card { background: var(--navy-card); border: 1px solid rgba(255,255,255,0.05); padding: 40px 30px; border-radius: 8px; text-align: center; position: relative; transition: 0.3s; }
+        .step-card:hover { transform: translateY(-8px); border-color: rgba(195,160,82,0.4); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
+        .step-number { width: 60px; height: 60px; background: rgba(195,160,82,0.15); color: var(--gold-main); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; font-family: var(--font-head); margin: 0 auto 20px; border: 2px solid var(--gold-main); }
+        .step-card h3 { font-size: 1.4rem; margin-bottom: 15px; }
+        .step-card p { font-size: 0.95rem; color: var(--text-muted); }
+
+        /* POR QUE COMPRAR COM A GENTE */
+        #por-que-comprar { background: var(--navy-darkest); }
+        .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .why-image img { width: 100%; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 1px solid rgba(195,160,82,0.3); }
+        .why-content ul { list-style: none; margin-top: 30px; }
+        .why-content li { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 25px; }
+        .why-icon { font-size: 1.5rem; color: var(--gold-main); margin-top: 5px; }
+        .why-content h4 { font-size: 1.25rem; margin-bottom: 5px; color: #fff; }
+        .why-content p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
+        
+        @media (max-width: 992px) { .why-grid { grid-template-columns: 1fr; text-align: center; } .why-content li { flex-direction: column; align-items: center; text-align: center; } }
+
+        /* GRADUAÇÕES / CONCURSOS */
+        #concursos { background: var(--navy-dark); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .grad-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .grad-card { background: var(--navy-card); border-top: 4px solid var(--navy-main); border-radius: 8px; overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; border-left: 1px solid rgba(255,255,255,0.02); border-right: 1px solid rgba(255,255,255,0.02); border-bottom: 1px solid rgba(255,255,255,0.02); }
+        .grad-card:hover { transform: translateY(-5px); border-top-color: var(--gold-main); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
+        .g-header { padding: 30px 25px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .g-header h3 { font-size: 1.5rem; margin-bottom: 10px; color: var(--gold-main); }
+        .g-header p { font-size: 0.95rem; color: var(--text-light); line-height: 1.5; }
+        .g-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .g-features { list-style: none; margin-bottom: 25px; flex-grow: 1; }
+        .g-features li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted); }
+        .g-features li i { color: #22c55e; margin-top: 3px; }
+
+        /* QUIZ ROBUSTO COM BARRA DE PROGRESSO */
+        #quiz { background: radial-gradient(circle at top, var(--navy-dark) 0%, var(--navy-darkest) 100%); }
+        .quiz-container { max-width: 800px; margin: 0 auto; background: var(--navy-card); padding: 4rem; border-radius: 12px; border: 1px solid rgba(195,160,82,0.25); position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .quiz-progress { display: flex; align-items: center; justify-content: space-between; margin-bottom: 3rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .step-text { font-weight: 800; color: var(--gold-main); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; }
+        .bar-bg { width: 200px; height: 6px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
+        .bar-fill { height: 100%; background: var(--gold-main); width: 0%; transition: 0.6s cubic-bezier(0.5, 0, 0, 1); }
+        
+        .quiz-content-area { min-height: 300px; display: flex; flex-direction: column; justify-content: center; }
+        .quiz-q { font-size: 1.6rem; font-family: var(--font-head); font-weight: 700; color: #fff; margin-bottom: 2rem; text-align: center; line-height: 1.4; }
+        .quiz-options { display: grid; gap: 1rem; }
+        .opt-btn { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 1.2rem 2rem; font-size: 1rem; border-radius: 6px; cursor: pointer; transition: all 0.3s; font-family: var(--font-body); font-weight: 600; color: var(--text-light); text-align: left; display: flex; align-items: center; justify-content: space-between; }
+        .opt-btn i { color: rgba(255,255,255,0.2); font-size: 1.2rem; transition: 0.3s; }
+        .opt-btn:hover { border-color: var(--gold-main); background: rgba(195,160,82,0.08); color: #fff; transform: translateX(5px); }
+        .opt-btn:hover i { color: var(--gold-main); }
+        
+        .quiz-input-group { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
+        .quiz-text-input { width: 100%; background: rgba(255, 255, 255, 0.05); border: 2px solid var(--gold-main); padding: 1.2rem 1.5rem; font-size: 1.1rem; border-radius: 6px; color: #fff; font-family: var(--font-body); outline: none; transition: 0.3s; }
+        .quiz-text-input:focus { background: rgba(255, 255, 255, 0.1); box-shadow: 0 0 15px rgba(195, 160, 82, 0.3); }
+
+        @media (max-width: 768px) {
+            .quiz-container { padding: 2rem 1.5rem; }
+            .bar-bg { width: 100px; }
+            .quiz-q { font-size: 1.3rem; }
+            .opt-btn { padding: 1rem 1.2rem; font-size: 0.9rem; }
+        }
+
+        /* ==========================================
+           4. VIEW ARTIGO (BLOG: CRIME)
+        ========================================== */
+        #view-artigo { display: none; padding-bottom: 6rem; background: var(--navy-darkest); }
+        .article-header { background: radial-gradient(circle at bottom, var(--navy-dark) 0%, var(--navy-darkest) 100%); padding: 120px 5% 60px; text-align: center; border-bottom: 1px solid rgba(195,160,82,0.2); }
+        .article-label { background: rgba(220, 38, 38, 0.15); color: #ef4444; border: 1px solid rgba(220, 38, 38, 0.4); padding: 6px 18px; border-radius: 50px; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; display: inline-block; }
+        .article-header h1 { font-size: clamp(2rem, 5vw, 3.8rem); max-width: 1000px; margin: 0 auto 20px; line-height: 1.2; color: #fff; }
+        .article-header p { font-size: 1.2rem; color: var(--text-muted); max-width: 800px; margin: 0 auto; }
+        
+        .article-body { max-width: 850px; margin: 60px auto 0; padding: 0 5%; font-size: 1.15rem; line-height: 1.8; color: var(--text-light); }
+        .article-body h2 { font-size: 2rem; color: var(--gold-main); margin: 50px 0 20px; }
+        .article-body p { margin-bottom: 25px; }
+        .article-body strong { color: #fff; }
+        
+        .article-quote { border-left: 4px solid var(--gold-main); background: var(--navy-card); padding: 25px 35px; margin: 40px 0; border-radius: 0 8px 8px 0; font-style: italic; font-size: 1.25rem; color: var(--gold-main); font-family: var(--font-head); line-height: 1.6; }
+
+        .article-cta { text-align: center; margin-top: 60px; padding: 50px; background: var(--navy-card); border-radius: 12px; border: 1px solid rgba(195,160,82,0.3); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .article-cta h3 { font-size: 2rem; margin-bottom: 15px; }
+        .article-cta p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 30px; }
+
+        /* ==========================================
+           5. FOOTER
+        ========================================== */
+        footer { background: #02050a; padding: 80px 5% 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); position: relative; z-index: 2; }
+        footer img { max-width: 180px; margin-bottom: 30px; opacity: 0.9; }
+        .footer-desc { color: var(--text-muted); font-size: 0.95rem; max-width: 600px; margin: 0 auto 30px; line-height: 1.6; }
+        .copyright { font-size: 0.8rem; color: #475569; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; margin-top: 40px; }
+    </style>
+</head>
+<body oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
+
+    <!-- TOPBAR -->
+    <div class="topbar">Bruno Ortiz • Facilitação Documental para Carreiras e Concursos</div>
+
+    <!-- HEADER / MENU -->
+    <header class="site-header">
+        <nav>
+            <a href="#home" class="nav-brand" onclick="abrirHome('home', event)">
+                <img src="imagem_18.png" alt="Bruno Ortiz Graduações">
+            </a>
+            <i class="fa-solid fa-bars mobile-toggle" onclick="toggleMenu()"></i>
+            <div class="nav-links" id="menu-links">
+                <a href="#home" onclick="abrirHome('home', event)" class="nav-link">Início</a>
+                <a href="#como-funciona" onclick="abrirHome('como-funciona', event)" class="nav-link">Como Funciona</a>
+                <a href="#por-que-comprar" onclick="abrirHome('por-que-comprar', event)" class="nav-link">Por que comprar com a gente</a>
+                <a href="#" onclick="abrirArtigo(event)" style="color: var(--gold-main); font-weight: 700;">Diploma Falso é Crime</a>
+                <a href="#concursos" onclick="abrirHome('concursos', event)" class="nav-link">Graduações / Concursos</a>
+                <a href="#quiz" onclick="abrirHome('quiz', event)" class="btn-destaque"><i class="fa-solid fa-graduation-cap"></i> Análise de Perfil</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="watermark-global"></div>
+
+    <!-- VIEW: HOME (SPA PRINCIPAL) -->
+    <div id="view-home">
+        
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="container reveal active">
+                <div class="hero-badge"><i class="fa-solid fa-scale-balanced"></i> Amparo Legal LDB 9.394/96</div>
+                <h1>A Burocracia Acadêmica não pode atrasar a sua posse.<br><span>Nós resolvemos o seu diploma.</span></h1>
+                <div class="vsl-wrapper">
+                    <iframe src="https://www.youtube-nocookie.com/embed/ncnGTiGdI4I?rel=0&playsinline=1&modestbranding=1" title="Apresentação Bruno Ortiz" allowfullscreen></iframe>
+                </div>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#quiz" class="btn-gold"><i class="fa-solid fa-bolt"></i> Iniciar Triagem de Perfil</a>
+                    <a href="javascript:void(0)" class="btn-gold c-zap" style="background: transparent; border: 2px solid var(--gold-main); color: var(--gold-main) !important;" data-msg="Olá! Vim pelo site da Bruno Ortiz e quero atendimento com um consultor."><i class="fa-brands fa-whatsapp"></i> Falar com Diretoria</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMO FUNCIONA -->
+        <section id="como-funciona">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Como Funciona a Facilitação Acadêmica</h2>
+                    <p>O método Bruno Ortiz simplifica a burocracia do sistema tradicional através de um processo puramente administrativo e amparado na legislação educacional vigente.</p>
+                </div>
+                <div class="steps-grid">
+                    <div class="step-card reveal">
+                        <div class="step-number">1</div>
+                        <h3>Análise e Mapeamento</h3>
+                        <p>Avaliamos o seu histórico, sua experiência profissional ou a exigência específica do edital do seu concurso para definir qual a titulação ideal e mais rápida para o seu caso.</p>
+                    </div>
+                    <div class="step-card reveal delay-1">
+                        <div class="step-number">2</div>
+                        <h3>Processamento Institucional</h3>
+                        <p>Nossa equipe assume 100% dos trâmites nas faculdades parceiras. O seu processo é matriculado, cursado administrativamente e concluído com registros formais.</p>
+                    </div>
+                    <div class="step-card reveal delay-2">
+                        <div class="step-number">3</div>
+                        <h3>Homologação e Emissão</h3>
+                        <p>O seu diploma é emitido com registro ativo no sistema do MEC (SISTEC/e-MEC), acompanhado de Histórico Escolar, Ata de Colação e publicação no Diário Oficial.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POR QUE COMPRAR COM A GENTE -->
+        <section id="por-que-comprar">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Por Que Comprar Com A Gente?</h2>
+                    <p>No ambiente corporativo e no universo dos concursos, confiança se comprova com auditoria e garantias sólidas.</p>
+                </div>
+                <div class="why-grid">
+                    <div class="why-content reveal">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-file-shield why-icon"></i>
+                                <div>
+                                    <h4>Risco Alocado: Apenas 5% de Entrada</h4>
+                                    <p>Trabalhamos com máxima transparência. Você realiza um aporte inicial de apenas 5% para a instauração administrativa. Os 95% restantes são liquidados somente quando o diploma estiver pronto e validado por você nos portais oficiais.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass-chart why-icon"></i>
+                                <div>
+                                    <h4>Auditoria MEC e Diário Oficial</h4>
+                                    <p>Não entregamos "papéis impressos". Entregamos um ativo acadêmico rastreável. Seu diploma possui QR Code/XML para validação instantânea no Ministério da Educação e publicação em DOU.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-user-tie why-icon"></i>
+                                <div>
+                                    <h4>Aptidão para Conselhos e Editais</h4>
+                                    <p>O pacote documental inclui o histórico e a ata de colação exatos exigidos pelas bancas examinadoras (Cebraspe, FGV) e conselhos profissionais (CREA, CRA, CRC).</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="why-image reveal delay-1">
+                        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=1000&q=80" alt="Auditoria de Diplomas">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRADUAÇÕES E CONCURSOS -->
+        <section id="concursos">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Graduações & Soluções para Concursos</h2>
+                    <p>Modalidades homologadas para assegurar a sua aprovação na fase de provas de títulos e na posse de cargos públicos de alto escalão.</p>
+                </div>
+                <div class="grad-grid">
+                    <div class="grad-card reveal">
+                        <div class="g-header">
+                            <h3>Tecnólogos Acelerados</h3>
+                            <p>O nível superior mais rápido e aceito na maioria dos editais de segurança pública e tribunais.</p>
+                        </div>
+                        <div class="g-body">
+                            <ul class="g-features">
+                                <li><i class="fa-solid fa-circle-check"></i> Ideal para PF, PRF e Polícias Civis</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Gestão Pública, Segurança e TI</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Validação célere em Bancas</li>
+                            </ul>
+                            <a href="javascript:void(0)" class="btn-gold c-zap" style="width: 100%; font-size: 0.85rem; padding: 15px;" data-msg="Olá! Preciso de um Tecnólogo Acelerado para assumir meu concurso."><i class="fa-brands fa-whatsapp"></i> Solicitar Tecnólogo</a>
+                        </div>
+                    </div>
+                    <div class="grad-card reveal delay-1">
+                        <div class="g-header">
+                            <h3>Bacharelados Executivos</h3>
+                            <p>Grau pleno essencial para conselhos de classe, peritos e cargos de diretoria fiscal.</p>
+                        </div>
+                        <div class="g-body">
+                            <ul class="g-features">
+                                <li><i class="fa-solid fa-circle-check"></i> Direito, Administração, Engenharias</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Registro no CRA, CREA, OAB</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Histórico escolar completo homologado</li>
+                            </ul>
+                            <a href="javascript:void(0)" class="btn-gold c-zap" style="width: 100%; font-size: 0.85rem; padding: 15px;" data-msg="Olá! Preciso viabilizar um Bacharelado para registro em conselho/concurso."><i class="fa-brands fa-whatsapp"></i> Solicitar Bacharelado</a>
+                        </div>
+                    </div>
+                    <div class="grad-card reveal delay-2">
+                        <div class="g-header">
+                            <h3>Licenciaturas (Área da Educação)</h3>
+                            <p>Adequação curricular para docentes que buscam evolução salarial e posse em secretarias.</p>
+                        </div>
+                        <div class="g-body">
+                            <ul class="g-features">
+                                <li><i class="fa-solid fa-circle-check"></i> Pedagogia, Letras, Matemática</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Complementação Pedagógica Rápida</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Pontuação altíssima em Títulos</li>
+                            </ul>
+                            <a href="javascript:void(0)" class="btn-gold c-zap" style="width: 100%; font-size: 0.85rem; padding: 15px;" data-msg="Olá! Gostaria de informações sobre a Licenciatura facilitada."><i class="fa-brands fa-whatsapp"></i> Solicitar Licenciatura</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUIZ ROBUSTO -->
+        <section id="quiz">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Análise de Perfil e Viabilidade</h2>
+                    <p>Passe pela triagem do nosso sistema e descubra o caminho exato para a sua regularização acadêmica e documental.</p>
+                </div>
+                
+                <div class="quiz-container reveal delay-1">
+                    <div class="quiz-progress">
+                        <span class="step-text" id="q-step">Triagem: Etapa 1 / 3</span>
+                        <div class="bar-bg"><div class="bar-fill" id="q-bar" style="width: 33%;"></div></div>
+                    </div>
+                    <div class="quiz-content-area" id="quiz-content">
+                        <!-- Conteúdo será injetado pelo JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- VIEW: ARTIGO DE BLOG (COMPRAR DIPLOMA É CRIME) -->
+    <div id="view-artigo">
+        <header class="article-header">
+            <span class="article-label">Direito & Risco Criminal</span>
+            <h1 class="reveal">Comprar Diploma Falso é Crime? Entenda a Diferença Entre Fraude e a Facilitação Oficial</h1>
+            <p class="reveal delay-1">Se você pesquisou sobre compra de diplomas, precisa entender os perigos do mercado clandestino e como a operação da Bruno Ortiz viabiliza a sua documentação de forma 100% legal e segura.</p>
+        </header>
+
+        <div class="article-body">
+            <p class="reveal">A urgência por qualificação faz com que centenas de profissionais busquem atalhos na internet. O grande problema é que a maioria absoluta dessas ofertas são falsificações grosseiras geradas em gráficas clandestinas ou arquivos de PDF editados. E a resposta é clara: <strong>Sim, comprar e apresentar um diploma falso é crime rigoroso no Brasil</strong>.</p>
+            
+            <p class="reveal">Quando você apresenta um papel sem procedência em uma prova de títulos, na posse de um edital público ou na mesa de um conselho fiscalizador (CREA, CRA, CRC), o documento passará por uma auditoria primária. A fraude se enquadra nos Artigos 297 (falsificação de documento público) e 304 (uso de documento falso) do Código Penal, resultando em eliminação imediata, perda de direitos políticos e inquérito criminal.</p>
+
+            <div class="article-quote reveal delay-1">
+                "A ignorância não blinda o candidato perante a lei. Apresentar um documento não rastreável no Ministério da Educação encerra imediatamente a carreira do concurseiro."
+            </div>
+
+            <h2 class="reveal">O Método Bruno Ortiz: Por que a nossa Facilitação é Segura?</h2>
+            <p class="reveal">A assessoria <strong>Bruno Ortiz</strong> nasceu exatamente para proteger executivos e candidatos desse abismo criminal, resolvendo a burocracia do sistema tradicional por vias legítimas. Nós <strong>não fabricamos e não vendemos diplomas falsos</strong>.</p>
+            <p class="reveal">O que a nossa operação entrega é uma **Facilitação Acadêmica**. Atuamos por meio de acordos institucionais e amparados pela legislação (como a Certificação por Competência e o aproveitamento extraordinário de estudos da LDB). O seu nome é efetivamente processado dentro das faculdades credenciadas, gerando um lastro administrativo real.</p>
+
+            <h2 class="reveal">A Prova de Fogo: Auditoria e-MEC</h2>
+            <p class="reveal">O diferencial absoluto entre o mercado criminoso e a operação da Bruno Ortiz é a verificabilidade governamental. O diploma que nós viabilizamos conta com:</p>
+            <ul style="list-style-type: disc; margin-left: 25px; margin-bottom: 25px; color: var(--text-muted);" class="reveal">
+                <li><strong>Publicação Oficial:</strong> Seu nome constará no Diário Oficial da União (DOU) listado na portaria de formandos.</li>
+                <li><strong>Código XML/QR Code:</strong> Leitura digital que aponta diretamente para o portal de validação oficial do Ministério da Educação (SISTEC/e-MEC).</li>
+                <li><strong>Acervo Completo:</strong> Histórico com registro de notas curriculares chanceladas pela secretaria acadêmica da universidade emissora.</li>
+            </ul>
+
+            <div class="article-cta reveal delay-1">
+                <h3>Faça a Escolha Inteligente e Irrevogável</h3>
+                <p>Não destrua anos de estudos para um concurso por conta de um atalho criminoso. Se o que separa você da posse é a burocracia documental, nós temos o caminho institucional, legal e 100% auditável.</p>
+                <a href="javascript:void(0)" class="btn-gold c-zap" style="font-size: 1.1rem; padding: 1.2rem 3rem;" data-msg="Olá! Li o artigo sobre os riscos de diploma falso e a legalidade da facilitação. Gostaria de iniciar o meu processo seguro com a Bruno Ortiz."><i class="fa-brands fa-whatsapp"></i> Iniciar Processo Seguro no WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <img src="imagem_19.png" alt="Bruno Ortiz - Assessoria Educacional">
+        <p class="footer-desc">Operação nacional executiva. Facilitamos processos acadêmicos burocráticos e emitimos titulações chanceladas pelo MEC com estrito amparo legal para executivos e editais públicos.</p>
+        <a href="javascript:void(0)" class="btn-gold c-zap" style="font-size: 0.95rem; padding: 12px 25px;" data-msg="Olá! Gostaria de falar com o atendimento da Bruno Ortiz.">
+            <i class="fa-brands fa-whatsapp"></i> Diretoria Comercial: (31) 99607-7793
+        </a>
+        <div class="copyright">
+            &copy; 2026 Bruno Ortiz Graduações & Concursos. Plataforma Auditada e Protegida.
+        </div>
+    </footer>
+
+    <!-- ENGINE JAVASCRIPT: SPA, QUIZ, ANTI-COPY, WHATSAPP CÓDIGO -->
+    <script>
+        // 1. SISTEMA ANTI-CÓPIA E BLOQUEIO DEVTOOLS
+        (function(_0x2213a, _0x3b89b){
+            const _0x1a8f = function(_0x4b7c){ while(--_0x4b7c){ _0x2213a['push'](_0x2213a['shift']()); } };
+            _0x1a8f(++_0x3b89b);
+        }(['prevent','oncontextmenu','keyCode','ctrlKey','shiftKey','addEventListener','copy','clipboardData','setData','text/plain','Conteúdo Protegido pela Bruno Ortiz.','writeText',''], 0x1f));
+
+        try {
+            document.oncontextmenu = function() { return false; };
+            document.onkeydown = function(e) {
+                if(e.keyCode==123) return false; 
+                if(e.ctrlKey && e.shiftKey && (e.keyCode==73 || e.keyCode==74 || e.keyCode==67)) return false; 
+                if(e.ctrlKey && e.keyCode==85) return false; 
+                if(e.key === 'PrintScreen' || e.keyCode==44) { navigator.clipboard.writeText(''); }
+            };
+            document.addEventListener('copy', function(e){ e.preventDefault(); e.clipboardData.setData('text/plain', 'Conteúdo Protegido. Bruno Ortiz.'); });
+            
+            // 2. CODIFICAÇÃO WHATSAPP (31 99607-7793) -> Base64
+            const _b = ["aHR0cHM6Ly93","YS5tZS81NTMxOTk2","MDc3NzkzP3RleHQ9"];
+            
+            document.body.addEventListener('click', function(e) {
+                const btnZap = e.target.closest('.c-zap');
+                if (btnZap && !btnZap.hasAttribute('onclick')) { 
+                    e.preventDefault();
+                    let msg = btnZap.getAttribute('data-msg') || "Olá! Vim pelo site da Bruno Ortiz e quero atendimento.";
+                    window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg), '_blank');
+                }
+            });
+
+            // 3. MENU MOBILE E SCROLL REVEAL
+            window.toggleMenu = function() { document.getElementById('menu-links').classList.toggle('menu-aberto'); };
+            
+            const _anim = function() {
+                if('IntersectionObserver' in window) {
+                    const _obs = new IntersectionObserver((_ent) => { _ent.forEach(_e => { if (_e.isIntersecting) _e.target.classList.add('active'); }); }, { threshold: 0.1 });
+                    document.querySelectorAll('.reveal').forEach(_el => _obs.observe(_el));
+                } else { document.querySelectorAll('.reveal').forEach(_el => _el.classList.add('active')); }
+            };
+
+            // 4. LÓGICA DE NAVEGAÇÃO SPA
+            window.abrirHome = function(sectionId, event) {
+                if(event) event.preventDefault();
+                document.getElementById('view-artigo').style.display = 'none';
+                document.getElementById('view-home').style.display = 'block';
+                document.getElementById('menu-links').classList.remove('menu-aberto');
+                
+                document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+                if(event && event.target.tagName === 'A') event.target.classList.add('active');
+
+                if(sectionId) {
+                    setTimeout(() => {
+                        const el = document.getElementById(sectionId);
+                        if(el) { window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 85, behavior: 'smooth' }); }
+                    }, 50);
+                } else {
+                    window.scrollTo(0, 0);
+                }
+            };
+
+            window.abrirArtigo = function(event) {
+                if(event) event.preventDefault();
+                document.getElementById('view-home').style.display = 'none';
+                document.getElementById('view-artigo').style.display = 'block';
+                document.getElementById('menu-links').classList.remove('menu-aberto');
+                
+                document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+                if(event && event.target.tagName === 'A') event.target.classList.add('active');
+                
+                window.scrollTo({ top: 0, behavior: 'auto' });
+                _anim(); 
+            };
+
+            // 5. LÓGICA DO QUIZ ROBUSTO
+            let _qD = { t: "", s: "", c: "" };
+            
+            window.iniciarQuiz = function() {
+                let q = document.getElementById('quiz-content'); if(!q) return;
+                document.getElementById('q-step').innerText = "Triagem: Etapa 1 / 3"; document.getElementById('q-bar').style.width = '33%';
+                q.style.opacity = 0;
+                setTimeout(() => { 
+                    q.innerHTML = '<div class="quiz-q">Qual modalidade você precisa viabilizar agora?</div><div class="quiz-options"><button class="opt-btn" onclick="escolherTipo(\'Bacharelado\')">Bacharelado <i class="fa-solid fa-chevron-right"></i></button><button class="opt-btn" onclick="escolherTipo(\'Licenciatura\')">Licenciatura Plena <i class="fa-solid fa-chevron-right"></i></button><button class="opt-btn" onclick="escolherTipo(\'Tecnólogo\')">Tecnólogo Acelerado <i class="fa-solid fa-chevron-right"></i></button><button class="opt-btn" onclick="escolherTipo(\'Supletivo EJA\')">Supletivo do Ensino Médio <i class="fa-solid fa-chevron-right"></i></button></div>'; 
+                    q.style.opacity = 1; q.style.transition = "opacity 0.4s"; 
+                }, 200);
+            };
+
+            window.escolherTipo = function(tipo) {
+                _qD.t = tipo; let q = document.getElementById('quiz-content');
+                document.getElementById('q-step').innerText = "Triagem: Etapa 2 / 3"; document.getElementById('q-bar').style.width = '66%';
+                q.style.opacity = 0;
+                setTimeout(() => { 
+                    q.innerHTML = '<div class="quiz-q">Qual o seu status atual nesta formação?</div><div class="quiz-options"><button class="opt-btn" onclick="escolherStatus(\'Iniciei mas não terminei\')">Iniciei, mas precisei parar / trancar <i class="fa-solid fa-chevron-right"></i></button><button class="opt-btn" onclick="escolherStatus(\'Nunca iniciei\')">Nunca iniciei (Preciso resolver do zero) <i class="fa-solid fa-chevron-right"></i></button><button class="opt-btn" onclick="escolherStatus(\'Só tenho experiência\')">Tenho apenas a experiência prática na profissão <i class="fa-solid fa-chevron-right"></i></button></div>'; 
+                    q.style.opacity = 1; 
+                }, 200);
+            };
+
+            window.escolherStatus = function(status) {
+                _qD.s = status; let q = document.getElementById('quiz-content');
+                if (_qD.t === "Supletivo EJA") {
+                    document.getElementById('q-step').innerText = "Diagnóstico Pronto • Regularização Garantida"; document.getElementById('q-bar').style.width = '100%';
+                    let msg = "Olá! Fiz o Quiz no site Bruno Ortiz. Preciso regularizar meu Ensino Médio (Situação: " + _qD.s + "). Gostaria de entender o processo de facilitação acadêmica.";
+                    q.style.opacity = 0;
+                    setTimeout(() => { 
+                        q.innerHTML = '<div style="text-align: center; padding: 1rem 0;"><i class="fa-solid fa-circle-check" style="font-size: 4.5rem; color: #22c55e; margin-bottom: 20px;"></i><h2 style="font-size: 2.2rem; margin-bottom: 15px; color: #fff;">Solução Identificada!</h2><p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 30px; line-height: 1.6;">Nossa assessoria executa a emissão oficial do seu <strong>Ensino Médio</strong> com registro no MEC, sem que você precise fazer provas. Fale agora com a diretoria para iniciar.</p><button class="btn-gold" style="width: 100%; justify-content: center;" onclick="abrirZapF(\'' + msg + '\')"><i class="fa-brands fa-whatsapp"></i> Obter Liberação do Processo</button></div>'; 
+                        q.style.opacity = 1; 
+                    }, 200);
+                } else {
+                    document.getElementById('q-step').innerText = "Triagem: Etapa 3 / 3"; document.getElementById('q-bar').style.width = '95%';
+                    q.style.opacity = 0;
+                    setTimeout(() => { 
+                        q.innerHTML = '<div class="quiz-q">Qual o curso de ' + _qD.t + ' você precisa viabilizar?</div><div class="quiz-input-group"><input type="text" id="campo-curso" class="quiz-text-input" placeholder="Ex: Direito, Administração, Pedagogia, Gestão Pública..." autofocus onkeypress="teclaEnter(event)"><button class="btn-gold" onclick="enviarGraduacao()" style="width: 100%; justify-content: center; margin-top: 10px;"><i class="fa-brands fa-whatsapp"></i> Finalizar e Abrir Canal Direto</button></div>'; 
+                        q.style.opacity = 1; 
+                        let c = document.getElementById('campo-curso'); if(c) c.focus(); 
+                    }, 200);
+                }
+            };
+
+            window.teclaEnter = function(e) { if (e.key === "Enter") enviarGraduacao(); };
+            
+            window.enviarGraduacao = function() {
+                let input = document.getElementById('campo-curso'); let curso = input ? input.value.trim() : "";
+                if (!curso) { alert("Por favor, digite o nome do curso desejado para continuar."); return; }
+                _qD.c = curso; 
+                let msg = "Olá! Concluí a análise de perfil no site Bruno Ortiz para " + _qD.t + " em " + _qD.c + " (Situação: " + _qD.s + "). Gostaria de entender o processo de facilitação acadêmica com aporte de 5% de entrada.";
+                abrirZapF(msg);
+            };
+
+            window.abrirZapF = function(msg) {
+                window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg), '_blank');
+            };
+
+            // INICIALIZAÇÃO
+            window.onload = function() {
+                iniciarQuiz();
+                _anim();
+            };
+
+        } catch(e) {}
+    </script>
+</body>
+</html>
