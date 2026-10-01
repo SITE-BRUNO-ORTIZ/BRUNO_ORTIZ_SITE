@@ -266,7 +266,7 @@
             <a href="#por-que-comprar" onclick="abrirHome('por-que-comprar', event)" class="nav-link">Por que a Bruno Ortiz?</a>
             <!-- LINK PARA A NOVA PÁGINA SEO -->
             <a href="artigo.html" style="color: #ef4444; font-weight: 700;"><i class="fa-solid fa-newspaper"></i> Editorial</a>
-            <a href="#concursos" onclick="abrirHome('concursos', event)" class="nav-link">Editais</a>
+            <a href="#concursos" onclick="abrirHome('concursos', event)" class="nav-link">Graduações/Concursos</a>
             <a href="#quiz" onclick="abrirHome('quiz', event)" class="btn-destaque"><i class="fa-solid fa-bolt"></i> Análise de Perfil</a>
         </nav>
     </header>
@@ -546,7 +546,8 @@
             window.enviarGraduacao = function() { let input = document.getElementById('campo-curso'); let curso = input ? input.value.trim() : ""; if (!curso) { alert("Por favor, digite o nome do curso desejado."); return; } _qD.c = curso; let msg = "Olá! Concluí a análise de perfil no site Bruno Ortiz para " + _qD.t + " em " + _qD.c + " (Situação: " + _qD.s + "). Gostaria de entender o processo de facilitação acadêmica com um consultor."; abrirZapF(msg); };
             window.abrirZapF = function(msg) { window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg), '_blank'); };
 
-            window.onload = function() { renderizarConcursos('Todos'); iniciarQuiz(); _anim(); };
+            // SOLUÇÃO DO ATRASO AQUI: Trocado 'window.onload' para evento no DOMContentLoaded
+            document.addEventListener('DOMContentLoaded', function() { renderizarConcursos('Todos'); iniciarQuiz(); _anim(); });
         } catch(e) {}
     </script>
 </body>
