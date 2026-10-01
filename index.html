@@ -28,68 +28,34 @@
             --navy-dark: #071224; 
             --navy-main: #0B1E36;
             --navy-card: #102a4a;
-            
             --accent-light: #ffffff; 
             --accent-main: #f8fafc; 
             --accent-dark: #e2e8f0;
-            
             --text-light: #f8fafc;
             --text-muted: #94a3b8;
             --font-head: 'Montserrat', sans-serif; 
             --font-body: 'Inter', sans-serif;
-            --font-editorial: 'Merriweather', serif;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* BLOQUEIO RIGOROSO DE OVERFLOW PARA MOBILE */
         html, body { 
-            font-family: var(--font-body); 
-            background-color: var(--navy-darkest); 
-            color: var(--text-light); 
-            line-height: 1.6; 
-            overflow-x: hidden;
-            width: 100%;
-            max-width: 100vw;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
+            font-family: var(--font-body); background-color: var(--navy-darkest); color: var(--text-light); line-height: 1.6; overflow-x: hidden; width: 100%; max-width: 100vw; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
         }
-        
         html { scroll-behavior: smooth; }
         @media print { body { display: none !important; } }
         h1, h2, h3, h4 { font-family: var(--font-head); color: #ffffff; }
 
-        /* REVEAL ANIMATIONS BASE */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
         .delay-1 { transition-delay: 0.15s; } .delay-2 { transition-delay: 0.3s; }
 
         /* ==========================================
-           2. MENU FLUTUANTE (ANIMAÇÃO SLIDE DOWN)
+           2. MENU FLUTUANTE
         ========================================== */
         .site-header { 
-            position: fixed; 
-            top: 20px; 
-            left: 50%;
-            transform: translate(-50%, -150%); 
-            width: 95%; 
-            max-width: 1200px;
-            z-index: 1000; 
-            display: flex; 
-            align-items: center;
-            background: rgba(11, 30, 54, 0.85); 
-            backdrop-filter: blur(16px); 
-            -webkit-backdrop-filter: blur(16px); 
-            padding: 10px 25px; 
-            border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            animation: slideDownMenu 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            animation-delay: 0.2s;
+            position: fixed; top: 20px; left: 50%; transform: translate(-50%, -150%); width: 95%; max-width: 1200px; z-index: 1000; display: flex; align-items: center; background: rgba(11, 30, 54, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); padding: 10px 25px; border-radius: 50px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5); animation: slideDownMenu 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.2s;
         }
-        
         @keyframes slideDownMenu { to { transform: translate(-50%, 0); } }
         
         .nav-brand { display: flex; align-items: center; text-decoration: none; }
@@ -101,30 +67,16 @@
         .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0%; height: 2px; background: #ffffff; transition: 0.3s; }
         .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
         
-        .btn-destaque { 
-            background: rgba(255, 255, 255, 0.05); 
-            border: 1px solid #ffffff !important; 
-            padding: 0.6rem 1.4rem !important; 
-            border-radius: 50px !important; 
-            color: #ffffff !important; 
-            position: relative;
-            overflow: hidden;
-        }
+        .btn-destaque { background: rgba(255, 255, 255, 0.05); border: 1px solid #ffffff !important; padding: 0.6rem 1.4rem !important; border-radius: 50px !important; color: #ffffff !important; position: relative; overflow: hidden; }
         .btn-destaque::after { display: none !important; }
-        .btn-destaque::before {
-            content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent); transform: skewX(-25deg); animation: shineBtn 3s infinite;
-        }
+        .btn-destaque::before { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent); transform: skewX(-25deg); animation: shineBtn 3s infinite; }
         @keyframes shineBtn { 0% { left: -100%; } 20% { left: 200%; } 100% { left: 200%; } }
         .btn-destaque:hover { background: #ffffff; color: var(--navy-darkest) !important; box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
         
         .mobile-toggle { display: none; color: #ffffff; font-size: 1.5rem; cursor: pointer; }
 
-        @media (min-width: 1051px) {
-            .nav-brand { display: none !important; }
-            .site-header { justify-content: center; }
-        }
+        @media (min-width: 1051px) { .nav-brand { display: none !important; } .site-header { justify-content: center; } }
 
-        /* BOTOES GERAIS */
         .btn-primary { background: linear-gradient(135deg, var(--accent-light), var(--accent-dark)); color: var(--navy-darkest) !important; font-family: var(--font-head); font-weight: 800; padding: 1.2rem 2.5rem; border-radius: 50px; text-decoration: none; text-transform: uppercase; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: none; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); font-size: 0.95rem; letter-spacing: 1px; }
         .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(255, 255, 255, 0.2); background: linear-gradient(135deg, var(--accent-dark), var(--accent-light)); }
 
@@ -133,27 +85,17 @@
         ========================================== */
         section { position: relative; z-index: 1; padding: 120px 5% 80px; scroll-margin-top: 80px; }
         .container { max-width: 1200px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
-        
         .section-header { text-align: center; margin-bottom: 4.5rem; width: 100%; }
         .section-header h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 1rem; line-height: 1.2; color: #ffffff; }
         .section-header p { color: var(--text-muted); font-size: 1.15rem; max-width: 850px; margin: 0 auto; line-height: 1.7; }
 
         .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-top: 150px; width: 100%; overflow: hidden; position: relative; }
-        
         .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 30%, rgba(11, 30, 54, 0.8) 0%, var(--navy-darkest) 85%), url('https://images.unsplash.com/photo-1505664177922-928383a51980?auto=format&fit=crop&w=1920&q=80') center/cover; z-index: -2; }
         
-        /* A NOVA MARCA D'ÁGUA GIGANTE DOURADA */
         .hero-watermark { position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%); width: 150vw; max-width: 1100px; opacity: 0.04; pointer-events: none; z-index: -1; }
         
-        /* BADGE DINÂMICA (CAINDO E FLUTUANDO) */
-        .hero-badge-container {
-            display: inline-flex; align-items: center; gap: 12px; padding: 0.7rem 2rem; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 50px; color: #ffffff; font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 2rem; backdrop-filter: blur(10px);
-            animation: floatBadge 4s ease-in-out infinite; max-width: 100%;
-        }
-        @keyframes floatBadge {
-            0%, 100% { transform: translateY(0); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-            50% { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); }
-        }
+        .hero-badge-container { display: inline-flex; align-items: center; gap: 12px; padding: 0.7rem 2rem; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 50px; color: #ffffff; font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 2rem; backdrop-filter: blur(10px); animation: floatBadge 4s ease-in-out infinite; max-width: 100%; }
+        @keyframes floatBadge { 0%, 100% { transform: translateY(0); box-shadow: 0 5px 15px rgba(0,0,0,0.3); } 50% { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); } }
         .badge-word { display: inline-flex; align-items: center; gap: 6px; opacity: 0; transform: translateY(-25px); animation: dropWord 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
         .badge-word:nth-child(1) { animation-delay: 0.3s; }
         .badge-word:nth-child(3) { animation-delay: 0.5s; }
@@ -164,39 +106,18 @@
         
         .hero h1 { font-size: clamp(1.8rem, 4.2vw, 3.8rem); line-height: 1.15; margin-bottom: 1.5rem; font-weight: 900; max-width: 1000px; color: #ffffff; }
         
-        /* AÇÃO MAGNÉTICA PARA DESCER O OLHAR */
-        .hero-sub-action { 
-            display: block;
-            font-size: clamp(1.1rem, 2.5vw, 1.3rem); 
-            color: #ffffff; 
-            max-width: 900px; 
-            margin: 0 auto 2.5rem; 
-            font-weight: 700; 
-            text-transform: uppercase; 
-            letter-spacing: 1px; 
-            animation: pulseSub 2.5s infinite; 
-            padding: 0 10px; 
-            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
-        }
-        @keyframes pulseSub { 
-            0%, 100% { transform: scale(1); text-shadow: 0 0 10px rgba(255,255,255,0.2); } 
-            50% { transform: scale(1.02); text-shadow: 0 0 25px rgba(255,255,255,0.6); } 
-        }
+        .hero-sub-action { display: block; font-size: clamp(1.1rem, 2.5vw, 1.3rem); color: #ffffff; max-width: 900px; margin: 0 auto 2.5rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; animation: pulseSub 2.5s infinite; padding: 0 10px; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
+        @keyframes pulseSub { 0%, 100% { transform: scale(1); text-shadow: 0 0 10px rgba(255,255,255,0.2); } 50% { transform: scale(1.02); text-shadow: 0 0 25px rgba(255,255,255,0.6); } }
         .hero-arrow { display: block; font-size: 2.2rem; margin-top: 15px; color: #ffffff; animation: bounceArrow 2s infinite; }
-        @keyframes bounceArrow { 
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 
-            40% { transform: translateY(-15px); } 
-            60% { transform: translateY(-7px); } 
-        }
+        @keyframes bounceArrow { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-15px); } 60% { transform: translateY(-7px); } }
 
         .hero-btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; width: 100%; max-width: 700px; }
         .vsl-wrapper { width: 100%; max-width: 850px; margin: 0 auto 40px; position: relative; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 20px 60px rgba(0,0,0,0.8); background: #000; aspect-ratio: 16 / 9; }
         .vsl-wrapper iframe { width: 100%; height: 100%; border: none; }
 
         /* ==========================================
-           4. SEÇÕES DO SITE - GRIDS SEGUROS
+           4. SEÇÕES DO SITE
         ========================================== */
-        /* COMO FUNCIONA (ROBUSTO) */
         #como-funciona { background: var(--navy-dark); }
         .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; width: 100%; }
         .step-card { background: var(--navy-card); padding: 45px 35px; border-radius: 12px; text-align: left; position: relative; transition: 0.3s; border: 1px solid rgba(255,255,255,0.05); width: 100%; display: flex; flex-direction: column; }
@@ -208,7 +129,6 @@
         .step-card li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: #cbd5e1; margin-bottom: 10px; }
         .step-card li i { color: #22c55e; margin-top: 4px; }
 
-        /* POR QUE COMPRAR COM A GENTE (AGRESSIVO) */
         #por-que-comprar { background: var(--navy-darkest); }
         .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; width: 100%; }
         .why-image img { width: 100%; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 1px solid rgba(255, 255, 255, 0.1); }
@@ -218,7 +138,6 @@
         .why-content h4 { font-size: 1.25rem; margin-bottom: 10px; color: #ffffff; }
         .why-content p { color: var(--text-muted); font-size: 1rem; line-height: 1.6; }
 
-        /* GRADUAÇÕES (CARDS) */
         #graduacoes { background: var(--navy-dark); border-top: 1px solid rgba(255,255,255,0.02); }
         .grad-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; width: 100%; }
         .grad-card { background: var(--navy-card); border-radius: 12px; overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; border: 1px solid rgba(255,255,255,0.02); width: 100%; }
@@ -231,7 +150,6 @@
         .g-features li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 0.9rem; color: #e2e8f0; }
         .g-features li i { color: #cbd5e1; margin-top: 3px; }
 
-        /* EDITAIS DE CONCURSOS */
         #concursos { background: var(--navy-darkest); border-top: 1px solid rgba(255,255,255,0.02); border-bottom: 1px solid rgba(255,255,255,0.02); }
         .concursos-notice { max-width: 900px; margin: 0 auto 3rem; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; padding: 1.2rem 1.8rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
         .cn-text { display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #fff; font-weight: 600; }
@@ -239,11 +157,9 @@
         .cn-tag { background: #ffffff; color: var(--navy-darkest); font-size: 0.72rem; font-weight: 800; padding: 0.35rem 0.85rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 1px; display: inline-flex; align-items: center; gap: 6px; }
         .cn-pulse { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 8px #22c55e; animation: pulseDot 1.6s infinite; }
         @keyframes pulseDot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.3); } }
-        
         .filters { display: flex; justify-content: center; gap: 1rem; margin-bottom: 3.5rem; flex-wrap: wrap; }
         .filter-btn { padding: 0.8rem 2rem; border: 1px solid #475569; background: transparent; color: #cbd5e1; border-radius: 50px; cursor: pointer; font-weight: 700; transition: 0.3s; font-size: 0.88rem; font-family: var(--font-body); text-transform: uppercase; letter-spacing: 1px; }
         .filter-btn.active, .filter-btn:hover { background: #ffffff; color: var(--navy-darkest); border-color: #ffffff; box-shadow: 0 6px 16px rgba(255, 255, 255, 0.2); }
-        
         .concursos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; max-width: 1300px; margin: 0 auto; width: 100%; }
         .concurso-card { background: var(--navy-card); border: 1px solid rgba(255,255,255,0.05); border-top: 4px solid #ffffff; padding: 2rem 1.5rem; border-radius: 8px; transition: all 0.35s; display: flex; flex-direction: column; justify-content: space-between; width: 100%; }
         .concurso-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); border-top-color: #cbd5e1; }
@@ -263,14 +179,12 @@
         .cc-guarantee { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 7px; }
         .cc-guarantee i { color: #22c55e; font-size: 0.85rem; }
 
-        /* QUIZ ROBUSTO */
         #quiz { background: radial-gradient(circle at top, var(--navy-darkest) 0%, var(--navy-dark) 100%); }
         .quiz-container { max-width: 800px; margin: 0 auto; background: var(--navy-card); padding: 4rem; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.5); width: 100%; }
         .quiz-progress { display: flex; align-items: center; justify-content: space-between; margin-bottom: 3rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .step-text { font-weight: 800; color: #ffffff; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; }
         .bar-bg { width: 200px; height: 6px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
         .bar-fill { height: 100%; background: #ffffff; width: 0%; transition: 0.6s cubic-bezier(0.5, 0, 0, 1); }
-        
         .quiz-content-area { min-height: 300px; display: flex; flex-direction: column; justify-content: center; }
         .quiz-q { font-size: 1.6rem; font-family: var(--font-head); font-weight: 700; color: #fff; margin-bottom: 2rem; text-align: center; line-height: 1.4; }
         .quiz-options { display: grid; gap: 1rem; }
@@ -278,57 +192,16 @@
         .opt-btn i { color: rgba(255,255,255,0.2); font-size: 1.2rem; transition: 0.3s; }
         .opt-btn:hover { border-color: #ffffff; background: rgba(255, 255, 255, 0.05); color: #fff; transform: translateX(5px); }
         .opt-btn:hover i { color: #ffffff; }
-        
         .quiz-input-group { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
         .quiz-text-input { width: 100%; background: rgba(0,0,0,0.3); border: 1px solid rgba(255, 255, 255, 0.3); padding: 1.2rem 1.5rem; font-size: 1.1rem; border-radius: 8px; color: #fff; font-family: var(--font-body); outline: none; transition: 0.3s; }
         .quiz-text-input:focus { background: rgba(0,0,0,0.5); box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); border-color: #ffffff; }
 
-        /* ==========================================
-           5. VIEW ARTIGO (O NOVO PORTAL DE NOTÍCIAS)
-        ========================================== */
-        #view-artigo { display: none; background: #f8fafc; color: #1e293b; width: 100%; min-height: 100vh; padding-top: 100px; font-family: var(--font-editorial); }
-        
-        .editorial-container { max-width: 800px; margin: 0 auto; padding: 40px 5% 80px; background: #ffffff; box-shadow: 0 0 40px rgba(0,0,0,0.05); }
-        
-        .ed-header { margin-bottom: 40px; border-bottom: 2px solid #e2e8f0; padding-bottom: 30px; }
-        .ed-tag { display: inline-block; background: #ef4444; color: #fff; font-family: var(--font-head); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; padding: 6px 12px; margin-bottom: 20px; border-radius: 3px; }
-        .ed-title { font-family: var(--font-head); font-size: clamp(2.2rem, 5vw, 3rem); font-weight: 900; color: #0f172a; line-height: 1.1; margin-bottom: 20px; letter-spacing: -1px; }
-        .ed-subtitle { font-family: var(--font-body); font-size: 1.25rem; color: #475569; line-height: 1.6; margin-bottom: 30px; font-weight: 400; }
-        
-        .ed-meta { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; font-family: var(--font-body); }
-        .ed-author { display: flex; align-items: center; gap: 15px; }
-        .ed-avatar { width: 45px; height: 45px; background: var(--navy-darkest); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.2rem; }
-        .ed-author-text strong { display: block; color: #0f172a; font-size: 0.95rem; font-weight: 700; }
-        .ed-author-text span { display: block; color: #64748b; font-size: 0.85rem; }
-        
-        .ed-share { display: flex; gap: 10px; }
-        .ed-share i { width: 38px; height: 38px; border-radius: 50%; background: #f1f5f9; color: #475569; display: flex; align-items: center; justify-content: center; font-size: 1rem; cursor: pointer; transition: 0.3s; }
-        .ed-share i:hover { background: var(--navy-darkest); color: #fff; }
-        
-        .ed-body { font-size: 1.15rem; line-height: 1.9; color: #334155; }
-        .ed-dropcap { float: left; font-family: var(--font-head); font-size: 5.5rem; line-height: 4.5rem; padding-top: 8px; padding-right: 12px; padding-left: 3px; color: var(--navy-darkest); font-weight: 900; }
-        .ed-body p { margin-bottom: 25px; }
-        .ed-body h2 { font-family: var(--font-head); font-size: 1.8rem; color: #0f172a; margin: 50px 0 20px; font-weight: 800; }
-        
-        .ed-quote { border-left: 5px solid var(--navy-darkest); background: #f8fafc; padding: 30px; margin: 40px 0; font-style: italic; font-size: 1.3rem; color: #0f172a; font-weight: 700; line-height: 1.6; }
-        
-        .ed-list { list-style: none; margin: 30px 0; padding: 0; }
-        .ed-list li { position: relative; padding-left: 30px; margin-bottom: 15px; font-family: var(--font-body); font-weight: 500; }
-        .ed-list li::before { content: '✓'; position: absolute; left: 0; top: 0; color: #22c55e; font-weight: 900; font-size: 1.2rem; }
-        
-        .ed-cta { margin-top: 60px; padding: 40px; background: var(--navy-darkest); border-radius: 8px; text-align: center; color: #fff; font-family: var(--font-body); }
-        .ed-cta h3 { font-family: var(--font-head); font-size: 1.8rem; margin-bottom: 15px; }
-        .ed-cta p { color: #cbd5e1; margin-bottom: 30px; font-size: 1.05rem; }
-
-        /* FOOTER */
         footer { background: #02050a; padding: 80px 5% 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); position: relative; z-index: 2; width: 100%; }
         footer img { max-width: 150px; margin-bottom: 30px; filter: drop-shadow(0 0 10px rgba(0,0,0,0.5)); }
         .footer-desc { color: var(--text-muted); font-size: 0.9rem; max-width: 500px; margin: 0 auto 30px; line-height: 1.6; }
         .copyright { font-size: 0.8rem; color: #475569; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; margin-top: 40px; }
 
-        /* ==========================================
-           7. MEDIA QUERIES (MOBILE FIRST AVANÇADO)
-        ========================================== */
+        /* MEDIA QUERIES MOBILE FIRST */
         @media (max-width: 1050px) {
             .site-header { justify-content: space-between; top: 10px; border-radius: 12px; padding: 15px 20px; transform: translate(-50%, -120%); }
             .mobile-toggle { display: block; }
@@ -339,7 +212,6 @@
             .why-grid { grid-template-columns: 1fr; }
         }
 
-        /* AJUSTES SEGUROS PARA CELULAR */
         @media (max-width: 768px) {
             section { padding: 90px 5% 60px; }
             .hero { padding-top: 130px; }
@@ -350,12 +222,12 @@
             
             .hero h1 { font-size: clamp(1.6rem, 7vw, 2.2rem); margin-top: 10px; }
             .hero-sub-action { font-size: 0.95rem; }
+            .hero-watermark { width: 250vw; top: 50%; opacity: 0.05; }
             
             .btn-primary { width: 100%; padding: 1.1rem; justify-content: center; }
             .hero-btn-group { flex-direction: column; gap: 10px; }
             
             .steps-grid, .grad-grid, .concursos-grid { grid-template-columns: 1fr; }
-            
             .concursos-notice { flex-direction: column; text-align: center; gap: 15px; }
             .cn-text { flex-direction: column; }
             .filters { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 2.5rem; }
@@ -366,19 +238,13 @@
             .bar-bg { width: 100px; }
             .quiz-q { font-size: 1.3rem; }
             .opt-btn { padding: 1rem 1.2rem; font-size: 0.9rem; }
-            
-            .editorial-container { padding: 30px 20px; }
-            .ed-cta { padding: 30px 20px; }
         }
-
-        @media (max-width: 480px) {
-            .filters { grid-template-columns: 1fr; }
-        }
+        @media (max-width: 480px) { .filters { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
 
-    <!-- HEADER / MENU FLUTUANTE -->
+    <!-- HEADER / MENU FLUTUANTE (Aponta para artigo separado) -->
     <header class="site-header">
         <a href="#home" class="nav-brand" onclick="abrirHome('home', event)">
             <img src="image_18.png" alt="Bruno Ortiz Graduações">
@@ -388,26 +254,22 @@
             <a href="#home" onclick="abrirHome('home', event)" class="nav-link">Início</a>
             <a href="#como-funciona" onclick="abrirHome('como-funciona', event)" class="nav-link">Como Funciona</a>
             <a href="#por-que-comprar" onclick="abrirHome('por-que-comprar', event)" class="nav-link">Por que a Bruno Ortiz?</a>
-            <a href="#" onclick="abrirArtigo(event)" style="color: #ef4444; font-weight: 700;"><i class="fa-solid fa-newspaper"></i> Editorial</a>
+            <!-- LINK PARA A NOVA PÁGINA SEO -->
+            <a href="artigo.html" style="color: #ef4444; font-weight: 700;"><i class="fa-solid fa-newspaper"></i> Editorial</a>
             <a href="#concursos" onclick="abrirHome('concursos', event)" class="nav-link">Editais</a>
             <a href="#quiz" onclick="abrirHome('quiz', event)" class="btn-destaque"><i class="fa-solid fa-bolt"></i> Análise de Perfil</a>
         </nav>
     </header>
 
-    <div class="watermark-global"></div>
-
-    <!-- VIEW: HOME -->
+    <!-- VIEW PRINCIPAL -->
     <div id="view-home">
         
-        <!-- HERO COM MARCA D'ÁGUA GIGANTE -->
+        <!-- HERO -->
         <section id="home" class="hero">
             <div class="hero-bg"></div>
-            
-            <!-- A MARCA D'ÁGUA DO CHAPÉU DOURADO -->
             <img src="image_19.png" class="hero-watermark" alt="">
             
             <div class="container reveal active">
-                
                 <div class="hero-badge-container">
                     <span class="badge-word"><i class="fa-solid fa-shield-check"></i> Garantia</span>
                     <span class="badge-sep">|</span>
@@ -418,7 +280,6 @@
 
                 <h1>Conquiste ou resolva a sua pendência acadêmica<br><span>se não o seu dinheiro de volta.</span></h1>
                 
-                <!-- AÇÃO MAGNÉTICA (AGORA FORÇADA NO DESKTOP E MOBILE) -->
                 <div class="hero-sub-action reveal delay-1">
                     Assista ao nosso vídeo, leia as informações e fale com um de nossos consultores.
                     <i class="fa-solid fa-angles-down hero-arrow"></i>
@@ -429,13 +290,13 @@
                 </div>
                 
                 <div class="hero-btn-group reveal delay-2">
-                    <a href="#quiz" class="btn-primary"><i class="fa-solid fa-bolt"></i> Iniciar Triagem de Perfil</a>
+                    <a href="#quiz" class="btn-primary" onclick="abrirHome('quiz', event)"><i class="fa-solid fa-bolt"></i> Iniciar Triagem de Perfil</a>
                     <a href="javascript:void(0)" class="btn-primary c-zap" style="background: transparent; border: 1px solid #ffffff; color: #ffffff !important;" data-msg="Olá! Vim pelo site da Bruno Ortiz e quero atendimento com um consultor."><i class="fa-brands fa-whatsapp"></i> Falar com Consultor</a>
                 </div>
             </div>
         </section>
 
-        <!-- COMO FUNCIONA (NOVA CÓPIA DETALHADA E BLINDADA) -->
+        <!-- COMO FUNCIONA -->
         <section id="como-funciona">
             <div class="container">
                 <div class="section-header reveal">
@@ -476,7 +337,7 @@
             </div>
         </section>
 
-        <!-- POR QUE COMPRAR COM A GENTE (NOVA CÓPIA AGRESSIVA E EXECUTIVA) -->
+        <!-- POR QUE COMPRAR -->
         <section id="por-que-comprar">
             <div class="container">
                 <div class="section-header reveal">
@@ -490,7 +351,7 @@
                                 <div class="why-icon"><i class="fa-solid fa-scale-balanced"></i></div>
                                 <div>
                                     <h4>Pagamento Vinculado à Prova Real (5% Inicial)</h4>
-                                    <p>Não exigimos confiança cega. Você realiza um aporte inicial simbólico de apenas 5% para a autuação do seu processo. <strong>Os 95% restantes só são liquidados quando você validar pessoalmente</strong> o seu diploma nos portais oficiais do Governo.</p>
+                                    <p>Não exigimos confiança cega. Você realiza um aporte inicial simbólico de apenas 5% para a autuação do processo. <strong>Os 95% restantes só são liquidados quando você validar pessoalmente</strong> o seu diploma nos portais oficiais do Governo.</p>
                                 </div>
                             </li>
                             <li>
@@ -516,7 +377,7 @@
             </div>
         </section>
 
-        <!-- GRADUAÇÕES (CARDS) -->
+        <!-- GRADUAÇÕES -->
         <section id="graduacoes">
             <div class="container">
                 <div class="section-header reveal">
@@ -570,105 +431,43 @@
             </div>
         </section>
 
-        <!-- PAINEL DE EDITAIS E CONCURSOS -->
+        <!-- CONCURSOS -->
         <section id="concursos">
             <div class="container">
                 <div class="section-header reveal">
                     <h2>Mapeamento de Editais e Posse Facilitada</h2>
                     <p>Nossa assessoria executa 100% do processo burocrático para emitir o seu diploma reconhecido pelo MEC e garantir a sua posse definitiva no cargo.</p>
                 </div>
-
                 <div class="concursos-notice reveal">
                     <div class="cn-text"><i class="fa-solid fa-shield-halved"></i> <span>Viabilização Documental Completa: Homologação no e-MEC e DOU.</span></div>
                     <div class="cn-tag"><span class="cn-pulse"></span> Editais Ativos 2026</div>
                 </div>
-                
                 <div class="filters reveal delay-1">
                     <button class="filter-btn active" id="f-todos" onclick="filtrarConcursos('Todos', 'f-todos')">Todos os Editais</button>
                     <button class="filter-btn" id="f-aberto" onclick="filtrarConcursos('Aberto', 'f-aberto')">Inscrições Abertas</button>
                     <button class="filter-btn" id="f-auto" onclick="filtrarConcursos('Autorizado', 'f-auto')">Autorizados</button>
                     <button class="filter-btn" id="f-prev" onclick="filtrarConcursos('Previsto', 'f-prev')">Previstos</button>
                 </div>
-
                 <div class="concursos-grid" id="painel-concursos"></div>
             </div>
         </section>
 
-        <!-- QUIZ ROBUSTO -->
+        <!-- QUIZ -->
         <section id="quiz">
             <div class="container">
                 <div class="section-header reveal">
                     <h2>Análise de Perfil e Viabilidade</h2>
                     <p>Passe pela triagem do nosso sistema e descubra o caminho exato para a sua regularização acadêmica e documental.</p>
                 </div>
-                
                 <div class="quiz-container reveal delay-1">
                     <div class="quiz-progress">
                         <span class="step-text" id="q-step">Triagem: Etapa 1 / 3</span>
                         <div class="bar-bg"><div class="bar-fill" id="q-bar" style="width: 33%;"></div></div>
                     </div>
-                    <div class="quiz-content-area" id="quiz-content">
-                        <!-- Conteúdo injetado via JS -->
-                    </div>
+                    <div class="quiz-content-area" id="quiz-content"></div>
                 </div>
             </div>
         </section>
-    </div>
-
-    <!-- VIEW: ARTIGO DE BLOG (NOVO LAYOUT DE PORTAL DE NOTÍCIAS JORNALÍSTICO) -->
-    <div id="view-artigo">
-        <article class="editorial-container">
-            <header class="ed-header">
-                <span class="ed-tag">Direito & Investigação</span>
-                <h1 class="ed-title reveal">Comprar Diploma Falso é Crime? A Diferença Entre Fraude e Facilitação</h1>
-                <p class="ed-subtitle reveal delay-1">Se pesquisou sobre compra de documentação acadêmica, precisa entender como o mercado clandestino destrói carreiras e como a atuação amparada pela LDB blinda o profissional de forma definitiva.</p>
-                
-                <div class="ed-meta reveal delay-2">
-                    <div class="ed-author">
-                        <div class="ed-avatar"><i class="fa-solid fa-pen-nib"></i></div>
-                        <div class="ed-author-text">
-                            <strong>Por Redação e Depto. Jurídico</strong>
-                            <span>Atualizado em 1 de Outubro de 2026</span>
-                        </div>
-                    </div>
-                    <div class="ed-share">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <i class="fa-brands fa-linkedin-in"></i>
-                        <i class="fa-solid fa-link"></i>
-                    </div>
-                </div>
-            </header>
-
-            <div class="ed-body">
-                <p class="reveal"><span class="ed-dropcap">A</span> urgência por qualificação faz com que centenas de profissionais busquem atalhos na internet. O grande problema é que a maioria absoluta dessas ofertas são falsificações grosseiras geradas em gráficas clandestinas ou arquivos de PDF editados. E a resposta direta a essa busca é clara: <strong>Sim, comprar e apresentar um diploma falso é crime rigoroso no Brasil</strong>.</p>
-                
-                <p class="reveal">Quando você apresenta um papel sem procedência em uma prova de títulos, na posse de um edital público ou na mesa de um conselho fiscalizador (como CREA, CRA ou CRC), o documento passará por uma auditoria primária obrigatória. A fraude detectada se enquadra nos Artigos 297 (falsificação de documento público) e 304 (uso de documento falso) do Código Penal, resultando em eliminação imediata do certame, perda de direitos políticos e abertura de inquérito criminal.</p>
-
-                <div class="ed-quote reveal delay-1">
-                    "A ignorância não blinda o candidato perante a lei. Apresentar um documento não rastreável no Ministério da Educação encerra imediatamente a carreira e a credibilidade do concurseiro."
-                </div>
-
-                <h2 class="reveal">O Método Bruno Ortiz: A Segurança da Facilitação</h2>
-                <p class="reveal">A assessoria executiva <strong>Bruno Ortiz</strong> nasceu exatamente para proteger candidatos de alto nível desse abismo criminal. O nosso papel é resolver a burocracia imposta pelo sistema educacional tradicional, mas unicamente por vias institucionais e legítimas. Para que fique absolutamente claro: <strong>nós não fabricamos, não imprimimos e não vendemos diplomas falsos</strong>.</p>
-                
-                <p class="reveal">A nossa operação atua no espectro da <strong>Facilitação Acadêmica</strong>. Trabalhamos fundamentados na legislação vigente (como a Certificação por Competência e o aproveitamento extraordinário de estudos da Lei de Diretrizes e Bases da Educação - LDB 9.394/96). Por intermédio de acordos institucionais firmados, o seu nome é processado no sistema da própria faculdade credenciada, gerando um lastro administrativo e histórico real antes de qualquer emissão documental.</p>
-
-                <h2 class="reveal">A Prova de Fogo: Auditoria e-MEC Absoluta</h2>
-                <p class="reveal">O fator que separa, de forma definitiva, o submundo do mercado criminoso da operação legítima da Bruno Ortiz é a verificabilidade governamental. O processo que viabilizamos resulta numa titulação blindada que conta com:</p>
-                
-                <ul class="ed-list reveal">
-                    <li><strong>Publicação Oficial:</strong> O seu nome constará na publicação do Diário Oficial da União (DOU), na respectiva portaria de formandos daquele ciclo.</li>
-                    <li><strong>Tecnologia e-MEC:</strong> O diploma gerado possui Código XML e QR Code nativo, cuja leitura direciona instantaneamente o auditor para o portal oficial de validação do Ministério da Educação (SISTEC/e-MEC).</li>
-                    <li><strong>Acervo Completo Institucional:</strong> Acompanha o Histórico Escolar integral e a Ata de Colação de Grau, com registro de notas devidamente processadas e chanceladas pela Secretaria Acadêmica da Universidade Emissora.</li>
-                </ul>
-
-                <div class="ed-cta reveal delay-1">
-                    <h3>Faça a Escolha Executiva</h3>
-                    <p>Não arrisque anos de dedicação a um concurso por conta de um atalho amador. Se a burocracia documental é a única barreira para a sua posse, nós operamos o caminho auditável, legal e institucionalizado.</p>
-                    <a href="javascript:void(0)" class="btn-primary c-zap" style="width: 100%; max-width: 400px; justify-content: center;" data-msg="Olá! Li a matéria do editorial sobre riscos documentais. Gostaria de entender o processo de facilitação segura com a equipe Bruno Ortiz."><i class="fa-brands fa-whatsapp"></i> Iniciar Processo Seguro</a>
-                </div>
-            </div>
-        </article>
     </div>
 
     <!-- FOOTER -->
@@ -685,196 +484,58 @@
 
     <!-- ENGINE JAVASCRIPT -->
     <script>
-        // 1. SISTEMA ANTI-CÓPIA E BLOQUEIO DEVTOOLS
-        (function(_0x2213a, _0x3b89b){
-            const _0x1a8f = function(_0x4b7c){ while(--_0x4b7c){ _0x2213a['push'](_0x2213a['shift']()); } };
-            _0x1a8f(++_0x3b89b);
-        }(['prevent','oncontextmenu','keyCode','ctrlKey','shiftKey','addEventListener','copy','clipboardData','setData','text/plain','Conteúdo Protegido pela Bruno Ortiz.','writeText',''], 0x1f));
-
+        (function(_0x2213a, _0x3b89b){ const _0x1a8f = function(_0x4b7c){ while(--_0x4b7c){ _0x2213a['push'](_0x2213a['shift']()); } }; _0x1a8f(++_0x3b89b); }(['prevent','oncontextmenu','keyCode','ctrlKey','shiftKey','addEventListener','copy','clipboardData','setData','text/plain','Conteúdo Protegido pela Bruno Ortiz.','writeText',''], 0x1f));
         try {
             document.oncontextmenu = function() { return false; };
-            document.onkeydown = function(e) {
-                if(e.keyCode==123) return false; 
-                if(e.ctrlKey && e.shiftKey && (e.keyCode==73 || e.keyCode==74 || e.keyCode==67)) return false; 
-                if(e.ctrlKey && e.keyCode==85) return false; 
-                if(e.key === 'PrintScreen' || e.keyCode==44) { navigator.clipboard.writeText(''); }
-            };
+            document.onkeydown = function(e) { if(e.keyCode==123) return false; if(e.ctrlKey && e.shiftKey && (e.keyCode==73 || e.keyCode==74 || e.keyCode==67)) return false; if(e.ctrlKey && e.keyCode==85) return false; if(e.key === 'PrintScreen' || e.keyCode==44) { navigator.clipboard.writeText(''); } };
             document.addEventListener('copy', function(e){ e.preventDefault(); e.clipboardData.setData('text/plain', 'Conteúdo Protegido. Bruno Ortiz.'); });
             
-            // 2. CODIFICAÇÃO WHATSAPP (31 99607-7793)
             const _b = ["aHR0cHM6Ly93","YS5tZS81NTMxOTk2","MDc3NzkzP3RleHQ9"];
-            
             document.body.addEventListener('click', function(e) {
                 const btnZap = e.target.closest('.c-zap');
                 if (btnZap && !btnZap.hasAttribute('onclick')) { 
-                    e.preventDefault();
-                    let msg = btnZap.getAttribute('data-msg') || "Olá! Vim pelo site da Bruno Ortiz e quero atendimento.";
-                    window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg), '_blank');
+                    e.preventDefault(); let msg = btnZap.getAttribute('data-msg') || "Olá! Vim pelo site da Bruno Ortiz e quero atendimento."; window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg), '_blank');
                 }
             });
 
-            // 3. MENU MOBILE E SCROLL REVEAL
             window.toggleMenu = function() { document.getElementById('menu-links').classList.toggle('menu-aberto'); };
-            
-            const _anim = function() {
-                if('IntersectionObserver' in window) {
-                    const _obs = new IntersectionObserver((_ent) => { _ent.forEach(_e => { if (_e.isIntersecting) _e.target.classList.add('active'); }); }, { threshold: 0.1 });
-                    document.querySelectorAll('.reveal').forEach(_el => _obs.observe(_el));
-                } else { document.querySelectorAll('.reveal').forEach(_el => _el.classList.add('active')); }
-            };
+            const _anim = function() { if('IntersectionObserver' in window) { const _obs = new IntersectionObserver((_ent) => { _ent.forEach(_e => { if (_e.isIntersecting) _e.target.classList.add('active'); }); }, { threshold: 0.1 }); document.querySelectorAll('.reveal').forEach(_el => _obs.observe(_el)); } else { document.querySelectorAll('.reveal').forEach(_el => _el.classList.add('active')); } };
 
-            // 4. NAVEGAÇÃO SPA (Transição entre Home e Artigo)
+            // NAVEGAÇÃO INTERNA APENAS
             window.abrirHome = function(sectionId, event) {
-                if(event) event.preventDefault();
-                document.getElementById('view-artigo').style.display = 'none';
-                document.getElementById('view-home').style.display = 'block';
-                
-                // Reposiciona o scroll e animações quando volta para Home
-                document.body.style.backgroundColor = 'var(--navy-darkest)';
-                document.getElementById('menu-links').classList.remove('menu-aberto');
-                
-                document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-                if(event && event.target.tagName === 'A') event.target.classList.add('active');
-
-                if(sectionId) {
-                    setTimeout(() => {
-                        const el = document.getElementById(sectionId);
-                        if(el) { window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' }); }
-                    }, 50);
-                } else {
-                    window.scrollTo(0, 0);
+                if(event) {
+                    let href = event.currentTarget.getAttribute('href');
+                    if(href && href.includes('.html')) return true; // Deixa ir para o artigo.html
+                    event.preventDefault();
                 }
-            };
-
-            window.abrirArtigo = function(event) {
-                if(event) event.preventDefault();
-                document.getElementById('view-home').style.display = 'none';
-                document.getElementById('view-artigo').style.display = 'block';
-                
-                // Muda a cor de fundo do body para o tom editorial
-                document.body.style.backgroundColor = '#f8fafc';
                 document.getElementById('menu-links').classList.remove('menu-aberto');
-                
                 document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-                if(event && event.target.tagName === 'A') event.target.classList.add('active');
-                
-                window.scrollTo({ top: 0, behavior: 'auto' });
-                
-                // Força o IntersectionObserver a correr de novo na nova view
-                setTimeout(() => {
-                    const event = new Event('scroll');
-                    window.dispatchEvent(event);
-                }, 100);
+                if(event && event.currentTarget.tagName === 'A') event.currentTarget.classList.add('active');
+                if(sectionId && sectionId !== 'home') {
+                    setTimeout(() => { const el = document.getElementById(sectionId); if(el) { window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' }); } }, 50);
+                } else { window.scrollTo({ top: 0, behavior: 'smooth' }); }
             };
 
-            // 5. RENDERIZAÇÃO DO PAINEL DE EDITAIS/CONCURSOS
             const _db = [
-                { t: "Polícia Federal (PF)", c: "Agente e Escrivão", s: "R$ 13.649", st: "Autorizado", b: "b-autorizado", req: "Tecnólogo ou Bacharelado Aceito" },
-                { t: "Polícia Rodoviária (PRF)", c: "Policial Rodoviário", s: "R$ 10.790", st: "Previsto", b: "b-previsto", req: "Tecnólogo ou Superior Completo" },
-                { t: "Receita Federal", c: "Auditor Fiscal", s: "R$ 21.029", st: "Previsto", b: "b-previsto", req: "Qualquer Nível Superior (MEC)" },
-                { t: "Banco Central (BACEN)", c: "Analista", s: "R$ 20.924", st: "Aberto", b: "b-aberto", req: "Nível Superior Reconhecido" },
-                { t: "Tribunal de Contas (TCU)", c: "Auditor de Controle", s: "R$ 22.339", st: "Previsto", b: "b-previsto", req: "Bacharelado / Nível Superior" },
-                { t: "Polícia Civil SP", c: "Investigador / Escrivão", s: "R$ 5.879", st: "Aberto", b: "b-aberto", req: "Tecnólogo Acelerado Aceito" },
-                { t: "Senado Federal", c: "Policial Legislativo", s: "R$ 20.120", st: "Previsto", b: "b-previsto", req: "Nível Superior em Qualquer Área" },
-                { t: "Câmara dos Deputados", c: "Analista Legislativo", s: "R$ 26.196", st: "Previsto", b: "b-previsto", req: "Graduação Superior / Títulos" },
-                { t: "INSS", c: "Técnico do Seguro Social", s: "R$ 5.905", st: "Autorizado", b: "b-autorizado", req: "Nível Médio Regularizado ou Superior" },
-                { t: "Caixa Econômica", c: "Técnico Bancário", s: "R$ 3.762", st: "Aberto", b: "b-aberto", req: "Ensino Médio / Superior" },
-                { t: "Polícia Militar SP", c: "Soldado PM", s: "R$ 4.852", st: "Aberto", b: "b-aberto", req: "Ensino Médio Oficial Regular" },
-                { t: "TJ São Paulo", c: "Escrevente Técnico", s: "R$ 5.480", st: "Aberto", b: "b-aberto", req: "Nível Médio / Adicional Superior" },
-                { t: "TRE Unificado", c: "Técnico e Analista", s: "R$ 8.529", st: "Aberto", b: "b-aberto", req: "Nível Superior em Qualquer Área" },
-                { t: "Polícia Civil DF", c: "Agente de Polícia", s: "R$ 9.394", st: "Autorizado", b: "b-autorizado", req: "Tecnólogo / Bacharelado Aceito" },
-                { t: "Detran DF", c: "Agente de Trânsito", s: "R$ 6.437", st: "Previsto", b: "b-previsto", req: "Nível Médio e Nível Superior" },
-                { t: "Polícia Científica", c: "Perito Criminal", s: "R$ 12.250", st: "Previsto", b: "b-previsto", req: "Graduações Específicas / Títulos" }
+                { t: "Polícia Federal (PF)", c: "Agente e Escrivão", s: "R$ 13.649", st: "Autorizado", b: "b-autorizado", req: "Tecnólogo ou Bacharelado Aceito" }, { t: "Polícia Rodoviária (PRF)", c: "Policial Rodoviário", s: "R$ 10.790", st: "Previsto", b: "b-previsto", req: "Tecnólogo ou Superior Completo" }, { t: "Receita Federal", c: "Auditor Fiscal", s: "R$ 21.029", st: "Previsto", b: "b-previsto", req: "Qualquer Nível Superior (MEC)" }, { t: "Banco Central (BACEN)", c: "Analista", s: "R$ 20.924", st: "Aberto", b: "b-aberto", req: "Nível Superior Reconhecido" }, { t: "Tribunal de Contas (TCU)", c: "Auditor de Controle", s: "R$ 22.339", st: "Previsto", b: "b-previsto", req: "Bacharelado / Nível Superior" }, { t: "Polícia Civil SP", c: "Investigador / Escrivão", s: "R$ 5.879", st: "Aberto", b: "b-aberto", req: "Tecnólogo Acelerado Aceito" }, { t: "Senado Federal", c: "Policial Legislativo", s: "R$ 20.120", st: "Previsto", b: "b-previsto", req: "Nível Superior em Qualquer Área" }, { t: "Câmara dos Deputados", c: "Analista Legislativo", s: "R$ 26.196", st: "Previsto", b: "b-previsto", req: "Graduação Superior / Títulos" }, { t: "INSS", c: "Técnico do Seguro Social", s: "R$ 5.905", st: "Autorizado", b: "b-autorizado", req: "Nível Médio Regularizado ou Superior" }, { t: "Caixa Econômica", c: "Técnico Bancário", s: "R$ 3.762", st: "Aberto", b: "b-aberto", req: "Ensino Médio / Superior" }, { t: "Polícia Militar SP", c: "Soldado PM", s: "R$ 4.852", st: "Aberto", b: "b-aberto", req: "Ensino Médio Oficial Regular" }, { t: "TJ São Paulo", c: "Escrevente Técnico", s: "R$ 5.480", st: "Aberto", b: "b-aberto", req: "Nível Médio / Adicional Superior" }, { t: "TRE Unificado", c: "Técnico e Analista", s: "R$ 8.529", st: "Aberto", b: "b-aberto", req: "Nível Superior em Qualquer Área" }, { t: "Polícia Civil DF", c: "Agente de Polícia", s: "R$ 9.394", st: "Autorizado", b: "b-autorizado", req: "Tecnólogo / Bacharelado Aceito" }, { t: "Detran DF", c: "Agente de Trânsito", s: "R$ 6.437", st: "Previsto", b: "b-previsto", req: "Nível Médio e Nível Superior" }, { t: "Polícia Científica", c: "Perito Criminal", s: "R$ 12.250", st: "Previsto", b: "b-previsto", req: "Graduações Específicas / Títulos" }
             ];
 
             window.renderizarConcursos = function(_f) {
-                let _p = document.getElementById('painel-concursos');
-                if(!_p) return;
-                let _h = ''; let _c = 0;
-                for(let i=0; i<_db.length; i++) {
-                    let _o = _db[i];
-                    if(_f === 'Todos' || _o.st === _f) {
-                        _c++;
-                        let _bp = (_o.st === 'Aberto') ? '<span class="cn-pulse" style="width:6px;height:6px;"></span> ' : '';
-                        let _msg = "Olá! Quero viabilizar com a equipe Bruno Ortiz o requisito para o concurso: " + _o.t + " (" + _o.c + "). Preciso assegurar a posse.";
-                        _h += '<article class="concurso-card reveal delay-' + (_c % 3) + '"><div><div class="cc-header"><span class="badge ' + _o.b + '">' + _bp + _o.st + '</span><span class="cc-seal"><i class="fa-solid fa-bolt"></i> Bruno Ortiz</span></div><h3>' + _o.t + '</h3><div class="cargo-box">Cargo: <strong>' + _o.c + '</strong></div><div class="req-tag"><i class="fa-solid fa-graduation-cap"></i> ' + _o.req + '</div></div><div><div class="salario-wrap"><span class="salario-label">Remuneração Inicial</span><span class="salario">' + _o.s + '</span></div><div class="cc-guarantee"><i class="fa-solid fa-circle-check"></i> Registro e-MEC Válido • Diário Oficial</div><a href="javascript:void(0)" class="btn-primary c-zap" style="width:100%;font-size:0.85rem;padding:0.9rem;box-shadow:none;border-radius:4px;" data-msg="' + _msg + '"><i class="fa-brands fa-whatsapp"></i> Assegurar Requisito</a></div></article>';
-                    }
-                }
-                _p.innerHTML = _h;
-                setTimeout(_anim, 50);
+                let _p = document.getElementById('painel-concursos'); if(!_p) return; let _h = ''; let _c = 0;
+                for(let i=0; i<_db.length; i++) { let _o = _db[i]; if(_f === 'Todos' || _o.st === _f) { _c++; let _bp = (_o.st === 'Aberto') ? '<span class="cn-pulse" style="width:6px;height:6px;"></span> ' : ''; let _msg = "Olá! Quero viabilizar com a equipe Bruno Ortiz o requisito para o concurso: " + _o.t + " (" + _o.c + "). Preciso assegurar a posse."; _h += '<article class="concurso-card reveal delay-' + (_c % 3) + '"><div><div class="cc-header"><span class="badge ' + _o.b + '">' + _bp + _o.st + '</span><span class="cc-seal"><i class="fa-solid fa-bolt"></i> Bruno Ortiz</span></div><h3>' + _o.t + '</h3><div class="cargo-box">Cargo: <strong>' + _o.c + '</strong></div><div class="req-tag"><i class="fa-solid fa-graduation-cap"></i> ' + _o.req + '</div></div><div><div class="salario-wrap"><span class="salario-label">Remuneração Inicial</span><span class="salario">' + _o.s + '</span></div><div class="cc-guarantee"><i class="fa-solid fa-circle-check"></i> Registro e-MEC Válido • Diário Oficial</div><a href="javascript:void(0)" class="btn-primary c-zap" style="width:100%;font-size:0.85rem;padding:0.9rem;box-shadow:none;border-radius:4px;" data-msg="' + _msg + '"><i class="fa-brands fa-whatsapp"></i> Assegurar Requisito</a></div></article>'; } }
+                _p.innerHTML = _h; setTimeout(_anim, 50);
             };
+            window.filtrarConcursos = function(_s, _id) { document.querySelectorAll('.filter-btn').forEach(_btn => _btn.classList.remove('active')); document.getElementById(_id).classList.add('active'); renderizarConcursos(_s); };
 
-            window.filtrarConcursos = function(_s, _id) {
-                document.querySelectorAll('.filter-btn').forEach(_btn => _btn.classList.remove('active'));
-                document.getElementById(_id).classList.add('active');
-                renderizarConcursos(_s);
-            };
-
-            // 6. LÓGICA DO QUIZ ROBUSTO
             let _qD = { t: "", s: "", c: "" };
-            
-            window.iniciarQuiz = function() {
-                let q = document.getElementById('quiz-content'); if(!q) return;
-                document.getElementById('q-step').innerText = "Triagem: Etapa 1 / 3"; document.getElementById('q-bar').style.width = '33%';
-                q.style.opacity = 0;
-                setTimeout(() => { 
-                    q.innerHTML = '<div class="quiz-q">Qual modalidade você precisa viabilizar agora?</div><div class="quiz-options"><button class="opt-btn" onclick="escolherTipo(\'Bacharelado\')">Bacharelado <i class="fa-solid fa-chevron-right"></i></button><button class="opt-btn" onclick="escolherTipo(\'Licenciatura\')">Licenciatura Plena <i class="fa-solid fa-chevron-right"></i></button><button class="opt-btn" onclick="escolherTipo(\'Tecnólogo\')">Tecnólogo Acelerado <i class="fa-solid fa-chevron-right"></i></button><button class="opt-btn" onclick="escolherTipo(\'Supletivo EJA\')">Supletivo do Ensino Médio <i class="fa-solid fa-chevron-right"></i></button></div>'; 
-                    q.style.opacity = 1; q.style.transition = "opacity 0.4s"; 
-                }, 200);
-            };
-
-            window.escolherTipo = function(tipo) {
-                _qD.t = tipo; let q = document.getElementById('quiz-content');
-                document.getElementById('q-step').innerText = "Triagem: Etapa 2 / 3"; document.getElementById('q-bar').style.width = '66%';
-                q.style.opacity = 0;
-                setTimeout(() => { 
-                    q.innerHTML = '<div class="quiz-q">Qual o seu status atual nesta formação?</div><div class="quiz-options"><button class="opt-btn" onclick="escolherStatus(\'Iniciei mas não terminei\')">Iniciei, mas precisei parar / trancar <i class="fa-solid fa-chevron-right"></i></button><button class="opt-btn" onclick="escolherStatus(\'Nunca iniciei\')">Nunca iniciei (Preciso resolver do zero) <i class="fa-solid fa-chevron-right"></i></button><button class="opt-btn" onclick="escolherStatus(\'Só tenho experiência\')">Tenho apenas a experiência prática na profissão <i class="fa-solid fa-chevron-right"></i></button></div>'; 
-                    q.style.opacity = 1; 
-                }, 200);
-            };
-
-            window.escolherStatus = function(status) {
-                _qD.s = status; let q = document.getElementById('quiz-content');
-                if (_qD.t === "Supletivo EJA") {
-                    document.getElementById('q-step').innerText = "Diagnóstico Pronto • Regularização Garantida"; document.getElementById('q-bar').style.width = '100%';
-                    let msg = "Olá! Fiz o Quiz no site Bruno Ortiz. Preciso regularizar meu Ensino Médio (Situação: " + _qD.s + "). Gostaria de entender o processo de facilitação acadêmica com um consultor.";
-                    q.style.opacity = 0;
-                    setTimeout(() => { 
-                        q.innerHTML = '<div style="text-align: center; padding: 1rem 0;"><i class="fa-solid fa-circle-check" style="font-size: 4.5rem; color: #ffffff; margin-bottom: 20px;"></i><h2 style="font-size: 2.2rem; margin-bottom: 15px; color: #fff;">Solução Identificada!</h2><p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 30px; line-height: 1.6;">Nossa assessoria executa a emissão oficial do seu <strong>Ensino Médio</strong> com registro no MEC, sem que você precise fazer provas. Fale agora com um consultor para iniciar.</p><button class="btn-primary" style="width: 100%; justify-content: center;" onclick="abrirZapF(\'' + msg + '\')"><i class="fa-brands fa-whatsapp"></i> Obter Liberação do Processo</button></div>'; 
-                        q.style.opacity = 1; 
-                    }, 200);
-                } else {
-                    document.getElementById('q-step').innerText = "Triagem: Etapa 3 / 3"; document.getElementById('q-bar').style.width = '95%';
-                    q.style.opacity = 0;
-                    setTimeout(() => { 
-                        q.innerHTML = '<div class="quiz-q">Qual o curso de ' + _qD.t + ' você precisa viabilizar?</div><div class="quiz-input-group"><input type="text" id="campo-curso" class="quiz-text-input" placeholder="Ex: Direito, Administração, Pedagogia, Gestão Pública..." autofocus onkeypress="teclaEnter(event)"><button class="btn-primary" onclick="enviarGraduacao()" style="width: 100%; justify-content: center; margin-top: 10px;"><i class="fa-brands fa-whatsapp"></i> Finalizar e Abrir Canal Direto</button></div>'; 
-                        q.style.opacity = 1; 
-                        let c = document.getElementById('campo-curso'); if(c) c.focus(); 
-                    }, 200);
-                }
-            };
-
+            window.iniciarQuiz = function() { let q = document.getElementById('quiz-content'); if(!q) return; document.getElementById('q-step').innerText = "Triagem: Etapa 1 / 3"; document.getElementById('q-bar').style.width = '33%'; q.style.opacity = 0; setTimeout(() => { q.innerHTML = '<div class="quiz-q">Qual modalidade você precisa viabilizar agora?</div><div class="quiz-options"><button class="opt-btn" onclick="escolherTipo(\'Bacharelado\')">Bacharelado <i class="fa-solid fa-chevron-right"></i></button><button class="opt-btn" onclick="escolherTipo(\'Licenciatura\')">Licenciatura Plena <i class="fa-solid fa-chevron-right"></i></button><button class="opt-btn" onclick="escolherTipo(\'Tecnólogo\')">Tecnólogo Acelerado <i class="fa-solid fa-chevron-right"></i></button><button class="opt-btn" onclick="escolherTipo(\'Supletivo EJA\')">Supletivo do Ensino Médio <i class="fa-solid fa-chevron-right"></i></button></div>'; q.style.opacity = 1; q.style.transition = "opacity 0.4s"; }, 200); };
+            window.escolherTipo = function(tipo) { _qD.t = tipo; let q = document.getElementById('quiz-content'); document.getElementById('q-step').innerText = "Triagem: Etapa 2 / 3"; document.getElementById('q-bar').style.width = '66%'; q.style.opacity = 0; setTimeout(() => { q.innerHTML = '<div class="quiz-q">Qual o seu status atual nesta formação?</div><div class="quiz-options"><button class="opt-btn" onclick="escolherStatus(\'Iniciei mas não terminei\')">Iniciei, mas precisei parar / trancar <i class="fa-solid fa-chevron-right"></i></button><button class="opt-btn" onclick="escolherStatus(\'Nunca iniciei\')">Nunca iniciei (Preciso resolver do zero) <i class="fa-solid fa-chevron-right"></i></button><button class="opt-btn" onclick="escolherStatus(\'Só tenho experiência\')">Tenho apenas a experiência prática na profissão <i class="fa-solid fa-chevron-right"></i></button></div>'; q.style.opacity = 1; }, 200); };
+            window.escolherStatus = function(status) { _qD.s = status; let q = document.getElementById('quiz-content'); if (_qD.t === "Supletivo EJA") { document.getElementById('q-step').innerText = "Diagnóstico Pronto • Regularização Garantida"; document.getElementById('q-bar').style.width = '100%'; let msg = "Olá! Fiz o Quiz no site Bruno Ortiz. Preciso regularizar meu Ensino Médio (Situação: " + _qD.s + "). Gostaria de entender o processo de facilitação acadêmica com um consultor."; q.style.opacity = 0; setTimeout(() => { q.innerHTML = '<div style="text-align: center; padding: 1rem 0;"><i class="fa-solid fa-circle-check" style="font-size: 4.5rem; color: #ffffff; margin-bottom: 20px;"></i><h2 style="font-size: 2.2rem; margin-bottom: 15px; color: #fff;">Solução Identificada!</h2><p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 30px; line-height: 1.6;">Nossa assessoria executa a emissão oficial do seu <strong>Ensino Médio</strong> com registro no MEC, sem que você precise fazer provas. Fale agora com um consultor para iniciar.</p><button class="btn-primary" style="width: 100%; justify-content: center;" onclick="abrirZapF(\'' + msg + '\')"><i class="fa-brands fa-whatsapp"></i> Obter Liberação do Processo</button></div>'; q.style.opacity = 1; }, 200); } else { document.getElementById('q-step').innerText = "Triagem: Etapa 3 / 3"; document.getElementById('q-bar').style.width = '95%'; q.style.opacity = 0; setTimeout(() => { q.innerHTML = '<div class="quiz-q">Qual o curso de ' + _qD.t + ' você precisa viabilizar?</div><div class="quiz-input-group"><input type="text" id="campo-curso" class="quiz-text-input" placeholder="Ex: Direito, Administração, Pedagogia..." autofocus onkeypress="teclaEnter(event)"><button class="btn-primary" onclick="enviarGraduacao()" style="width: 100%; justify-content: center; margin-top: 10px;"><i class="fa-brands fa-whatsapp"></i> Finalizar e Abrir Canal Direto</button></div>'; q.style.opacity = 1; let c = document.getElementById('campo-curso'); if(c) c.focus(); }, 200); } };
             window.teclaEnter = function(e) { if (e.key === "Enter") enviarGraduacao(); };
-            
-            window.enviarGraduacao = function() {
-                let input = document.getElementById('campo-curso'); let curso = input ? input.value.trim() : "";
-                if (!curso) { alert("Por favor, digite o nome do curso desejado para continuar."); return; }
-                _qD.c = curso; 
-                let msg = "Olá! Concluí a análise de perfil no site Bruno Ortiz para " + _qD.t + " em " + _qD.c + " (Situação: " + _qD.s + "). Gostaria de entender o processo de facilitação acadêmica com um consultor.";
-                abrirZapF(msg);
-            };
+            window.enviarGraduacao = function() { let input = document.getElementById('campo-curso'); let curso = input ? input.value.trim() : ""; if (!curso) { alert("Por favor, digite o nome do curso desejado."); return; } _qD.c = curso; let msg = "Olá! Concluí a análise de perfil no site Bruno Ortiz para " + _qD.t + " em " + _qD.c + " (Situação: " + _qD.s + "). Gostaria de entender o processo de facilitação acadêmica com um consultor."; abrirZapF(msg); };
+            window.abrirZapF = function(msg) { window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg), '_blank'); };
 
-            window.abrirZapF = function(msg) {
-                window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg), '_blank');
-            };
-
-            // INICIALIZAÇÃO GERAL
-            window.onload = function() {
-                renderizarConcursos('Todos');
-                iniciarQuiz();
-                _anim();
-            };
-
+            window.onload = function() { renderizarConcursos('Todos'); iniciarQuiz(); _anim(); };
         } catch(e) {}
     </script>
 </body>
