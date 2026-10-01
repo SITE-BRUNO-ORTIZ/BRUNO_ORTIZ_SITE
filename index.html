@@ -13,22 +13,15 @@
     <!-- ÍCONE DO SITE -->
     <link rel="icon" href="image_19.png" type="image/png">
 
-    <!-- FONTES PREMIUM MODERNAS (Sem falhas de acentuação) -->
+    <!-- FONTES PREMIUM MODERNAS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- OPEN GRAPH -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Bruno Ortiz | Graduações & Concursos">
-    <meta property="og:description" content="Assessoria educacional executiva. Conquiste sua titulação acadêmica homologada no e-MEC com total amparo legal.">
-    <meta property="og:url" content="https://brunoaprovaconcursos.com.br/">
-    <meta property="og:image" content="image_18.png">
-
     <style>
         /* ==========================================
-           1. NOVA PALETA: AZUL MARINHO & PLATINA (Corporate Premium)
+           1. PALETA MONOCROMÁTICA PREMIUM (Azul Marinho & Platina)
         ========================================== */
         :root {
             --navy-darkest: #030811; 
@@ -36,7 +29,6 @@
             --navy-main: #0B1E36;
             --navy-card: #102a4a;
             
-            /* Destaque Institucional: Platina / Branco Gelo (Zero "Cara de Jogo") */
             --accent-light: #ffffff; 
             --accent-main: #f8fafc; 
             --accent-dark: #e2e8f0;
@@ -47,7 +39,6 @@
             --font-body: 'Inter', sans-serif;
         }
 
-        /* PROTEÇÕES GERAIS */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { 
@@ -63,22 +54,21 @@
         }
         
         @media print { body { display: none !important; } }
-        
         h1, h2, h3, h4 { font-family: var(--font-head); color: #ffffff; }
 
-        /* REVEAL ANIMATIONS */
+        /* REVEAL ANIMATIONS BASE */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
         .delay-1 { transition-delay: 0.15s; } .delay-2 { transition-delay: 0.3s; }
 
         /* ==========================================
-           2. MENU FLUTUANTE (PILL HEADER)
+           2. MENU FLUTUANTE (ANIMAÇÃO SLIDE DOWN)
         ========================================== */
         .site-header { 
             position: fixed; 
             top: 20px; 
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, -150%); /* For Slide Animation */
             width: 95%; 
             max-width: 1200px;
             z-index: 1000; 
@@ -91,7 +81,12 @@
             border-radius: 50px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            transition: all 0.3s;
+            animation: slideDownMenu 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation-delay: 0.2s;
+        }
+        
+        @keyframes slideDownMenu {
+            to { transform: translate(-50%, 0); }
         }
         
         .nav-brand { display: flex; align-items: center; text-decoration: none; }
@@ -103,20 +98,36 @@
         .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0%; height: 2px; background: #ffffff; transition: 0.3s; }
         .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
         
-        .btn-destaque { background: rgba(255, 255, 255, 0.05); border: 1px solid #ffffff !important; padding: 0.6rem 1.4rem !important; border-radius: 50px !important; color: #ffffff !important; }
+        /* BOTÃO DESTAQUE COM BRILHO CONTÍNUO */
+        .btn-destaque { 
+            background: rgba(255, 255, 255, 0.05); 
+            border: 1px solid #ffffff !important; 
+            padding: 0.6rem 1.4rem !important; 
+            border-radius: 50px !important; 
+            color: #ffffff !important; 
+            position: relative;
+            overflow: hidden;
+        }
         .btn-destaque::after { display: none !important; }
+        .btn-destaque::before {
+            content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent); transform: skewX(-25deg); animation: shineBtn 3s infinite;
+        }
+        @keyframes shineBtn {
+            0% { left: -100%; }
+            20% { left: 200%; }
+            100% { left: 200%; }
+        }
         .btn-destaque:hover { background: #ffffff; color: var(--navy-darkest) !important; box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
         
         .mobile-toggle { display: none; color: #ffffff; font-size: 1.5rem; cursor: pointer; }
 
-        /* LÓGICA DE EXIBIÇÃO DA LOGO: Oculta no PC, visível no celular */
         @media (min-width: 1051px) {
             .nav-brand { display: none !important; }
             .site-header { justify-content: center; }
         }
 
         @media (max-width: 1050px) {
-            .site-header { justify-content: space-between; top: 10px; border-radius: 12px; padding: 15px 20px; }
+            .site-header { justify-content: space-between; top: 10px; border-radius: 12px; padding: 15px 20px; transform: translate(-50%, -120%); }
             .mobile-toggle { display: block; }
             .nav-links { position: absolute; top: 70px; left: 0; width: 100%; background: rgba(11, 30, 54, 0.98); backdrop-filter: blur(15px); flex-direction: column; padding: 0; gap: 0; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
             .nav-links.menu-aberto { max-height: 500px; padding: 1.5rem 0; border: 1px solid rgba(255, 255, 255, 0.2); }
@@ -124,12 +135,12 @@
             .btn-destaque { margin: 1rem 0; width: 85%; text-align: center; }
         }
 
-        /* BOTOES GERAIS (PLATINA/BRANCO) */
+        /* BOTOES GERAIS */
         .btn-primary { background: linear-gradient(135deg, var(--accent-light), var(--accent-dark)); color: var(--navy-darkest) !important; font-family: var(--font-head); font-weight: 800; padding: 1.2rem 2.5rem; border-radius: 50px; text-decoration: none; text-transform: uppercase; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: none; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); font-size: 0.95rem; letter-spacing: 1px; }
         .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(255, 255, 255, 0.2); background: linear-gradient(135deg, var(--accent-dark), var(--accent-light)); }
 
         /* ==========================================
-           3. VIEW HOME (SPA)
+           3. HERO & ANIMAÇÃO DE TEXTO CAINDO
         ========================================== */
         section { position: relative; z-index: 1; padding: 120px 5% 80px; scroll-margin-top: 80px; }
         .container { max-width: 1200px; margin: 0 auto; }
@@ -138,17 +149,36 @@
         .section-header h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; line-height: 1.2; color: #ffffff; }
         .section-header p { color: var(--text-muted); font-size: 1.1rem; max-width: 800px; margin: 0 auto; line-height: 1.7; }
 
-        /* HERO */
         .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-top: 150px; }
         .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 30%, rgba(11, 30, 54, 0.8) 0%, var(--navy-darkest) 85%), url('https://images.unsplash.com/photo-1505664177922-928383a51980?auto=format&fit=crop&w=1920&q=80') center/cover; z-index: -1; }
         
-        .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 0.5rem 1.5rem; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 50px; color: #ffffff; font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1.8rem; }
+        /* BADGE DINÂMICA (CAINDO E FLUTUANDO) */
+        .hero-badge-container {
+            display: inline-flex; align-items: center; gap: 12px; padding: 0.7rem 2rem; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 50px; color: #ffffff; font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 2rem; backdrop-filter: blur(10px);
+            animation: floatBadge 4s ease-in-out infinite;
+        }
+        @keyframes floatBadge {
+            0%, 100% { transform: translateY(0); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+            50% { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); }
+        }
+        .badge-word { display: inline-flex; align-items: center; gap: 6px; opacity: 0; transform: translateY(-25px); animation: dropWord 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+        .badge-word:nth-child(1) { animation-delay: 0.3s; }
+        .badge-word:nth-child(3) { animation-delay: 0.5s; }
+        .badge-word:nth-child(5) { animation-delay: 0.7s; }
+        @keyframes dropWord { to { opacity: 1; transform: translateY(0); } }
+        .badge-sep { color: rgba(255,255,255,0.3); opacity: 0; animation: fadeInSep 0.5s forwards; animation-delay: 0.9s; }
+        @keyframes fadeInSep { to { opacity: 1; } }
         
-        .hero h1 { font-size: clamp(1.8rem, 4.5vw, 4rem); line-height: 1.15; margin-bottom: 1.5rem; font-weight: 900; max-width: 1000px; color: #ffffff; }
+        /* TEXTOS HERO */
+        .hero h1 { font-size: clamp(1.8rem, 4.2vw, 3.8rem); line-height: 1.15; margin-bottom: 1.2rem; font-weight: 900; max-width: 1000px; color: #ffffff; }
+        .hero-sub { font-size: 1.15rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 2.5rem; font-weight: 500; }
         
-        .vsl-wrapper { width: 100%; max-width: 850px; margin: 30px auto 40px; position: relative; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 20px 60px rgba(0,0,0,0.8); background: #000; aspect-ratio: 16 / 9; }
+        .vsl-wrapper { width: 100%; max-width: 850px; margin: 0 auto 40px; position: relative; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 20px 60px rgba(0,0,0,0.8); background: #000; aspect-ratio: 16 / 9; }
         .vsl-wrapper iframe { width: 100%; height: 100%; border: none; }
 
+        /* ==========================================
+           4. SEÇÕES DO SITE
+        ========================================== */
         /* COMO FUNCIONA */
         #como-funciona { background: var(--navy-dark); }
         .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
@@ -170,8 +200,8 @@
         
         @media (max-width: 992px) { .why-grid { grid-template-columns: 1fr; text-align: center; } .why-content li { flex-direction: column; align-items: center; text-align: center; } }
 
-        /* GRADUAÇÕES / CONCURSOS */
-        #concursos { background: var(--navy-dark); border-top: 1px solid rgba(255,255,255,0.02); }
+        /* GRADUAÇÕES (CARDS) */
+        #graduacoes { background: var(--navy-dark); border-top: 1px solid rgba(255,255,255,0.02); }
         .grad-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .grad-card { background: var(--navy-card); border-radius: 12px; overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; border: 1px solid rgba(255,255,255,0.02); }
         .grad-card:hover { transform: translateY(-5px); border-color: rgba(255, 255, 255, 0.3); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
@@ -182,6 +212,38 @@
         .g-features { list-style: none; margin-bottom: 25px; flex-grow: 1; }
         .g-features li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 0.9rem; color: #e2e8f0; }
         .g-features li i { color: #cbd5e1; margin-top: 3px; }
+
+        /* EDITAIS DE CONCURSOS (O PAINEL QUE PEDIU) */
+        #editais { background: var(--navy-darkest); border-top: 1px solid rgba(255,255,255,0.02); }
+        .concursos-notice { max-width: 900px; margin: 0 auto 3rem; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; padding: 1.2rem 1.8rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+        .cn-text { display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #fff; font-weight: 600; }
+        .cn-text i { color: #fff; font-size: 1.4rem; }
+        .cn-tag { background: #ffffff; color: var(--navy-darkest); font-size: 0.72rem; font-weight: 800; padding: 0.35rem 0.85rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 1px; display: inline-flex; align-items: center; gap: 6px; }
+        .cn-pulse { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 8px #22c55e; animation: pulseDot 1.6s infinite; }
+        @keyframes pulseDot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.3); } }
+        
+        .filters { display: flex; justify-content: center; gap: 1rem; margin-bottom: 3.5rem; flex-wrap: wrap; }
+        .filter-btn { padding: 0.8rem 2rem; border: 1px solid #475569; background: transparent; color: #cbd5e1; border-radius: 50px; cursor: pointer; font-weight: 700; transition: 0.3s; font-size: 0.88rem; font-family: var(--font-body); text-transform: uppercase; letter-spacing: 1px; }
+        .filter-btn.active, .filter-btn:hover { background: #ffffff; color: var(--navy-darkest); border-color: #ffffff; box-shadow: 0 6px 16px rgba(255, 255, 255, 0.2); }
+        
+        .concursos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.8rem; max-width: 1300px; margin: 0 auto; }
+        .concurso-card { background: var(--navy-card); border: 1px solid rgba(255,255,255,0.05); border-top: 4px solid #ffffff; padding: 2.2rem 2rem; border-radius: 8px; transition: all 0.35s; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
+        .concurso-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); border-top-color: #cbd5e1; }
+        .cc-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; }
+        .badge { display: inline-flex; align-items: center; gap: 6px; padding: 0.35rem 0.85rem; font-size: 0.72rem; font-weight: 800; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; color: var(--navy-darkest); }
+        .b-aberto { background: #a7f3d0; border: 1px solid #34d399; } 
+        .b-autorizado { background: #fde68a; border: 1px solid #fbbf24; } 
+        .b-previsto { background: #cbd5e1; border: 1px solid #94a3b8; }
+        .cc-seal { font-size: 0.72rem; color: #fff; font-weight: 700; background: rgba(255, 255, 255, 0.1); padding: 0.3rem 0.65rem; border-radius: 4px; display: inline-flex; align-items: center; gap: 5px; }
+        .concurso-card h3 { font-size: 1.35rem; margin-bottom: 0.6rem; line-height: 1.3; color: #fff; }
+        .cargo-box { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 0.8rem; line-height: 1.5; }
+        .cargo-box strong { color: #fff; }
+        .req-tag { background: rgba(255,255,255,0.05); color: #cbd5e1; font-size: 0.78rem; font-weight: 600; padding: 0.4rem 0.75rem; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 1.2rem; border-left: 3px solid #ffffff; }
+        .salario-wrap { background: rgba(0, 0, 0, 0.2); padding: 0.9rem 1.2rem; border-radius: 4px; margin-bottom: 1.5rem; display: flex; align-items: baseline; justify-content: space-between; border: 1px dashed rgba(255,255,255,0.2); }
+        .salario-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px; }
+        .salario { color: #ffffff; font-weight: 800; font-size: 1.55rem; line-height: 1; font-family: var(--font-head); }
+        .cc-guarantee { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 7px; }
+        .cc-guarantee i { color: #22c55e; font-size: 0.85rem; }
 
         /* QUIZ ROBUSTO */
         #quiz { background: radial-gradient(circle at top, var(--navy-dark) 0%, var(--navy-darkest) 100%); }
@@ -211,7 +273,7 @@
         }
 
         /* ==========================================
-           4. VIEW ARTIGO (BLOG: CRIME)
+           5. VIEW ARTIGO (BLOG: CRIME)
         ========================================== */
         #view-artigo { display: none; padding-bottom: 6rem; background: var(--navy-darkest); }
         .article-header { background: radial-gradient(circle at bottom, var(--navy-dark) 0%, var(--navy-darkest) 100%); padding: 160px 5% 60px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
@@ -231,7 +293,7 @@
         .article-cta p { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 30px; }
 
         /* ==========================================
-           5. FOOTER
+           6. FOOTER
         ========================================== */
         footer { background: #02050a; padding: 80px 5% 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); position: relative; z-index: 2; }
         footer img { max-width: 150px; margin-bottom: 30px; filter: drop-shadow(0 0 10px rgba(0,0,0,0.5)); }
@@ -241,7 +303,7 @@
 </head>
 <body oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
 
-    <!-- HEADER / MENU FLUTUANTE (Sem logo no PC) -->
+    <!-- HEADER / MENU FLUTUANTE -->
     <header class="site-header">
         <a href="#home" class="nav-brand" onclick="abrirHome('home', event)">
             <img src="image_18.png" alt="Bruno Ortiz Graduações">
@@ -252,7 +314,7 @@
             <a href="#como-funciona" onclick="abrirHome('como-funciona', event)" class="nav-link">Como Funciona</a>
             <a href="#por-que-comprar" onclick="abrirHome('por-que-comprar', event)" class="nav-link">Por que comprar com a gente</a>
             <a href="#" onclick="abrirArtigo(event)" style="color: #ef4444; font-weight: 700;">Diploma Falso é Crime</a>
-            <a href="#concursos" onclick="abrirHome('concursos', event)" class="nav-link">Graduações / Concursos</a>
+            <a href="#graduacoes" onclick="abrirHome('graduacoes', event)" class="nav-link">Graduações / Concursos</a>
             <a href="#quiz" onclick="abrirHome('quiz', event)" class="btn-destaque"><i class="fa-solid fa-graduation-cap"></i> Análise de Perfil</a>
         </nav>
     </header>
@@ -262,13 +324,24 @@
     <!-- VIEW: HOME (SPA PRINCIPAL) -->
     <div id="view-home">
         
-        <!-- HERO -->
+        <!-- HERO COM ANIMAÇÃO DE TEXTO CAINDO E GATILHO MENTAL -->
         <section id="home" class="hero">
             <div class="hero-bg"></div>
             <div class="container reveal active">
-                <div class="hero-badge"><i class="fa-solid fa-scale-balanced"></i> Amparo Legal LDB 9.394/96</div>
-                <h1>A Burocracia Acadêmica não pode atrasar a sua posse.<br><span>Nós resolvemos o seu diploma.</span></h1>
-                <div class="vsl-wrapper">
+                
+                <div class="hero-badge-container">
+                    <span class="badge-word"><i class="fa-solid fa-shield-check"></i> Garantia</span>
+                    <span class="badge-sep">|</span>
+                    <span class="badge-word"><i class="fa-solid fa-award"></i> Reconhecimento</span>
+                    <span class="badge-sep">|</span>
+                    <span class="badge-word"><i class="fa-solid fa-lock"></i> Segurança</span>
+                </div>
+
+                <h1>Conquiste ou resolva a sua pendência acadêmica<br><span>se não o seu dinheiro de volta.</span></h1>
+                
+                <p class="hero-sub reveal delay-1">Assista ao nosso vídeo, leia as nossas informações e fale com um de nossos consultores.</p>
+                
+                <div class="vsl-wrapper reveal delay-2">
                     <iframe src="https://www.youtube-nocookie.com/embed/ncnGTiGdI4I?rel=0&playsinline=1&modestbranding=1" title="Apresentação Bruno Ortiz" allowfullscreen></iframe>
                 </div>
                 <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
@@ -345,11 +418,11 @@
             </div>
         </section>
 
-        <!-- GRADUAÇÕES E CONCURSOS -->
-        <section id="concursos">
+        <!-- GRADUAÇÕES (CARDS) -->
+        <section id="graduacoes">
             <div class="container">
                 <div class="section-header reveal">
-                    <h2>Graduações & Soluções para Concursos</h2>
+                    <h2>Graduações & Soluções</h2>
                     <p>Modalidades homologadas para assegurar a sua aprovação na fase de provas de títulos e na posse de cargos públicos de alto escalão.</p>
                 </div>
                 <div class="grad-grid">
@@ -399,6 +472,30 @@
             </div>
         </section>
 
+        <!-- PAINEL DE EDITAIS E CONCURSOS -->
+        <section id="concursos">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Mapeamento de Editais e Posse Facilitada</h2>
+                    <p>Nossa assessoria executa 100% do processo burocrático para emitir o seu diploma reconhecido pelo MEC e garantir a sua posse definitiva no cargo.</p>
+                </div>
+
+                <div class="concursos-notice reveal">
+                    <div class="cn-text"><i class="fa-solid fa-shield-halved"></i> <span>Viabilização Documental Completa: Homologação no e-MEC e DOU.</span></div>
+                    <div class="cn-tag"><span class="cn-pulse"></span> Editais Ativos 2026</div>
+                </div>
+                
+                <div class="filters reveal delay-1">
+                    <button class="filter-btn active" id="f-todos" onclick="filtrarConcursos('Todos', 'f-todos')">Todos os Editais</button>
+                    <button class="filter-btn" id="f-aberto" onclick="filtrarConcursos('Aberto', 'f-aberto')">Inscrições Abertas</button>
+                    <button class="filter-btn" id="f-auto" onclick="filtrarConcursos('Autorizado', 'f-auto')">Autorizados</button>
+                    <button class="filter-btn" id="f-prev" onclick="filtrarConcursos('Previsto', 'f-prev')">Previstos</button>
+                </div>
+
+                <div class="concursos-grid" id="painel-concursos"></div>
+            </div>
+        </section>
+
         <!-- QUIZ ROBUSTO -->
         <section id="quiz">
             <div class="container">
@@ -413,7 +510,7 @@
                         <div class="bar-bg"><div class="bar-fill" id="q-bar" style="width: 33%;"></div></div>
                     </div>
                     <div class="quiz-content-area" id="quiz-content">
-                        <!-- Conteúdo será injetado pelo JS -->
+                        <!-- Conteúdo injetado via JS -->
                     </div>
                 </div>
             </div>
@@ -461,7 +558,7 @@
     <footer>
         <img src="image_19.png" alt="Bruno Ortiz - Assessoria Educacional">
         <p class="footer-desc">Operação nacional executiva. Facilitamos processos acadêmicos burocráticos e emitimos titulações chanceladas pelo MEC com estrito amparo legal para executivos e editais públicos.</p>
-        <a href="javascript:void(0)" class="btn-primary c-zap" style="font-size: 0.95rem; padding: 12px 25px;" data-msg="Olá! Gostaria de falar com o consultor da Bruno Ortiz.">
+        <a href="javascript:void(0)" class="btn-primary c-zap" style="font-size: 0.95rem; padding: 12px 25px;" data-msg="Olá! Gostaria de falar com um consultor da Bruno Ortiz.">
             <i class="fa-brands fa-whatsapp"></i> Falar com Consultor: (31) 99607-7793
         </a>
         <div class="copyright">
@@ -469,7 +566,7 @@
         </div>
     </footer>
 
-    <!-- ENGINE JAVASCRIPT: SPA, QUIZ, ANTI-COPY, WHATSAPP CÓDIGO -->
+    <!-- ENGINE JAVASCRIPT: SPA, QUIZ, EDITAIS, ANTI-COPY -->
     <script>
         // 1. SISTEMA ANTI-CÓPIA E BLOQUEIO DEVTOOLS
         (function(_0x2213a, _0x3b89b){
@@ -487,7 +584,7 @@
             };
             document.addEventListener('copy', function(e){ e.preventDefault(); e.clipboardData.setData('text/plain', 'Conteúdo Protegido. Bruno Ortiz.'); });
             
-            // 2. CODIFICAÇÃO WHATSAPP (31 99607-7793) -> Base64
+            // 2. CODIFICAÇÃO WHATSAPP (31 99607-7793)
             const _b = ["aHR0cHM6Ly93","YS5tZS81NTMxOTk2","MDc3NzkzP3RleHQ9"];
             
             document.body.addEventListener('click', function(e) {
@@ -509,7 +606,7 @@
                 } else { document.querySelectorAll('.reveal').forEach(_el => _el.classList.add('active')); }
             };
 
-            // 4. LÓGICA DE NAVEGAÇÃO SPA
+            // 4. NAVEGAÇÃO SPA
             window.abrirHome = function(sectionId, event) {
                 if(event) event.preventDefault();
                 document.getElementById('view-artigo').style.display = 'none';
@@ -542,7 +639,50 @@
                 _anim(); 
             };
 
-            // 5. LÓGICA DO QUIZ ROBUSTO
+            // 5. RENDERIZAÇÃO DO PAINEL DE EDITAIS/CONCURSOS
+            const _db = [
+                { t: "Polícia Federal (PF)", c: "Agente e Escrivão", s: "R$ 13.649", st: "Autorizado", b: "b-autorizado", req: "Tecnólogo ou Bacharelado Aceito" },
+                { t: "Polícia Rodoviária (PRF)", c: "Policial Rodoviário", s: "R$ 10.790", st: "Previsto", b: "b-previsto", req: "Tecnólogo ou Superior Completo" },
+                { t: "Receita Federal", c: "Auditor Fiscal", s: "R$ 21.029", st: "Previsto", b: "b-previsto", req: "Qualquer Nível Superior (MEC)" },
+                { t: "Banco Central (BACEN)", c: "Analista", s: "R$ 20.924", st: "Aberto", b: "b-aberto", req: "Nível Superior Reconhecido" },
+                { t: "Tribunal de Contas (TCU)", c: "Auditor de Controle", s: "R$ 22.339", st: "Previsto", b: "b-previsto", req: "Bacharelado / Nível Superior" },
+                { t: "Polícia Civil SP", c: "Investigador / Escrivão", s: "R$ 5.879", st: "Aberto", b: "b-aberto", req: "Tecnólogo Acelerado Aceito" },
+                { t: "Senado Federal", c: "Policial Legislativo", s: "R$ 20.120", st: "Previsto", b: "b-previsto", req: "Nível Superior em Qualquer Área" },
+                { t: "Câmara dos Deputados", c: "Analista Legislativo", s: "R$ 26.196", st: "Previsto", b: "b-previsto", req: "Graduação Superior / Títulos" },
+                { t: "INSS", c: "Técnico do Seguro Social", s: "R$ 5.905", st: "Autorizado", b: "b-autorizado", req: "Nível Médio Regularizado ou Superior" },
+                { t: "Caixa Econômica", c: "Técnico Bancário", s: "R$ 3.762", st: "Aberto", b: "b-aberto", req: "Ensino Médio / Superior" },
+                { t: "Polícia Militar SP", c: "Soldado PM", s: "R$ 4.852", st: "Aberto", b: "b-aberto", req: "Ensino Médio Oficial Regular" },
+                { t: "TJ São Paulo", c: "Escrevente Técnico", s: "R$ 5.480", st: "Aberto", b: "b-aberto", req: "Nível Médio / Adicional Superior" },
+                { t: "TRE Unificado", c: "Técnico e Analista", s: "R$ 8.529", st: "Aberto", b: "b-aberto", req: "Nível Superior em Qualquer Área" },
+                { t: "Polícia Civil DF", c: "Agente de Polícia", s: "R$ 9.394", st: "Autorizado", b: "b-autorizado", req: "Tecnólogo / Bacharelado Aceito" },
+                { t: "Detran DF", c: "Agente de Trânsito", s: "R$ 6.437", st: "Previsto", b: "b-previsto", req: "Nível Médio e Nível Superior" },
+                { t: "Polícia Científica", c: "Perito Criminal", s: "R$ 12.250", st: "Previsto", b: "b-previsto", req: "Graduações Específicas / Títulos" }
+            ];
+
+            window.renderizarConcursos = function(_f) {
+                let _p = document.getElementById('painel-concursos');
+                if(!_p) return;
+                let _h = ''; let _c = 0;
+                for(let i=0; i<_db.length; i++) {
+                    let _o = _db[i];
+                    if(_f === 'Todos' || _o.st === _f) {
+                        _c++;
+                        let _bp = (_o.st === 'Aberto') ? '<span class="cn-pulse" style="width:6px;height:6px;"></span> ' : '';
+                        let _msg = "Olá! Quero viabilizar com a equipe Bruno Ortiz o requisito para o concurso: " + _o.t + " (" + _o.c + "). Preciso assegurar a posse.";
+                        _h += '<article class="concurso-card reveal delay-' + (_c % 3) + '"><div><div class="cc-header"><span class="badge ' + _o.b + '">' + _bp + _o.st + '</span><span class="cc-seal"><i class="fa-solid fa-bolt"></i> Bruno Ortiz</span></div><h3>' + _o.t + '</h3><div class="cargo-box">Cargo: <strong>' + _o.c + '</strong></div><div class="req-tag"><i class="fa-solid fa-graduation-cap"></i> ' + _o.req + '</div></div><div><div class="salario-wrap"><span class="salario-label">Remuneração Inicial</span><span class="salario">' + _o.s + '</span></div><div class="cc-guarantee"><i class="fa-solid fa-circle-check"></i> Registro e-MEC Válido • Diário Oficial</div><a href="javascript:void(0)" class="btn-primary c-zap" style="width:100%;font-size:0.85rem;padding:0.9rem;box-shadow:none;border-radius:4px;" data-msg="' + _msg + '"><i class="fa-brands fa-whatsapp"></i> Assegurar Requisito</a></div></article>';
+                    }
+                }
+                _p.innerHTML = _h;
+                setTimeout(_anim, 50);
+            };
+
+            window.filtrarConcursos = function(_s, _id) {
+                document.querySelectorAll('.filter-btn').forEach(_btn => _btn.classList.remove('active'));
+                document.getElementById(_id).classList.add('active');
+                renderizarConcursos(_s);
+            };
+
+            // 6. LÓGICA DO QUIZ ROBUSTO
             let _qD = { t: "", s: "", c: "" };
             
             window.iniciarQuiz = function() {
@@ -600,8 +740,9 @@
                 window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg), '_blank');
             };
 
-            // INICIALIZAÇÃO
+            // INICIALIZAÇÃO GERAL
             window.onload = function() {
+                renderizarConcursos('Todos');
                 iniciarQuiz();
                 _anim();
             };
