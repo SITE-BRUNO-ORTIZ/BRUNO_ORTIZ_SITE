@@ -501,10 +501,22 @@
             document.addEventListener('copy', function(e){ e.preventDefault(); e.clipboardData.setData('text/plain', 'Conteúdo Protegido. Bruno Ortiz.'); });
             
             const _b = ["aHR0cHM6Ly93","YS5tZS81NTMxOTk2","MDc3NzkzP3RleHQ9"];
+            
+            // ATUALIZAÇÃO SÊNIOR: Rastreador de UTMs (Para tráfego e backlink)
             document.body.addEventListener('click', function(e) {
                 const btnZap = e.target.closest('.c-zap');
                 if (btnZap && !btnZap.hasAttribute('onclick')) { 
-                    e.preventDefault(); let msg = btnZap.getAttribute('data-msg') || "Olá! Vim pelo site da Bruno Ortiz e quero atendimento."; window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg), '_blank');
+                    e.preventDefault(); 
+                    let msg = btnZap.getAttribute('data-msg') || "Olá! Vim pelo site da Bruno Ortiz e quero atendimento."; 
+                    
+                    // Captura os parâmetros da URL
+                    const urlParams = new URLSearchParams(window.location.search);
+                    let origem = '';
+                    if(urlParams.toString()) {
+                        origem = ' [Origem: ' + urlParams.toString().replace(/&/g, ' | ') + ']';
+                    }
+                    
+                    window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg + origem), '_blank');
                 }
             });
 
