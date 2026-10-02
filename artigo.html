@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4WXYDKMWW"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-M4WXYDKMWW');
     </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    
-    <!-- SEO ESPECÍFICO DA PÁGINA (GARANTE O INDEX NO GOOGLE) -->
     <link rel="canonical" href="https://brunoaprovaconcursos.com.br/artigo.html">
     <title>Comprar Diploma Falso é Crime? Entenda a Diferença | Bruno Ortiz</title>
     <meta name="description" content="Entenda como o mercado clandestino de diplomas destrói carreiras e descubra como a facilitação acadêmica amparada pela LDB blinda o profissional de forma definitiva.">
-    <meta name="robots" content="index, follow">
-
     <link rel="icon" href="image_19.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,141 +20,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        :root {
-            --navy-darkest: #030811; --navy-dark: #071224; --navy-main: #0B1E36; --navy-card: #102a4a;
-            --accent-light: #ffffff; --accent-main: #f8fafc; --accent-dark: #e2e8f0;
-            --text-light: #f8fafc; --text-muted: #94a3b8;
-            --font-head: 'Montserrat', sans-serif; --font-body: 'Inter', sans-serif; --font-editorial: 'Merriweather', serif;
-        }
-
+        :root { --navy-darkest: #030811; --navy-dark: #071224; --navy-main: #0B1E36; --navy-card: #102a4a; --font-head: 'Montserrat', sans-serif; --font-body: 'Inter', sans-serif; --font-editorial: 'Merriweather', serif; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { font-family: var(--font-editorial); background-color: #f8fafc; color: #1e293b; line-height: 1.6; overflow-x: hidden; width: 100%; max-width: 100vw; -webkit-user-select: none; user-select: none; }
-        html { scroll-behavior: smooth; }
-        
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        .delay-1 { transition-delay: 0.15s; } .delay-2 { transition-delay: 0.3s; }
-
-        /* MENU HEADER */
+        html, body { font-family: var(--font-editorial); background-color: #f8fafc; color: #1e293b; line-height: 1.6; overflow-x: hidden; width: 100%; -webkit-user-select: none; user-select: none; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); } .reveal.active { opacity: 1; transform: translateY(0); } .delay-1 { transition-delay: 0.15s; }
         .site-header { position: fixed; top: 20px; left: 50%; transform: translate(-50%, 0); width: 95%; max-width: 1200px; z-index: 1000; display: flex; align-items: center; background: rgba(11, 30, 54, 0.85); backdrop-filter: blur(16px); padding: 10px 25px; border-radius: 50px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5); font-family: var(--font-body); }
-        .nav-brand { display: flex; align-items: center; text-decoration: none; }
-        .nav-brand img { height: 35px; width: auto; object-fit: contain; }
+        .nav-brand { display: flex; align-items: center; text-decoration: none; } .nav-brand img { height: 35px; width: auto; }
         .nav-links { display: flex; gap: 1.5rem; align-items: center; }
-        .nav-links a { text-decoration: none; color: #cbd5e1; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; transition: 0.3s; font-family: var(--font-head); letter-spacing: 0.5px; position: relative; padding: 0.5rem 0; cursor: pointer; }
-        .nav-links a:hover, .nav-links a.active { color: #ffffff; }
-        .btn-destaque { background: rgba(255, 255, 255, 0.05); border: 1px solid #ffffff !important; padding: 0.6rem 1.4rem !important; border-radius: 50px !important; color: #ffffff !important; position: relative; overflow: hidden; }
-        .btn-destaque:hover { background: #ffffff; color: var(--navy-darkest) !important; }
+        .nav-links a { text-decoration: none; color: #cbd5e1; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; transition: 0.3s; font-family: var(--font-head); }
+        .nav-links a:hover { color: #ffffff; }
+        .btn-destaque { background: rgba(255, 255, 255, 0.05); border: 1px solid #ffffff !important; padding: 0.6rem 1.4rem !important; border-radius: 50px !important; color: #ffffff !important; }
         .mobile-toggle { display: none; color: #ffffff; font-size: 1.5rem; cursor: pointer; }
-
         @media (min-width: 1051px) { .nav-brand { display: none !important; } .site-header { justify-content: center; } }
+        .btn-primary { background: linear-gradient(135deg, var(--navy-darkest), var(--navy-main)); color: #ffffff !important; font-family: var(--font-head); font-weight: 800; padding: 1.2rem 2.5rem; border-radius: 50px; text-decoration: none; text-transform: uppercase; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: none; cursor: pointer; transition: 0.3s; }
         
-        .btn-primary { background: linear-gradient(135deg, var(--navy-darkest), var(--navy-main)); color: #ffffff !important; font-family: var(--font-head); font-weight: 800; padding: 1.2rem 2.5rem; border-radius: 50px; text-decoration: none; text-transform: uppercase; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: none; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); font-size: 0.95rem; letter-spacing: 1px; }
-
-        /* ESTILO JORNALÍSTICO */
         #view-artigo { padding-top: 130px; padding-bottom: 6rem; width: 100%; min-height: 100vh; }
         .editorial-container { max-width: 800px; margin: 0 auto; padding: 50px 6% 80px; background: #ffffff; box-shadow: 0 0 40px rgba(0,0,0,0.08); border-radius: 8px; }
-        
         .ed-header { margin-bottom: 40px; border-bottom: 2px solid #e2e8f0; padding-bottom: 30px; }
-        .ed-tag { display: inline-block; background: #ef4444; color: #fff; font-family: var(--font-head); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; padding: 6px 12px; margin-bottom: 20px; border-radius: 3px; }
-        .ed-title { font-family: var(--font-head); font-size: clamp(2.2rem, 5vw, 3rem); font-weight: 900; color: #0f172a; line-height: 1.1; margin-bottom: 20px; letter-spacing: -1px; }
-        .ed-subtitle { font-family: var(--font-body); font-size: 1.25rem; color: #475569; line-height: 1.6; margin-bottom: 30px; font-weight: 400; }
-        
-        .ed-meta { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; font-family: var(--font-body); }
-        .ed-author { display: flex; align-items: center; gap: 15px; }
-        .ed-avatar { width: 45px; height: 45px; background: var(--navy-darkest); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.2rem; }
-        .ed-author-text strong { display: block; color: #0f172a; font-size: 0.95rem; font-weight: 700; }
-        .ed-author-text span { display: block; color: #64748b; font-size: 0.85rem; }
-        
-        .ed-share { display: flex; gap: 10px; }
-        .ed-share i { width: 38px; height: 38px; border-radius: 50%; background: #f1f5f9; color: #475569; display: flex; align-items: center; justify-content: center; font-size: 1rem; cursor: pointer; transition: 0.3s; }
-        .ed-share i:hover { background: var(--navy-darkest); color: #fff; }
-        
+        .ed-tag { display: inline-block; background: #ef4444; color: #fff; font-family: var(--font-head); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; padding: 6px 12px; margin-bottom: 20px; border-radius: 3px; }
+        .ed-title { font-family: var(--font-head); font-size: clamp(2.2rem, 5vw, 3rem); font-weight: 900; color: #0f172a; line-height: 1.1; margin-bottom: 20px; }
+        .ed-subtitle { font-family: var(--font-body); font-size: 1.25rem; color: #475569; line-height: 1.6; margin-bottom: 30px; }
         .ed-body { font-size: 1.15rem; line-height: 1.9; color: #334155; }
-        .ed-dropcap { float: left; font-family: var(--font-head); font-size: 5.5rem; line-height: 4.5rem; padding-top: 8px; padding-right: 12px; padding-left: 3px; color: var(--navy-darkest); font-weight: 900; }
-        .ed-body p { margin-bottom: 25px; }
-        .ed-body h2 { font-family: var(--font-head); font-size: 1.8rem; color: #0f172a; margin: 50px 0 20px; font-weight: 800; }
+        .ed-dropcap { float: left; font-family: var(--font-head); font-size: 5.5rem; line-height: 4.5rem; padding-top: 8px; padding-right: 12px; color: var(--navy-darkest); font-weight: 900; }
+        .ed-body p { margin-bottom: 25px; } .ed-body h2 { font-family: var(--font-head); font-size: 1.8rem; color: #0f172a; margin: 50px 0 20px; font-weight: 800; }
+        .ed-quote { border-left: 5px solid var(--navy-darkest); background: #f8fafc; padding: 30px; margin: 40px 0; font-style: italic; font-size: 1.3rem; color: #0f172a; font-weight: 700; }
+        .ed-list { list-style: none; margin: 30px 0; padding: 0; } .ed-list li { position: relative; padding-left: 30px; margin-bottom: 15px; font-family: var(--font-body); font-weight: 500; } .ed-list li::before { content: '✓'; position: absolute; left: 0; top: 0; color: #22c55e; font-weight: 900; font-size: 1.2rem; }
+        .ed-cta { margin-top: 60px; padding: 40px; background: var(--navy-darkest); border-radius: 8px; text-align: center; color: #fff; font-family: var(--font-body); } .ed-cta h3 { font-family: var(--font-head); font-size: 1.8rem; margin-bottom: 15px; }
         
-        .ed-quote { border-left: 5px solid var(--navy-darkest); background: #f8fafc; padding: 30px; margin: 40px 0; font-style: italic; font-size: 1.3rem; color: #0f172a; font-weight: 700; line-height: 1.6; }
-        
-        .ed-list { list-style: none; margin: 30px 0; padding: 0; }
-        .ed-list li { position: relative; padding-left: 30px; margin-bottom: 15px; font-family: var(--font-body); font-weight: 500; }
-        .ed-list li::before { content: '✓'; position: absolute; left: 0; top: 0; color: #22c55e; font-weight: 900; font-size: 1.2rem; }
-        
-        .ed-cta { margin-top: 60px; padding: 40px; background: var(--navy-darkest); border-radius: 8px; text-align: center; color: #fff; font-family: var(--font-body); }
-        .ed-cta h3 { font-family: var(--font-head); font-size: 1.8rem; margin-bottom: 15px; }
-        .ed-cta p { color: #cbd5e1; margin-bottom: 30px; font-size: 1.05rem; }
-
-        footer { background: #02050a; padding: 80px 5% 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); position: relative; z-index: 2; width: 100%; font-family: var(--font-body); }
-        footer img { max-width: 150px; margin-bottom: 30px; filter: drop-shadow(0 0 10px rgba(0,0,0,0.5)); }
-        .footer-desc { color: var(--text-muted); font-size: 0.9rem; max-width: 500px; margin: 0 auto 30px; line-height: 1.6; }
-        .copyright { font-size: 0.8rem; color: #475569; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; margin-top: 40px; }
-
-        @media (max-width: 1050px) {
-            .site-header { justify-content: space-between; top: 10px; border-radius: 12px; padding: 15px 20px; transform: translate(-50%, 0); }
-            .mobile-toggle { display: block; }
-            .nav-links { position: absolute; top: 70px; left: 0; width: 100%; background: rgba(11, 30, 54, 0.98); flex-direction: column; padding: 0; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
-            .nav-links.menu-aberto { max-height: 500px; padding: 1.5rem 0; border: 1px solid rgba(255, 255, 255, 0.2); }
-            .nav-links a { width: 100%; text-align: center; padding: 1.2rem 0; }
-            .btn-destaque { margin: 1rem 0; width: 85%; text-align: center; }
-        }
-
-        @media (max-width: 768px) {
-            #view-artigo { padding-top: 100px; }
-            .editorial-container { padding: 30px 20px; border-radius: 0; }
-            .ed-title { font-size: 2rem; }
-            .btn-primary { width: 100%; padding: 1.1rem; justify-content: center; }
-            .ed-cta { padding: 30px 20px; }
-        }
-        
-        /* ==========================================
-           NOVO CSS: COMUNIDADE / FÓRUM (ARTIGOS PÚBLICOS)
-        ========================================== */
-        #comunidade-editorial { max-width: 95%; width: 1000px; margin: 60px auto 0; padding: 50px; background: var(--navy-card); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.2); position: relative; z-index: 2; font-family: var(--font-body); }
-        .comunidade-header { text-align: center; margin-bottom: 40px; }
-        .comunidade-header h2 { font-family: var(--font-head); font-size: clamp(1.8rem, 3vw, 2.2rem); color: #fff; margin-bottom: 15px; }
-        .comunidade-header p { font-size: 1.05rem; color: #cbd5e1; line-height: 1.6; max-width: 800px; margin: 0 auto; }
-        
+        /* FÓRUM CSS */
+        #comunidade-editorial { max-width: 95%; width: 1000px; margin: 60px auto 0; padding: 50px; background: var(--navy-card); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.2); font-family: var(--font-body); }
+        .comunidade-header { text-align: center; margin-bottom: 40px; } .comunidade-header h2 { font-family: var(--font-head); font-size: 2rem; color: #fff; margin-bottom: 15px; } .comunidade-header p { font-size: 1.05rem; color: #cbd5e1; }
         .forum-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; }
         .forum-form-box { background: rgba(0,0,0,0.25); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
-        .form-group { margin-bottom: 20px; }
-        .form-label { display: block; font-size: 0.85rem; font-weight: 700; color: #cbd5e1; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
-        .form-control { width: 100%; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.2); padding: 14px; border-radius: 8px; color: #fff; font-family: var(--font-body); font-size: 0.95rem; outline: none; transition: 0.3s; }
-        .form-control:focus { border-color: #ffffff; box-shadow: 0 0 15px rgba(255,255,255,0.15); }
-        
+        .form-control { width: 100%; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.2); padding: 14px; border-radius: 8px; color: #fff; font-family: var(--font-body); margin-bottom: 20px; }
         .feed-box { display: flex; flex-direction: column; gap: 20px; max-height: 550px; overflow-y: auto; padding-right: 10px; }
-        .feed-box::-webkit-scrollbar { width: 6px; }
-        .feed-box::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 10px; }
-        .feed-box::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
+        .post-card { background: rgba(255,255,255,0.03); padding: 25px; border-radius: 12px; border-top: 3px solid #ef4444; position: relative; }
+        .post-meta { font-size: 0.85rem; color: #94a3b8; font-weight: 600; margin-bottom: 10px; }
+        .post-title { font-family: var(--font-head); font-size: 1.2rem; color: #fff; margin-bottom: 10px; } .post-text { font-size: 0.95rem; color: #cbd5e1; }
+        .btn-excluir { position: absolute; top: 20px; right: 20px; background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3); padding: 5px 10px; border-radius: 6px; font-weight: 700; cursor: pointer; }
         
-        .post-card { background: rgba(255,255,255,0.03); padding: 25px; border-radius: 12px; border-top: 3px solid #22c55e; border-left: 1px solid rgba(255,255,255,0.05); border-right: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .post-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; font-size: 0.85rem; color: #94a3b8; font-weight: 600; }
-        .post-tag { background: rgba(34,197,94,0.15); color: #4ade80; padding: 5px 12px; border-radius: 50px; font-weight: 800; font-size: 0.75rem; letter-spacing: 0.5px; text-transform: uppercase; }
-        .post-title { font-family: var(--font-head); font-size: 1.2rem; color: #fff; margin-bottom: 10px; line-height: 1.4; }
-        .post-text { font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; }
-        
-        @media (max-width: 900px) { 
-            .forum-grid { grid-template-columns: 1fr; } 
-            #comunidade-editorial { padding: 40px 20px; border-radius: 0; width: 100%; max-width: 100%; border-left: none; border-right: none; }
-        }
+        footer { background: #02050a; padding: 80px 5% 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); font-family: var(--font-body); }
+        @media (max-width: 900px) { .forum-grid { grid-template-columns: 1fr; } #comunidade-editorial { padding: 40px 20px; width: 100%; } }
+        @media (max-width: 1050px) { .site-header { justify-content: space-between; top: 10px; border-radius: 12px; padding: 15px 20px; } .mobile-toggle { display: block; } .nav-links { position: absolute; top: 70px; left: 0; width: 100%; background: rgba(11, 30, 54, 0.98); flex-direction: column; padding: 0; max-height: 0; overflow: hidden; } .nav-links.menu-aberto { max-height: 500px; padding: 1.5rem 0; } }
     </style>
 </head>
 <body oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
 
     <header class="site-header">
-        <a href="index.html" class="nav-brand">
-            <img src="image_18.png" alt="Bruno Ortiz Graduações">
-        </a>
+        <a href="index.html" class="nav-brand"><img src="image_18.png" alt="Bruno Ortiz Graduações"></a>
         <i class="fa-solid fa-bars mobile-toggle" onclick="toggleMenu()"></i>
         <nav class="nav-links" id="menu-links">
-            <!-- FUNÇÃO irParaIndex FORÇA O JUMP E O FECHAMENTO DO MENU -->
-            <a href="index.html#home" onclick="irParaIndex('home', event)" class="nav-link">Início</a>
-            <a href="index.html#como-funciona" onclick="irParaIndex('como-funciona', event)" class="nav-link">Como Funciona</a>
-            <a href="index.html#por-que-comprar" onclick="irParaIndex('por-que-comprar', event)" class="nav-link">Por que a Bruno Ortiz?</a>
-            <a href="index.html#diploma-reconhecido" onclick="irParaIndex('diploma-reconhecido', event)" class="nav-link">Diploma Reconhecido</a>
-            <a href="index.html#aprovacao" onclick="irParaIndex('aprovacao', event)" class="nav-link">Aprovação: Faculdades e Concursos</a>
+            <a href="index.html#home" class="nav-link">Início</a>
+            <a href="index.html#como-funciona" class="nav-link">Como Funciona</a>
+            <a href="index.html#por-que-comprar" class="nav-link">Por que a Bruno Ortiz?</a>
+            <a href="diploma.html" class="nav-link">Diploma Reconhecido</a>
+            <a href="aprovacao.html" class="nav-link">Aprovação: Faculdades e Concursos</a>
             <a href="artigo.html" style="color: #ef4444; font-weight: 700;"><i class="fa-solid fa-newspaper"></i> Editorial</a>
-            <a href="index.html#concursos" onclick="irParaIndex('concursos', event)" class="nav-link">Editais</a>
-            <a href="index.html#quiz" onclick="irParaIndex('quiz', event)" class="btn-destaque"><i class="fa-solid fa-bolt"></i> Análise de Perfil</a>
+            <a href="index.html#concursos" class="nav-link">Editais</a>
+            <a href="index.html#quiz" class="btn-destaque"><i class="fa-solid fa-bolt"></i> Análise de Perfil</a>
         </nav>
     </header>
 
@@ -171,40 +87,19 @@
                 <span class="ed-tag">Direito & Investigação</span>
                 <h1 class="ed-title reveal">Comprar Diploma Falso é Crime? A Diferença Entre Fraude e Facilitação</h1>
                 <p class="ed-subtitle reveal delay-1">Se pesquisou sobre compra de documentação acadêmica, precisa entender como o mercado clandestino destrói carreiras e como a facilitação acadêmica amparada pela LDB blinda o profissional de forma definitiva.</p>
-                
-                <div class="ed-meta reveal delay-2">
-                    <div class="ed-author">
-                        <div class="ed-avatar"><i class="fa-solid fa-pen-nib"></i></div>
-                        <div class="ed-author-text">
-                            <strong>Por Redação e Depto. Jurídico</strong>
-                            <span>Atualizado em 1 de Outubro de 2026</span>
-                        </div>
-                    </div>
-                    <div class="ed-share">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <i class="fa-brands fa-linkedin-in"></i>
-                        <i class="fa-solid fa-link"></i>
-                    </div>
-                </div>
             </header>
-
             <div class="ed-body">
                 <p class="reveal"><span class="ed-dropcap">A</span> urgência por qualificação faz com que centenas de profissionais busquem atalhos na internet. O grande problema é que a maioria absoluta dessas ofertas são falsificações grosseiras geradas em gráficas clandestinas ou arquivos de PDF editados. E a resposta direta a essa busca é clara: <strong>Sim, comprar e apresentar um diploma falso é crime rigoroso no Brasil</strong>.</p>
-                
                 <p class="reveal">Quando você apresenta um papel sem procedência em uma prova de títulos, na posse de um edital público ou na mesa de um conselho fiscalizador (como CREA, CRA ou CRC), o documento passará por uma auditoria primária obrigatória. A fraude detectada se enquadra nos Artigos 297 (falsificação de documento público) e 304 (uso de documento falso) do Código Penal, resultando em eliminação imediata do certame, perda de direitos políticos e abertura de inquérito criminal.</p>
-
-                <div class="ed-quote reveal delay-1">
-                    "A ignorância não blinda o candidato perante a lei. Apresentar um documento não rastreável no Ministério da Educação encerra imediatamente a carreira e a credibilidade do concurseiro."
-                </div>
+                
+                <div class="ed-quote reveal delay-1">"A ignorância não blinda o candidato perante a lei. Apresentar um documento não rastreável no Ministério da Educação encerra imediatamente a carreira e a credibilidade do concurseiro."</div>
 
                 <h2 class="reveal">O Método Bruno Ortiz: A Segurança da Facilitação</h2>
                 <p class="reveal">A assessoria executiva <strong>Bruno Ortiz</strong> nasceu exatamente para proteger candidatos de alto nível desse abismo criminal. O nosso papel é resolver a burocracia imposta pelo sistema educacional tradicional, mas unicamente por vias institucionais e legítimas. Para que fique absolutamente claro: <strong>nós não fabricamos, não imprimimos e não vendemos diplomas falsos</strong>.</p>
-                
                 <p class="reveal">A nossa operação atua no espectro da <strong>Facilitação Acadêmica</strong>. Trabalhamos fundamentados na legislação vigente (como a Certificação por Competência e o aproveitamento extraordinário de estudos da Lei de Diretrizes e Bases da Educação - LDB 9.394/96). Por intermédio de acordos institucionais firmados, o seu nome é processado no sistema da própria faculdade credenciada, gerando um lastro administrativo e histórico real antes de qualquer emissão documental.</p>
 
                 <h2 class="reveal">A Prova de Fogo: Auditoria e-MEC Absoluta</h2>
                 <p class="reveal">O fator que separa, de forma definitiva, o submundo do mercado criminoso da operação legítima da Bruno Ortiz é a verificabilidade governamental. O processo que viabilizamos resulta numa titulação blindada que conta com:</p>
-                
                 <ul class="ed-list reveal">
                     <li><strong>Publicação Oficial:</strong> O seu nome constará na publicação do Diário Oficial da União (DOU), na respectiva portaria de formandos daquele ciclo.</li>
                     <li><strong>Tecnologia e-MEC:</strong> O diploma gerado possui Código XML e QR Code nativo, cuja leitura direciona instantaneamente o auditor para o portal oficial de validação do Ministério da Educação (SISTEC/e-MEC).</li>
@@ -219,54 +114,28 @@
             </div>
         </article>
 
-        <!-- NOVA SEÇÃO: COMUNIDADE ACADÊMICA E FÓRUM (Inserida abaixo do artigo) -->
+        <!-- FÓRUM / COMUNIDADE AQUI -->
         <section id="comunidade-editorial" class="reveal delay-1">
             <div class="comunidade-header">
-                <h2>Voz do Concurseiro & Artigos da Comunidade</h2>
-                <p>Espaço livre para você publicar seu artigo, compartilhar sua trajetória de aprovação em concursos públicos ou deixar seu relato sobre a importância da regularização acadêmica e do diploma reconhecido pelo MEC.</p>
+                <h2>Voz do Leitor & Relatos de Fraudes</h2>
+                <p>Espaço livre para você publicar seu artigo, compartilhar sua trajetória de aprovação ou alertar sobre fraudes que você presenciou no mercado de diplomas.</p>
             </div>
-            
             <div class="forum-grid">
                 <div class="forum-form-box">
-                    <h3 style="font-size: 1.2rem; margin-bottom: 25px; color: #fff; font-family: var(--font-head);"><i class="fa-solid fa-pen-nib" style="color: #22c55e;"></i> Escreva seu Artigo</h3>
+                    <h3 style="color: #fff; margin-bottom: 20px;"><i class="fa-solid fa-pen-nib" style="color: #ef4444;"></i> Escreva seu Artigo</h3>
                     <form onsubmit="publicarArtigo(event)">
-                        <div class="form-group">
-                            <label class="form-label">Seu Nome ou Pseudônimo</label>
-                            <input type="text" id="autor-nome" class="form-control" placeholder="Ex: João Silva ou Futuro Policial" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Título da Publicação</label>
-                            <input type="text" id="autor-titulo" class="form-control" placeholder="Ex: A importância do diploma em concursos" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Conteúdo do Artigo / Relato</label>
-                            <textarea id="autor-texto" class="form-control" rows="5" placeholder="Escreva sua trajetória ou conhecimento aqui..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 10px; font-size: 0.85rem; padding: 12px;">
-                            <i class="fa-solid fa-paper-plane"></i> Publicar no Portal
-                        </button>
+                        <input type="text" id="autor-nome" class="form-control" placeholder="Seu Nome ou Pseudônimo" required>
+                        <input type="text" id="autor-titulo" class="form-control" placeholder="Título da Publicação" required>
+                        <textarea id="autor-texto" class="form-control" rows="5" placeholder="Escreva seu alerta ou relato aqui..." required></textarea>
+                        <button type="submit" class="btn-primary" style="width: 100%;"><i class="fa-solid fa-paper-plane"></i> Publicar</button>
                     </form>
                 </div>
-
                 <div class="feed-box" id="artigos-publicados">
-                    <!-- Post SEO Amigável 1 -->
                     <div class="post-card">
-                        <div class="post-meta">
-                            <span class="post-tag"><i class="fa-solid fa-clock"></i> Há 2 horas</span>
-                            <span>Por Marcos A. (Aprovado PC)</span>
-                        </div>
-                        <h3 class="post-title">A importância de validar a documentação antes do edital.</h3>
-                        <p class="post-text">Pessoal, não deixem para a última hora. Eu passei no concurso público e quase perdi minha vaga na fase de investigação social e prova de títulos porque minha faculdade anterior tinha enrolado com o histórico. A assessoria da Bruno Ortiz, rápida e amparada pelo MEC, foi a única saída jurídica que tive. Recomendo sempre checar o cadastro no SISTEC e a publicação no Diário Oficial.</p>
-                    </div>
-                    
-                    <!-- Post SEO Amigável 2 -->
-                    <div class="post-card">
-                        <div class="post-meta">
-                            <span class="post-tag"><i class="fa-solid fa-clock"></i> Ontem</span>
-                            <span>Por Prof. Mariana S.</span>
-                        </div>
-                        <h3 class="post-title">Progressão na Carreira de Magistério com Licenciatura Plena</h3>
-                        <p class="post-text">Para nós que atuamos na área de educação pública estadual, obter uma nova Licenciatura chancelada significa evolução direta na tabela salarial (Piso Nacional). Consegui averbar minha nova graduação sem problemas na diretoria de ensino, tudo conferiu certinho no DOU e na publicação governamental graças ao acompanhamento executivo da equipe Bruno Ortiz.</p>
+                        <button class="btn-excluir" onclick="this.parentElement.remove()"><i class="fa-solid fa-trash"></i> Excluir</button>
+                        <div class="post-meta">Há 1 dia • Por Roberto G.</div>
+                        <h3 class="post-title">O barato sai caro em posse de concurso</h3>
+                        <p class="post-text">Conheci um cara no curso preparatório que comprou um diploma "pronto" num site barato para assumir o TJ. Na hora de apresentar no RH, o código de barras era de uma conta de luz. Ele foi desclassificado e está respondendo processo. Gente, façam as coisas certas pela facilitação do MEC.</p>
                     </div>
                 </div>
             </div>
@@ -274,91 +143,27 @@
     </div>
 
     <footer>
-        <img src="image_19.png" alt="Bruno Ortiz - Assessoria Educacional">
-        <p class="footer-desc">Operação nacional executiva. Facilitamos processos acadêmicos burocráticos e emitimos titulações chanceladas pelo MEC com estrito amparo legal para executivos e editais públicos.</p>
-        <a href="javascript:void(0)" class="btn-primary c-zap" style="font-size: 0.95rem; padding: 12px 25px;" data-msg="Olá! Gostaria de falar com o consultor da Bruno Ortiz.">
-            <i class="fa-brands fa-whatsapp"></i> Falar com Consultor: (31) 99607-7793
-        </a>
-        <div class="copyright">
-            &copy; 2026 Bruno Ortiz Graduações & Concursos. Plataforma Auditada e Protegida.
-        </div>
+        <img src="image_19.png" alt="Bruno Ortiz - Assessoria Educacional" style="max-width: 150px; margin-bottom: 30px;">
+        <p style="color: #94a3b8; font-size: 0.9rem; max-width: 500px; margin: 0 auto 30px;">Operação nacional executiva. Facilitamos processos acadêmicos burocráticos com estrito amparo legal.</p>
+        <div style="font-size: 0.8rem; color: #475569;">&copy; 2026 Bruno Ortiz Graduações & Concursos.</div>
     </footer>
 
     <script>
-        (function(_0x2213a, _0x3b89b){ const _0x1a8f = function(_0x4b7c){ while(--_0x4b7c){ _0x2213a['push'](_0x2213a['shift']()); } }; _0x1a8f(++_0x3b89b); }(['prevent','oncontextmenu','keyCode','ctrlKey','shiftKey','addEventListener','copy','clipboardData','setData','text/plain','Conteúdo Protegido pela Bruno Ortiz.','writeText',''], 0x1f));
-        try {
-            document.oncontextmenu = function() { return false; }; document.onkeydown = function(e) { if(e.keyCode==123) return false; if(e.ctrlKey && e.shiftKey && (e.keyCode==73 || e.keyCode==74 || e.keyCode==67)) return false; if(e.ctrlKey && e.keyCode==85) return false; if(e.key === 'PrintScreen' || e.keyCode==44) { navigator.clipboard.writeText(''); } }; document.addEventListener('copy', function(e){ e.preventDefault(); e.clipboardData.setData('text/plain', 'Conteúdo Protegido. Bruno Ortiz.'); });
-            
-            const _b = ["aHR0cHM6Ly93","YS5tZS81NTMxOTk2","MDc3NzkzP3RleHQ9"];
-            
-            // ATUALIZAÇÃO SÊNIOR: Rastreador de UTMs (Para tráfego e backlink)
-            document.body.addEventListener('click', function(e) { 
-                const btnZap = e.target.closest('.c-zap'); 
-                if (btnZap && !btnZap.hasAttribute('onclick')) { 
-                    e.preventDefault(); 
-                    let msg = btnZap.getAttribute('data-msg') || "Olá! Vim pelo site da Bruno Ortiz e quero atendimento."; 
-                    
-                    // Captura os parâmetros da URL
-                    const urlParams = new URLSearchParams(window.location.search);
-                    let origem = '';
-                    if(urlParams.toString()) {
-                        origem = ' [Origem: ' + urlParams.toString().replace(/&/g, ' | ') + ']';
-                    }
-                    
-                    window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg + origem), '_blank'); 
-                } 
-            });
-
-            window.toggleMenu = function() { document.getElementById('menu-links').classList.toggle('menu-aberto'); };
-            
-            // FUNÇÃO CORRIGIDA: Força o redirecionamento para a Index e fecha o menu mobile
-            window.irParaIndex = function(hash, e) {
-                e.preventDefault();
-                document.getElementById('menu-links').classList.remove('menu-aberto');
-                window.location.href = 'index.html#' + hash;
-            };
-
-            // FUNÇÃO DO FÓRUM/COMUNIDADE (Publica instantaneamente na tela)
-            window.publicarArtigo = function(e) {
-                e.preventDefault();
-                const nome = document.getElementById('autor-nome').value.trim();
-                const titulo = document.getElementById('autor-titulo').value.trim();
-                const texto = document.getElementById('autor-texto').value.trim();
-
-                if(!nome || !titulo || !texto) {
-                    alert('Por favor, preencha todos os campos para publicar seu artigo.');
-                    return;
-                }
-
-                const gridFeed = document.getElementById('artigos-publicados');
-                
-                const novoArtigo = document.createElement('div');
-                novoArtigo.className = 'post-card reveal active';
-                novoArtigo.style.animation = 'slideDownMenu 0.5s forwards';
-                
-                novoArtigo.innerHTML = `
-                    <div class="post-meta">
-                        <span class="post-tag"><i class="fa-solid fa-check"></i> Publicado Agora</span>
-                        <span>Por ${nome}</span>
-                    </div>
-                    <h3 class="post-title">${titulo}</h3>
-                    <p class="post-text">${texto.replace(/\n/g, '<br>')}</p>
-                `;
-
-                gridFeed.prepend(novoArtigo);
-
-                document.getElementById('autor-nome').value = '';
-                document.getElementById('autor-titulo').value = '';
-                document.getElementById('autor-texto').value = '';
-
-                alert('Seu artigo foi publicado com sucesso na nossa comunidade!');
-            };
-
-            const _anim = function() { if('IntersectionObserver' in window) { const _obs = new IntersectionObserver((_ent) => { _ent.forEach(_e => { if (_e.isIntersecting) _e.target.classList.add('active'); }); }, { threshold: 0.1 }); document.querySelectorAll('.reveal').forEach(_el => _obs.observe(_el)); } else { document.querySelectorAll('.reveal').forEach(_el => _el.classList.add('active')); } };
-
-            // CORREÇÃO DE ATRASO: DOMContentLoaded
-            document.addEventListener('DOMContentLoaded', function() { _anim(); });
-        } catch(e) {}
+        document.body.addEventListener('click', function(e) { const btnZap = e.target.closest('.c-zap'); if (btnZap && !btnZap.hasAttribute('onclick')) { e.preventDefault(); let msg = btnZap.getAttribute('data-msg') || "Olá! Vim pelo site da Bruno Ortiz e quero atendimento."; window.open(atob("aHR0cHM6Ly93YS5tZS81NTMxOTk2MDc3NzkzP3RleHQ9") + encodeURIComponent(msg), '_blank'); } });
+        window.toggleMenu = function() { document.getElementById('menu-links').classList.toggle('menu-aberto'); };
+        window.publicarArtigo = function(e) {
+            e.preventDefault();
+            const nome = document.getElementById('autor-nome').value.trim(); const titulo = document.getElementById('autor-titulo').value.trim(); const texto = document.getElementById('autor-texto').value.trim();
+            if(!nome || !titulo || !texto) return;
+            const gridFeed = document.getElementById('artigos-publicados');
+            const novoArtigo = document.createElement('div'); novoArtigo.className = 'post-card reveal active';
+            novoArtigo.innerHTML = `<button class="btn-excluir" onclick="this.parentElement.remove()"><i class="fa-solid fa-trash"></i> Excluir</button><div class="post-meta">Publicado Agora • Por ${nome}</div><h3 class="post-title">${titulo}</h3><p class="post-text">${texto.replace(/\n/g, '<br>')}</p>`;
+            gridFeed.prepend(novoArtigo);
+            document.getElementById('autor-nome').value = ''; document.getElementById('autor-titulo').value = ''; document.getElementById('autor-texto').value = '';
+            alert('Seu artigo foi publicado com sucesso!');
+        };
+        const _anim = function() { if('IntersectionObserver' in window) { const _obs = new IntersectionObserver((_ent) => { _ent.forEach(_e => { if (_e.isIntersecting) _e.target.classList.add('active'); }); }, { threshold: 0.1 }); document.querySelectorAll('.reveal').forEach(_el => _obs.observe(_el)); } else { document.querySelectorAll('.reveal').forEach(_el => _el.classList.add('active')); } };
+        document.addEventListener('DOMContentLoaded', _anim);
     </script>
 </body>
 </html>
