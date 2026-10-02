@@ -112,6 +112,37 @@
             .btn-primary { width: 100%; padding: 1.1rem; justify-content: center; }
             .ed-cta { padding: 30px 20px; }
         }
+        
+        /* ==========================================
+           NOVO CSS: COMUNIDADE / FÓRUM (ARTIGOS PÚBLICOS)
+        ========================================== */
+        #comunidade-editorial { max-width: 95%; width: 1000px; margin: 60px auto 0; padding: 50px; background: var(--navy-card); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.2); position: relative; z-index: 2; font-family: var(--font-body); }
+        .comunidade-header { text-align: center; margin-bottom: 40px; }
+        .comunidade-header h2 { font-family: var(--font-head); font-size: clamp(1.8rem, 3vw, 2.2rem); color: #fff; margin-bottom: 15px; }
+        .comunidade-header p { font-size: 1.05rem; color: #cbd5e1; line-height: 1.6; max-width: 800px; margin: 0 auto; }
+        
+        .forum-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; }
+        .forum-form-box { background: rgba(0,0,0,0.25); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
+        .form-group { margin-bottom: 20px; }
+        .form-label { display: block; font-size: 0.85rem; font-weight: 700; color: #cbd5e1; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .form-control { width: 100%; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.2); padding: 14px; border-radius: 8px; color: #fff; font-family: var(--font-body); font-size: 0.95rem; outline: none; transition: 0.3s; }
+        .form-control:focus { border-color: #ffffff; box-shadow: 0 0 15px rgba(255,255,255,0.15); }
+        
+        .feed-box { display: flex; flex-direction: column; gap: 20px; max-height: 550px; overflow-y: auto; padding-right: 10px; }
+        .feed-box::-webkit-scrollbar { width: 6px; }
+        .feed-box::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 10px; }
+        .feed-box::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
+        
+        .post-card { background: rgba(255,255,255,0.03); padding: 25px; border-radius: 12px; border-top: 3px solid #22c55e; border-left: 1px solid rgba(255,255,255,0.05); border-right: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .post-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; font-size: 0.85rem; color: #94a3b8; font-weight: 600; }
+        .post-tag { background: rgba(34,197,94,0.15); color: #4ade80; padding: 5px 12px; border-radius: 50px; font-weight: 800; font-size: 0.75rem; letter-spacing: 0.5px; text-transform: uppercase; }
+        .post-title { font-family: var(--font-head); font-size: 1.2rem; color: #fff; margin-bottom: 10px; line-height: 1.4; }
+        .post-text { font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; }
+        
+        @media (max-width: 900px) { 
+            .forum-grid { grid-template-columns: 1fr; } 
+            #comunidade-editorial { padding: 40px 20px; border-radius: 0; width: 100%; max-width: 100%; border-left: none; border-right: none; }
+        }
     </style>
 </head>
 <body oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
@@ -122,14 +153,15 @@
         </a>
         <i class="fa-solid fa-bars mobile-toggle" onclick="toggleMenu()"></i>
         <nav class="nav-links" id="menu-links">
-            <a href="index.html#home" class="nav-link">Início</a>
-            <a href="index.html#como-funciona" class="nav-link">Como Funciona</a>
-            <a href="index.html#por-que-comprar" class="nav-link">Por que a Bruno Ortiz?</a>
-            <a href="index.html#diploma-reconhecido" class="nav-link">Diploma Reconhecido</a>
-            <a href="index.html#aprovacao" class="nav-link">Aprovação: Faculdades e Concursos</a>
+            <!-- FUNÇÃO irParaIndex FORÇA O JUMP E O FECHAMENTO DO MENU -->
+            <a href="index.html#home" onclick="irParaIndex('home', event)" class="nav-link">Início</a>
+            <a href="index.html#como-funciona" onclick="irParaIndex('como-funciona', event)" class="nav-link">Como Funciona</a>
+            <a href="index.html#por-que-comprar" onclick="irParaIndex('por-que-comprar', event)" class="nav-link">Por que a Bruno Ortiz?</a>
+            <a href="index.html#diploma-reconhecido" onclick="irParaIndex('diploma-reconhecido', event)" class="nav-link">Diploma Reconhecido</a>
+            <a href="index.html#aprovacao" onclick="irParaIndex('aprovacao', event)" class="nav-link">Aprovação: Faculdades e Concursos</a>
             <a href="artigo.html" style="color: #ef4444; font-weight: 700;"><i class="fa-solid fa-newspaper"></i> Editorial</a>
-            <a href="index.html#concursos" class="nav-link">Editais</a>
-            <a href="index.html#quiz" class="btn-destaque"><i class="fa-solid fa-bolt"></i> Análise de Perfil</a>
+            <a href="index.html#concursos" onclick="irParaIndex('concursos', event)" class="nav-link">Editais</a>
+            <a href="index.html#quiz" onclick="irParaIndex('quiz', event)" class="btn-destaque"><i class="fa-solid fa-bolt"></i> Análise de Perfil</a>
         </nav>
     </header>
 
@@ -186,6 +218,59 @@
                 </div>
             </div>
         </article>
+
+        <!-- NOVA SEÇÃO: COMUNIDADE ACADÊMICA E FÓRUM (Inserida abaixo do artigo) -->
+        <section id="comunidade-editorial" class="reveal delay-1">
+            <div class="comunidade-header">
+                <h2>Voz do Concurseiro & Artigos da Comunidade</h2>
+                <p>Espaço livre para você publicar seu artigo, compartilhar sua trajetória de aprovação em concursos públicos ou deixar seu relato sobre a importância da regularização acadêmica e do diploma reconhecido pelo MEC.</p>
+            </div>
+            
+            <div class="forum-grid">
+                <div class="forum-form-box">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 25px; color: #fff; font-family: var(--font-head);"><i class="fa-solid fa-pen-nib" style="color: #22c55e;"></i> Escreva seu Artigo</h3>
+                    <form onsubmit="publicarArtigo(event)">
+                        <div class="form-group">
+                            <label class="form-label">Seu Nome ou Pseudônimo</label>
+                            <input type="text" id="autor-nome" class="form-control" placeholder="Ex: João Silva ou Futuro Policial" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Título da Publicação</label>
+                            <input type="text" id="autor-titulo" class="form-control" placeholder="Ex: A importância do diploma em concursos" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Conteúdo do Artigo / Relato</label>
+                            <textarea id="autor-texto" class="form-control" rows="5" placeholder="Escreva sua trajetória ou conhecimento aqui..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 10px; font-size: 0.85rem; padding: 12px;">
+                            <i class="fa-solid fa-paper-plane"></i> Publicar no Portal
+                        </button>
+                    </form>
+                </div>
+
+                <div class="feed-box" id="artigos-publicados">
+                    <!-- Post SEO Amigável 1 -->
+                    <div class="post-card">
+                        <div class="post-meta">
+                            <span class="post-tag"><i class="fa-solid fa-clock"></i> Há 2 horas</span>
+                            <span>Por Marcos A. (Aprovado PC)</span>
+                        </div>
+                        <h3 class="post-title">A importância de validar a documentação antes do edital.</h3>
+                        <p class="post-text">Pessoal, não deixem para a última hora. Eu passei no concurso público e quase perdi minha vaga na fase de investigação social e prova de títulos porque minha faculdade anterior tinha enrolado com o histórico. A assessoria da Bruno Ortiz, rápida e amparada pelo MEC, foi a única saída jurídica que tive. Recomendo sempre checar o cadastro no SISTEC e a publicação no Diário Oficial.</p>
+                    </div>
+                    
+                    <!-- Post SEO Amigável 2 -->
+                    <div class="post-card">
+                        <div class="post-meta">
+                            <span class="post-tag"><i class="fa-solid fa-clock"></i> Ontem</span>
+                            <span>Por Prof. Mariana S.</span>
+                        </div>
+                        <h3 class="post-title">Progressão na Carreira de Magistério com Licenciatura Plena</h3>
+                        <p class="post-text">Para nós que atuamos na área de educação pública estadual, obter uma nova Licenciatura chancelada significa evolução direta na tabela salarial (Piso Nacional). Consegui averbar minha nova graduação sem problemas na diretoria de ensino, tudo conferiu certinho no DOU e na publicação governamental graças ao acompanhamento executivo da equipe Bruno Ortiz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <footer>
@@ -225,6 +310,50 @@
             });
 
             window.toggleMenu = function() { document.getElementById('menu-links').classList.toggle('menu-aberto'); };
+            
+            // FUNÇÃO CORRIGIDA: Força o redirecionamento para a Index e fecha o menu mobile
+            window.irParaIndex = function(hash, e) {
+                e.preventDefault();
+                document.getElementById('menu-links').classList.remove('menu-aberto');
+                window.location.href = 'index.html#' + hash;
+            };
+
+            // FUNÇÃO DO FÓRUM/COMUNIDADE (Publica instantaneamente na tela)
+            window.publicarArtigo = function(e) {
+                e.preventDefault();
+                const nome = document.getElementById('autor-nome').value.trim();
+                const titulo = document.getElementById('autor-titulo').value.trim();
+                const texto = document.getElementById('autor-texto').value.trim();
+
+                if(!nome || !titulo || !texto) {
+                    alert('Por favor, preencha todos os campos para publicar seu artigo.');
+                    return;
+                }
+
+                const gridFeed = document.getElementById('artigos-publicados');
+                
+                const novoArtigo = document.createElement('div');
+                novoArtigo.className = 'post-card reveal active';
+                novoArtigo.style.animation = 'slideDownMenu 0.5s forwards';
+                
+                novoArtigo.innerHTML = `
+                    <div class="post-meta">
+                        <span class="post-tag"><i class="fa-solid fa-check"></i> Publicado Agora</span>
+                        <span>Por ${nome}</span>
+                    </div>
+                    <h3 class="post-title">${titulo}</h3>
+                    <p class="post-text">${texto.replace(/\n/g, '<br>')}</p>
+                `;
+
+                gridFeed.prepend(novoArtigo);
+
+                document.getElementById('autor-nome').value = '';
+                document.getElementById('autor-titulo').value = '';
+                document.getElementById('autor-texto').value = '';
+
+                alert('Seu artigo foi publicado com sucesso na nossa comunidade!');
+            };
+
             const _anim = function() { if('IntersectionObserver' in window) { const _obs = new IntersectionObserver((_ent) => { _ent.forEach(_e => { if (_e.isIntersecting) _e.target.classList.add('active'); }); }, { threshold: 0.1 }); document.querySelectorAll('.reveal').forEach(_el => _obs.observe(_el)); } else { document.querySelectorAll('.reveal').forEach(_el => _el.classList.add('active')); } };
 
             // CORREÇÃO DE ATRASO: DOMContentLoaded
