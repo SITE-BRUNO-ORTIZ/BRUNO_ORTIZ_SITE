@@ -3,15 +3,31 @@
   <!-- Página Principal -->
   <url>
     <loc>https://brunoaprovaconcursos.com.br/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
-  <!-- Nova Página Editorial SEO -->
+  <!-- Página Diploma Reconhecido -->
+  <url>
+    <loc>https://brunoaprovaconcursos.com.br/diploma.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Página Aprovação Fácil -->
+  <url>
+    <loc>https://brunoaprovaconcursos.com.br/aprovacao.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Página Editorial SEO -->
   <url>
     <loc>https://brunoaprovaconcursos.com.br/artigo.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
