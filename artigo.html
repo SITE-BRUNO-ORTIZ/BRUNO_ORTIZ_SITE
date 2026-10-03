@@ -61,7 +61,14 @@
         
         footer { background: #02050a; padding: 80px 5% 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); font-family: var(--font-body); }
         
-        @media (max-width: 1050px) { .site-header { justify-content: space-between; top: 10px; border-radius: 12px; padding: 15px 20px; } .mobile-toggle { display: block; } .nav-links { position: absolute; top: 75px; left: 0; width: 100%; background: rgba(11, 30, 54, 0.98); flex-direction: column; padding: 0; max-height: 0; overflow: hidden; transition: 0.4s; border-radius: 12px; } .nav-links.menu-aberto { max-height: 500px; padding: 1rem 0; border: 1px solid rgba(255,255,255,0.1); } .nav-links a { width: 100%; text-align: center; padding: 1rem 0; } }
+        @media (max-width: 1050px) { 
+            .site-header { justify-content: space-between; top: 10px; border-radius: 12px; padding: 15px 20px; } 
+            .mobile-toggle { display: block; } 
+            .nav-links { position: absolute; top: 75px; left: 0; width: 100%; background: rgba(11, 30, 54, 0.98); flex-direction: column; padding: 0; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; border-radius: 12px; } 
+            .nav-links.menu-aberto { max-height: 1000px; padding: 1.5rem 0; border: 1px solid rgba(255,255,255,0.1); } 
+            .nav-links a { width: 100%; text-align: center; padding: 1.2rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); } 
+            .btn-destaque { margin: 1rem auto; width: 85%; text-align: center; display: block; }
+        }
         @media (max-width: 900px) { .forum-grid { grid-template-columns: 1fr; } #comunidade-editorial { padding: 40px 20px; width: 100%; } }
         @media (max-width: 768px) { #view-artigo { padding-top: 100px; } .editorial-container { padding: 30px 20px; border-radius: 0; } .ed-title { font-size: 2rem; } .ed-dropcap { font-size: 4rem; line-height: 3.5rem; } }
     </style>
@@ -70,7 +77,7 @@
 
     <header class="site-header">
         <a href="index.html" class="nav-brand"><img src="image_18.png" alt="Bruno Ortiz Graduações"></a>
-        <i class="fa-solid fa-bars mobile-toggle" onclick="toggleMenu()"></i>
+        <i class="fa-solid fa-bars mobile-toggle" onclick="toggleMenu(event)"></i>
         <nav class="nav-links" id="menu-links">
             <a href="index.html#home">Início</a>
             <a href="index.html#como-funciona">Como Funciona</a>
@@ -88,7 +95,7 @@
             <header class="ed-header">
                 <span class="ed-tag">Direito & Investigação</span>
                 <h1 class="ed-title">Comprar Diploma Falso é Crime? A Diferença Entre Fraude e Facilitação</h1>
-                <p class="ed-subtitle">Se você já pesquisou sobre a compra de documentação acadêmica, precisa entender com clareza como o mercado clandestino destrói carreiras de forma irreversível e como a facilitação acadêmica baseada na LDB consegue blindar o profissional de forma definitiva.</p>
+                <p class="ed-subtitle">Se você já pesquisou sobre a compra de documentação acadêmica, precisa entender com clareza como o mercado clandestino destrói carreiras de forma irreversível e como a facilitação acadêmica amparada pela LDB consegue blindar o profissional de forma definitiva.</p>
             </header>
             <div class="ed-body">
                 <p><span class="ed-dropcap">A</span> urgência por qualificação rápida faz com que milhares de profissionais busquem atalhos perigosos na internet. O grande problema de 2026 é que a maioria absoluta dessas ofertas sedutoras são falsificações grosseiras geradas em gráficas clandestinas ou em arquivos de PDF comprados no mercado negro. A resposta legal a essa busca é contundente e sem meias palavras: <strong>Sim, comprar, encomendar e apresentar um diploma falso é crime de altíssimo rigor no Brasil</strong>.</p>
@@ -153,8 +160,35 @@
     </footer>
 
     <script>
-        document.body.addEventListener('click', function(e) { const btnZap = e.target.closest('.c-zap'); if (btnZap && !btnZap.hasAttribute('onclick')) { e.preventDefault(); let msg = btnZap.getAttribute('data-msg') || "Olá! Vim pelo site da Bruno Ortiz e quero atendimento."; window.open(atob("aHR0cHM6Ly93YS5tZS81NTMxOTk2MDc3NzkzP3RleHQ9") + encodeURIComponent(msg), '_blank'); } });
-        window.toggleMenu = function() { document.getElementById('menu-links').classList.toggle('menu-aberto'); };
+        document.body.addEventListener('click', function(e) { 
+            const btnZap = e.target.closest('.c-zap'); 
+            if (btnZap && !btnZap.hasAttribute('onclick')) { 
+                e.preventDefault(); 
+                let msg = btnZap.getAttribute('data-msg') || "Olá! Vim pelo site da Bruno Ortiz e quero atendimento."; 
+                window.open(atob("aHR0cHM6Ly93YS5tZS81NTMxOTk2MDc3NzkzP3RleHQ9") + encodeURIComponent(msg), '_blank'); 
+            } 
+        });
+
+        // Correção 1: Função toggle do Menu com suporte a clique externo e stopPropagation
+        window.toggleMenu = function(e) { 
+            if(e) e.stopPropagation();
+            document.getElementById('menu-links').classList.toggle('menu-aberto'); 
+        };
+        
+        // Correção 2: Fechamento automático ao clicar em um link
+        document.querySelectorAll('.nav-links a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.getElementById('menu-links').classList.remove('menu-aberto');
+            });
+        });
+
+        // Correção 3: Fechamento automático ao clicar fora do menu
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('menu-links');
+            if (menu && menu.classList.contains('menu-aberto') && !menu.contains(event.target)) {
+                menu.classList.remove('menu-aberto');
+            }
+        });
         
         window.publicarArtigo = function(e) {
             e.preventDefault();
@@ -166,7 +200,10 @@
             
             const gridFeed = document.getElementById('artigos-publicados');
             const novoArtigo = document.createElement('div'); novoArtigo.className = 'post-card';
-            novoArtigo.innerHTML = ⁠ <button class="btn-excluir" onclick="excluirArtigo(this)"><i class="fa-solid fa-trash"></i> Excluir</button><div class="post-meta">Publicado Agora • Por ${nome}</div><h3 class="post-title">${titulo}</h3><p class="post-text">${texto.replace(/\n/g, '<br>')}</p> ⁠;
+            
+            // Correção 4: Aspas Crases (Backticks) Corrigidas, resolvendo o Erro de Sintaxe (SyntaxError) que travava todo o Javascript do site.
+            novoArtigo.innerHTML = `<button class="btn-excluir" onclick="excluirArtigo(this)"><i class="fa-solid fa-trash"></i> Excluir</button><div class="post-meta">Publicado Agora • Por ${nome}</div><h3 class="post-title">${titulo}</h3><p class="post-text">${texto.replace(/\n/g, '<br>')}</p>`;
+            
             gridFeed.prepend(novoArtigo);
             localStorage.setItem('bruno_post_count_artigo', qtdArtigos + 1);
             document.getElementById('autor-nome').value = ''; document.getElementById('autor-titulo').value = ''; document.getElementById('autor-texto').value = '';
