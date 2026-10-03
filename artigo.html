@@ -8,6 +8,25 @@
       gtag('js', new Date());
       gtag('config', 'G-M4WXYDKMWW');
     </script>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '902396809491746');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=902396809491746&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <link rel="canonical" href="https://brunoaprovaconcursos.com.br/artigo.html">
@@ -165,6 +184,12 @@
             if (btnZap && !btnZap.hasAttribute('onclick')) { 
                 e.preventDefault(); 
                 let msg = btnZap.getAttribute('data-msg') || "Olá! Vim pelo site da Bruno Ortiz e quero atendimento."; 
+                
+                /* PIXEL DE LEAD: Dispara o evento de Lead quando o botão é clicado */
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Lead');
+                }
+                
                 window.open(atob("aHR0cHM6Ly93YS5tZS81NTMxOTk2MDc3NzkzP3RleHQ9") + encodeURIComponent(msg), '_blank'); 
             } 
         });
@@ -201,8 +226,8 @@
             const gridFeed = document.getElementById('artigos-publicados');
             const novoArtigo = document.createElement('div'); novoArtigo.className = 'post-card';
             
-            // Correção 4: Aspas Crases (Backticks) Corrigidas, resolvendo o Erro de Sintaxe (SyntaxError) que travava todo o Javascript do site.
-            novoArtigo.innerHTML = `<button class="btn-excluir" onclick="excluirArtigo(this)"><i class="fa-solid fa-trash"></i> Excluir</button><div class="post-meta">Publicado Agora • Por ${nome}</div><h3 class="post-title">${titulo}</h3><p class="post-text">${texto.replace(/\n/g, '<br>')}</p>`;
+            // Correção 4: Aspas Crases (Backticks) Corrigidas, resolvendo o Erro de Sintaxe (SyntaxError)
+            novoArtigo.innerHTML = ⁠ <button class="btn-excluir" onclick="excluirArtigo(this)"><i class="fa-solid fa-trash"></i> Excluir</button><div class="post-meta">Publicado Agora • Por ${nome}</div><h3 class="post-title">${titulo}</h3><p class="post-text">${texto.replace(/\n/g, '<br>')}</p> ⁠;
             
             gridFeed.prepend(novoArtigo);
             localStorage.setItem('bruno_post_count_artigo', qtdArtigos + 1);
