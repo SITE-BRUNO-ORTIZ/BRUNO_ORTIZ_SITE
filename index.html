@@ -8,6 +8,25 @@
       gtag('js', new Date());
       gtag('config', 'G-M4WXYDKMWW');
     </script>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '902396809491746');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=902396809491746&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <link rel="canonical" href="https://brunoaprovaconcursos.com.br/">
@@ -215,7 +234,20 @@
             
             document.body.addEventListener('click', function(e) { 
                 const btnZap = e.target.closest('.c-zap'); 
-                if (btnZap && !btnZap.hasAttribute('onclick')) { e.preventDefault(); let msg = btnZap.getAttribute('data-msg') || "Olá! Vim pelo site da Bruno Ortiz e quero atendimento."; const urlParams = new URLSearchParams(window.location.search); let origem = ''; if(urlParams.toString()) { origem = ' [Origem: ' + urlParams.toString().replace(/&/g, ' | ') + ']'; } window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg + origem), '_blank'); } 
+                if (btnZap && !btnZap.hasAttribute('onclick')) { 
+                    e.preventDefault(); 
+                    let msg = btnZap.getAttribute('data-msg') || "Olá! Vim pelo site da Bruno Ortiz e quero atendimento."; 
+                    const urlParams = new URLSearchParams(window.location.search); 
+                    let origem = ''; 
+                    if(urlParams.toString()) { origem = ' [Origem: ' + urlParams.toString().replace(/&/g, ' | ') + ']'; } 
+                    
+                    /* Disparo do Pixel quando o botão é clicado */
+                    if (typeof fbq === 'function') {
+                        fbq('track', 'Lead');
+                    }
+                    
+                    window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg + origem), '_blank'); 
+                } 
             });
 
             window.toggleMenu = function(e) { 
@@ -295,7 +327,13 @@
                 '<button class="btn-primary" style="width: 100%; justify-content: center;" onclick="abrirZapF(\'' + msg + '\')"><i class="fa-brands fa-whatsapp"></i> Receber Minha Opção no WhatsApp</button></div>'; 
             };
             
-            window.abrirZapF = function(msg) { window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg), '_blank'); };
+            window.abrirZapF = function(msg) { 
+                /* Disparo do Pixel quando clica no botão final do quiz */
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Lead');
+                }
+                window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg), '_blank'); 
+            };
 
             const _anim = function() { if('IntersectionObserver' in window) { const _obs = new IntersectionObserver((_ent) => { _ent.forEach(_e => { if (_e.isIntersecting) _e.target.classList.add('active'); }); }, { threshold: 0.1 }); document.querySelectorAll('.reveal').forEach(_el => _obs.observe(_el)); } else { document.querySelectorAll('.reveal').forEach(_el => _el.classList.add('active')); } };
             
