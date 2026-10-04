@@ -227,7 +227,7 @@
             const novoArtigo = document.createElement('div'); novoArtigo.className = 'post-card';
             
             // Correção 4: Aspas Crases (Backticks) Corrigidas, resolvendo o Erro de Sintaxe (SyntaxError)
-            novoArtigo.innerHTML = ⁠ <button class="btn-excluir" onclick="excluirArtigo(this)"><i class="fa-solid fa-trash"></i> Excluir</button><div class="post-meta">Publicado Agora • Por ${nome}</div><h3 class="post-title">${titulo}</h3><p class="post-text">${texto.replace(/\n/g, '<br>')}</p> ⁠;
+            novoArtigo.innerHTML = `<button class="btn-excluir" onclick="excluirArtigo(this)"><i class="fa-solid fa-trash"></i> Excluir</button><div class="post-meta">Publicado Agora • Por ${nome}</div><h3 class="post-title">${titulo}</h3><p class="post-text">${texto.replace(/\n/g, '<br>')}</p>`;
             
             gridFeed.prepend(novoArtigo);
             localStorage.setItem('bruno_post_count_artigo', qtdArtigos + 1);
