@@ -217,7 +217,7 @@
             
             const gridFeed = document.getElementById('artigos-publicados');
             const novoArtigo = document.createElement('div'); novoArtigo.className = 'post-card';
-            novoArtigo.innerHTML = ⁠ <button class="btn-excluir" onclick="excluirArtigo(this)"><i class="fa-solid fa-trash"></i> Excluir</button><div class="post-meta">Publicado Agora • Por ${nome}</div><h3 class="post-title">${titulo}</h3><p class="post-text">${texto.replace(/\n/g, '<br>')}</p> ⁠;
+            novoArtigo.innerHTML = `<button class="btn-excluir" onclick="excluirArtigo(this)"><i class="fa-solid fa-trash"></i> Excluir</button><div class="post-meta">Publicado Agora • Por ${nome}</div><h3 class="post-title">${titulo}</h3><p class="post-text">${texto.replace(/\n/g, '<br>')}</p>`;
             gridFeed.prepend(novoArtigo);
             localStorage.setItem('bruno_post_count_dip', qtdArtigos + 1);
             document.getElementById('autor-nome').value = ''; document.getElementById('autor-titulo').value = ''; document.getElementById('autor-texto').value = '';
