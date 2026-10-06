@@ -239,7 +239,7 @@
             artigosSalvos.forEach((artigo, index) => {
                 const card = document.createElement('div');
                 card.className = 'post-card art-dinamico';
-                card.innerHTML = ⁠ <button class="btn-excluir" onclick="excluirArtigo(this, ${index})"><i class="fa-solid fa-trash"></i> Excluir</button><div class="post-meta">${artigo.data} • Por ${artigo.nome}</div><h3 class="post-title">${artigo.titulo}</h3><p class="post-text">${artigo.texto}</p> ⁠;
+                card.innerHTML = '<button class="btn-excluir" onclick="excluirArtigo(this, ' + index + ')"><i class="fa-solid fa-trash"></i> Excluir</button><div class="post-meta">' + artigo.data + ' • Por ' + artigo.nome + '</div><h3 class="post-title">' + artigo.titulo + '</h3><p class="post-text">' + artigo.texto + '</p>';
                 feed.prepend(card);
             });
         };
