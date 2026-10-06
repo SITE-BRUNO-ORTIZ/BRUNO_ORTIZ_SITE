@@ -9,6 +9,15 @@
       gtag('config', 'G-M4WXYDKMWW');
     </script>
     
+    <!-- Google tag (gtag.js) Adicionada -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18493081830"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18493081830');
+    </script>
+
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -114,7 +123,7 @@
             <header class="ed-header">
                 <span class="ed-tag">Direito & Investigação</span>
                 <h1 class="ed-title">Comprar Diploma Falso é Crime? A Diferença Entre Fraude e Facilitação</h1>
-                <p class="ed-subtitle">Se você já pesquisou sobre a compra de documentação acadêmica, precisa entender com clareza como o mercado clandestino destrói carreiras de forma irreversível e como a facilitação acadêmica amparada pela LDB consegue blindar o profissional de forma definitiva.</p>
+                <p class="ed-subtitle">Se você já pesquisou sobre a compra de documentação acadêmica, precisa entender com clareza como o mercado clandestino destrói carreiras de forma irreversível e como a facilitação acadêmica amparada pela LDB blinda o profissional de forma definitiva.</p>
             </header>
             <div class="ed-body">
                 <p><span class="ed-dropcap">A</span> urgência por qualificação rápida faz com que milhares de profissionais busquem atalhos perigosos na internet. O grande problema de 2026 é que a maioria absoluta dessas ofertas sedutoras são falsificações grosseiras geradas em gráficas clandestinas ou em arquivos de PDF comprados no mercado negro. A resposta legal a essa busca é contundente e sem meias palavras: <strong>Sim, comprar, encomendar e apresentar um diploma falso é crime de altíssimo rigor no Brasil</strong>.</p>
@@ -161,6 +170,7 @@
                     </form>
                 </div>
                 <div class="feed-box" id="artigos-publicados">
+                    <!-- O artigo original fixo é mantido no HTML sem index para ser reconhecido na função excluir -->
                     <div class="post-card">
                         <button class="btn-excluir" onclick="excluirArtigo(this)"><i class="fa-solid fa-trash"></i> Excluir</button>
                         <div class="post-meta">Há 1 dia • Por Roberto G.</div>
@@ -194,20 +204,17 @@
             } 
         });
 
-        // Correção 1: Função toggle do Menu com suporte a clique externo e stopPropagation
         window.toggleMenu = function(e) { 
             if(e) e.stopPropagation();
             document.getElementById('menu-links').classList.toggle('menu-aberto'); 
         };
         
-        // Correção 2: Fechamento automático ao clicar em um link
         document.querySelectorAll('.nav-links a').forEach(function(link) {
             link.addEventListener('click', function() {
                 document.getElementById('menu-links').classList.remove('menu-aberto');
             });
         });
 
-        // Correção 3: Fechamento automático ao clicar fora do menu
         document.addEventListener('click', function(event) {
             const menu = document.getElementById('menu-links');
             if (menu && menu.classList.contains('menu-aberto') && !menu.contains(event.target)) {
@@ -215,29 +222,76 @@
             }
         });
         
-        window.publicarArtigo = function(e) {
-            e.preventDefault();
-            let qtdArtigos = parseInt(localStorage.getItem('bruno_post_count_artigo') || '0');
-            if(qtdArtigos >= 2) { alert('Limite atingido: Você só pode publicar 2 artigos por usuário nesta aba.'); return; }
+        /* --- NOVO CÓDIGO DE PERSISTÊNCIA DE ARTIGOS --- */
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            carregarArtigos();
+        });
 
-            const nome = document.getElementById('autor-nome').value.trim(); const titulo = document.getElementById('autor-titulo').value.trim(); const texto = document.getElementById('autor-texto').value.trim();
-            if(!nome || !titulo || !texto) return;
+        window.carregarArtigos = function() {
+            const feed = document.getElementById('artigos-publicados');
             
-            const gridFeed = document.getElementById('artigos-publicados');
-            const novoArtigo = document.createElement('div'); novoArtigo.className = 'post-card';
+            // Limpa apenas os artigos dinâmicos para não duplicar na renderização
+            const dinamicos = feed.querySelectorAll('.art-dinamico');
+            dinamicos.forEach(el => el.remove());
+
+            // Puxa o histórico salvo no localStorage (usando chave específica para a página de artigos)
+            let artigosSalvos = JSON.parse(localStorage.getItem('bruno_artigos_db_artigo') || '[]');
             
-            // Correção 4: Aspas Crases (Backticks) Corrigidas, resolvendo o Erro de Sintaxe (SyntaxError)
-            novoArtigo.innerHTML = `<button class="btn-excluir" onclick="excluirArtigo(this)"><i class="fa-solid fa-trash"></i> Excluir</button><div class="post-meta">Publicado Agora • Por ${nome}</div><h3 class="post-title">${titulo}</h3><p class="post-text">${texto.replace(/\n/g, '<br>')}</p>`;
-            
-            gridFeed.prepend(novoArtigo);
-            localStorage.setItem('bruno_post_count_artigo', qtdArtigos + 1);
-            document.getElementById('autor-nome').value = ''; document.getElementById('autor-titulo').value = ''; document.getElementById('autor-texto').value = '';
-            alert('Seu artigo foi publicado com sucesso!');
+            // Insere cada artigo no topo do feed
+            artigosSalvos.forEach((artigo, index) => {
+                const card = document.createElement('div');
+                card.className = 'post-card art-dinamico';
+                card.innerHTML = ⁠ <button class="btn-excluir" onclick="excluirArtigo(this, ${index})"><i class="fa-solid fa-trash"></i> Excluir</button><div class="post-meta">${artigo.data} • Por ${artigo.nome}</div><h3 class="post-title">${artigo.titulo}</h3><p class="post-text">${artigo.texto}</p> ⁠;
+                feed.prepend(card);
+            });
         };
 
-        window.excluirArtigo = function(btn) {
+        window.publicarArtigo = function(e) {
+            e.preventDefault();
+            let qtdArtigosSessao = parseInt(localStorage.getItem('bruno_post_count_artigo') || '0');
+            if(qtdArtigosSessao >= 2) { alert('Limite atingido: Você só pode publicar 2 artigos por usuário nesta aba.'); return; }
+
+            const nome = document.getElementById('autor-nome').value.trim(); 
+            const titulo = document.getElementById('autor-titulo').value.trim(); 
+            const texto = document.getElementById('autor-texto').value.trim();
+            if(!nome || !titulo || !texto) return;
+            
+            const textoFormatado = texto.replace(/\n/g, '<br>');
+            
+            // Guarda o novo artigo no banco do navegador
+            let artigosSalvos = JSON.parse(localStorage.getItem('bruno_artigos_db_artigo') || '[]');
+            artigosSalvos.push({ nome: nome, titulo: titulo, texto: textoFormatado, data: "Publicado Agora" });
+            localStorage.setItem('bruno_artigos_db_artigo', JSON.stringify(artigosSalvos));
+            
+            localStorage.setItem('bruno_post_count_artigo', qtdArtigosSessao + 1);
+            
+            // Limpa os campos do formulário
+            document.getElementById('autor-nome').value = ''; 
+            document.getElementById('autor-titulo').value = ''; 
+            document.getElementById('autor-texto').value = '';
+            
+            alert('Seu artigo foi publicado com sucesso!');
+            carregarArtigos(); // Atualiza a tela instantaneamente
+        };
+
+        window.excluirArtigo = function(btn, index) {
             let senha = prompt("Digite a senha de administrador para excluir este artigo:");
-            if(senha === '992136520Fe') { btn.parentElement.remove(); alert("Artigo excluído com sucesso."); } else { alert("Senha incorreta. Ação bloqueada."); }
+            if(senha === '992136520Fe') { 
+                if (index !== undefined) {
+                    // É um artigo recém-criado, então remove do banco de dados
+                    let artigosSalvos = JSON.parse(localStorage.getItem('bruno_artigos_db_artigo') || '[]');
+                    artigosSalvos.splice(index, 1);
+                    localStorage.setItem('bruno_artigos_db_artigo', JSON.stringify(artigosSalvos));
+                    carregarArtigos(); // Atualiza a tela
+                } else {
+                    // É o artigo de exemplo original fixo no HTML, apenas apaga o elemento
+                    btn.parentElement.remove(); 
+                }
+                alert("Artigo excluído com sucesso."); 
+            } else { 
+                alert("Senha incorreta. Ação bloqueada."); 
+            }
         };
     </script>
 </body>
