@@ -246,16 +246,19 @@
                 if (btnZap && !btnZap.hasAttribute('onclick')) { 
                     e.preventDefault(); 
                     let msg = btnZap.getAttribute('data-msg') || "Olá! Vim pelo site da Bruno Ortiz e quero atendimento."; 
-                    const urlParams = new URLSearchParams(window.location.search); 
-                    let origem = ''; 
-                    if(urlParams.toString()) { origem = ' [Origem: ' + urlParams.toString().replace(/&/g, ' | ') + ']'; } 
                     
-                    /* Disparo do Pixel quando o botão é clicado */
+                    /* Disparo do Pixel do Facebook */
                     if (typeof fbq === 'function') {
                         fbq('track', 'Lead');
                     }
                     
-                    window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg + origem), '_blank'); 
+                    /* Disparo da Conversão do Google Ads */
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'conversion', {'send_to': 'AW-18493081830/8fbtCL_G3ZIdEOaRmPJE'});
+                    }
+                    
+                    /* Removido o rastreio de URL para evitar códigos feios no WhatsApp */
+                    window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg), '_blank'); 
                 } 
             });
 
@@ -337,16 +340,18 @@
             };
             
             window.abrirZapF = function(msg) { 
-                /* Disparo do Pixel quando clica no botão final do quiz */
                 if (typeof fbq === 'function') {
                     fbq('track', 'Lead');
+                }
+                /* Disparo da Conversão do Google Ads no botão final do quiz */
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', {'send_to': 'AW-18493081830/8fbtCL_G3ZIdEOaRmPJE'});
                 }
                 window.open(atob(_b[0]+_b[1]+_b[2]) + encodeURIComponent(msg), '_blank'); 
             };
 
             const _anim = function() { if('IntersectionObserver' in window) { const _obs = new IntersectionObserver((_ent) => { _ent.forEach(_e => { if (_e.isIntersecting) _e.target.classList.add('active'); }); }, { threshold: 0.1 }); document.querySelectorAll('.reveal').forEach(_el => _obs.observe(_el)); } else { document.querySelectorAll('.reveal').forEach(_el => _el.classList.add('active')); } };
             
-            // Aguarda o carregamento do DOM antes de injetar e animar
             document.addEventListener('DOMContentLoaded', function() {
                 iniciarQuiz();
                 _anim();
