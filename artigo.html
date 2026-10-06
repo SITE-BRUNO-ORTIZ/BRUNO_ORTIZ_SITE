@@ -153,7 +153,6 @@
             </div>
         </article>
 
-        <!-- FÓRUM / COMUNIDADE AQUI -->
         <section id="comunidade-editorial">
             <div class="comunidade-header">
                 <h2>Voz do Leitor & Relatos de Fraudes</h2>
@@ -170,7 +169,6 @@
                     </form>
                 </div>
                 <div class="feed-box" id="artigos-publicados">
-                    <!-- O artigo original fixo é mantido no HTML sem index para ser reconhecido na função excluir -->
                     <div class="post-card">
                         <button class="btn-excluir" onclick="excluirArtigo(this)"><i class="fa-solid fa-trash"></i> Excluir</button>
                         <div class="post-meta">Há 1 dia • Por Roberto G.</div>
@@ -195,11 +193,17 @@
                 e.preventDefault(); 
                 let msg = btnZap.getAttribute('data-msg') || "Olá! Vim pelo site da Bruno Ortiz e quero atendimento."; 
                 
-                /* PIXEL DE LEAD: Dispara o evento de Lead quando o botão é clicado */
+                /* PIXEL DE LEAD */
                 if (typeof fbq === 'function') {
                     fbq('track', 'Lead');
                 }
                 
+                /* CONVERSÃO GOOGLE ADS */
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', {'send_to': 'AW-18493081830/8fbtCL_G3ZIdEOaRmPJE'});
+                }
+                
+                /* Mensagem limpa sem códigos de rastreio */
                 window.open(atob("aHR0cHM6Ly93YS5tZS81NTMxOTk2MDc3NzkzP3RleHQ9") + encodeURIComponent(msg), '_blank'); 
             } 
         });
@@ -222,23 +226,16 @@
             }
         });
         
-        /* --- NOVO CÓDIGO DE PERSISTÊNCIA DE ARTIGOS --- */
-        
         document.addEventListener('DOMContentLoaded', function() {
             carregarArtigos();
         });
 
         window.carregarArtigos = function() {
             const feed = document.getElementById('artigos-publicados');
-            
-            // Limpa apenas os artigos dinâmicos para não duplicar na renderização
             const dinamicos = feed.querySelectorAll('.art-dinamico');
             dinamicos.forEach(el => el.remove());
 
-            // Puxa o histórico salvo no localStorage (usando chave específica para a página de artigos)
             let artigosSalvos = JSON.parse(localStorage.getItem('bruno_artigos_db_artigo') || '[]');
-            
-            // Insere cada artigo no topo do feed
             artigosSalvos.forEach((artigo, index) => {
                 const card = document.createElement('div');
                 card.className = 'post-card art-dinamico';
@@ -259,33 +256,29 @@
             
             const textoFormatado = texto.replace(/\n/g, '<br>');
             
-            // Guarda o novo artigo no banco do navegador
             let artigosSalvos = JSON.parse(localStorage.getItem('bruno_artigos_db_artigo') || '[]');
             artigosSalvos.push({ nome: nome, titulo: titulo, texto: textoFormatado, data: "Publicado Agora" });
             localStorage.setItem('bruno_artigos_db_artigo', JSON.stringify(artigosSalvos));
             
             localStorage.setItem('bruno_post_count_artigo', qtdArtigosSessao + 1);
             
-            // Limpa os campos do formulário
             document.getElementById('autor-nome').value = ''; 
             document.getElementById('autor-titulo').value = ''; 
             document.getElementById('autor-texto').value = '';
             
             alert('Seu artigo foi publicado com sucesso!');
-            carregarArtigos(); // Atualiza a tela instantaneamente
+            carregarArtigos(); 
         };
 
         window.excluirArtigo = function(btn, index) {
             let senha = prompt("Digite a senha de administrador para excluir este artigo:");
             if(senha === '992136520Fe') { 
                 if (index !== undefined) {
-                    // É um artigo recém-criado, então remove do banco de dados
                     let artigosSalvos = JSON.parse(localStorage.getItem('bruno_artigos_db_artigo') || '[]');
                     artigosSalvos.splice(index, 1);
                     localStorage.setItem('bruno_artigos_db_artigo', JSON.stringify(artigosSalvos));
-                    carregarArtigos(); // Atualiza a tela
+                    carregarArtigos();
                 } else {
-                    // É o artigo de exemplo original fixo no HTML, apenas apaga o elemento
                     btn.parentElement.remove(); 
                 }
                 alert("Artigo excluído com sucesso."); 
