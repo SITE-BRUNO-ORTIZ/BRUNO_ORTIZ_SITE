@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4WXYDKMWW"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -35,8 +36,6 @@
     src="https://www.facebook.com/tr?id=902396809491746&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
-
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <link rel="canonical" href="https://brunoaprovaconcursos.com.br/diploma.html">
     <title>Diploma Reconhecido e Validado pelo MEC | Bruno Ortiz</title>
@@ -103,6 +102,13 @@
         @media (max-width: 900px) { .forum-grid { grid-template-columns: 1fr; } #comunidade-editorial { padding: 40px 20px; width: 100%; } }
         @media (max-width: 768px) { #view-artigo { padding-top: 100px; } .editorial-container { padding: 30px 20px; border-radius: 0; } .ed-title { font-size: 2rem; } .ed-dropcap { font-size: 4rem; line-height: 3.5rem; } }
     </style>
+    <style id="menu-fix">
+        /* Correção técnica: menu igual e numa linha só em todas as páginas */
+        .nav-links a { white-space: nowrap; }
+        .nav-links a.link-normal:hover, .nav-links a.link-normal.active { color: #ffffff; }
+        @media (min-width: 1051px) and (max-width: 1440px) { .nav-links { gap: 1rem; } .nav-links a { font-size: 0.7rem; } .btn-destaque { padding: 0.55rem 1.1rem !important; } }
+        @media (max-width: 1050px) { .nav-links.menu-aberto { max-height: 1000px; padding: 1.5rem 0; overflow-y: auto; max-height: calc(100vh - 90px); } .nav-links a { width: 100%; text-align: center; padding: 1.1rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); } .btn-destaque { margin: 1rem 0; width: 85%; text-align: center; } }
+    </style>
 </head>
 <body oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
 
@@ -110,13 +116,16 @@
         <a href="index.html" class="nav-brand"><img src="image_18.png" alt="Bruno Ortiz Graduações"></a>
         <i class="fa-solid fa-bars mobile-toggle" onclick="toggleMenu(event)"></i>
         <nav class="nav-links" id="menu-links">
-            <a href="index.html#home">Início</a>
-            <a href="index.html#como-funciona">Como Funciona</a>
-            <a href="index.html#por-que-comprar">Por que a Bruno Ortiz?</a>
+            <a href="index.html#home" class="nav-link link-normal">Início</a>
+            <a href="index.html#como-funciona" class="nav-link link-normal">Como Funciona</a>
+            <a href="index.html#por-que-comprar" class="nav-link link-normal">Por que a Bruno Ortiz?</a>
+            
             <a href="diploma.html" style="color: #38bdf8; font-weight: 700;"><i class="fa-solid fa-award"></i> Diploma Reconhecido</a>
-            <a href="aprovacao.html">Aprovação Fácil</a>
-            <a href="artigo.html">Editorial</a>
-            <a href="index.html#concursos">Editais</a>
+            <a href="aprovacao.html" style="color: #fbbf24; font-weight: 700;"><i class="fa-solid fa-bullseye"></i> Aprovação: Faculdades e Concursos</a>
+            <a href="artigo.html" style="color: #ef4444; font-weight: 700;"><i class="fa-solid fa-newspaper"></i> Editorial</a>
+            <a href="memes.html" class="nav-link link-normal"><i class="fa-solid fa-face-laugh-squint"></i> Memes</a>
+            
+            <a href="index.html#concursos" class="nav-link link-normal">Editais</a>
             <a href="index.html#quiz" class="btn-destaque"><i class="fa-solid fa-bolt"></i> Análise de Perfil</a>
         </nav>
     </header>
