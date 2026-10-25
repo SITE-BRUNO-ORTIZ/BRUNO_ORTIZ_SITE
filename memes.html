@@ -143,7 +143,8 @@
                 .catch(function () { return []; })
                 .then(function (lista) {
                     var h = hoje();
-                    var ativos = (lista || []).filter(function (m) { return !m.expira || m.expira > h; });
+                    var agora = Date.now();
+                    var ativos = (lista || []).filter(function (m) { return (!m.expira || m.expira > h) && (!m.publicar_em || Date.parse(m.publicar_em) <= agora); }).reverse();
                     if (!ativos.length) { grid.innerHTML = '<p class="memes-vazio">Os memes da semana já saíram do ar. Volte em breve! 😄</p>'; return; }
                     grid.innerHTML = ativos.map(function (m) {
                         return '<article class="meme">' +

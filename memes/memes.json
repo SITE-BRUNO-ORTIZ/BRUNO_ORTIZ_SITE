@@ -28,5 +28,27 @@
     "credito": "@hiidoconcursos",
     "publicado": "2026-10-25",
     "expira": "2026-10-30"
+  },
+  {
+    "id": "2026-10-26-estudante-na-faculdade",
+    "titulo": "O estudante depois que entra na faculdade",
+    "legenda": "Entrou na faculdade e já virou outra pessoa 😂 Quer sua graduação ou pós com diploma reconhecido pelo MEC? A Bruno Ortiz te ajuda.",
+    "video": "memes/2026-10-26-estudante-na-faculdade.mp4",
+    "capa": "memes/2026-10-26-estudante-na-faculdade.jpg",
+    "credito": "@ln_educacional_brasil",
+    "publicado": "2026-10-26",
+    "publicar_em": "2026-10-26T10:30:00-03:00",
+    "expira": "2026-10-31"
+  },
+  {
+    "id": "2026-10-26-nao-sei-pq-nao-passei",
+    "titulo": "\"Não sei por que não passei no concurso...\"",
+    "legenda": "Todo concurseiro conhece alguém assim 👀 Estude com foco, e na hora da posse conte com a Bruno Ortiz para cumprir os requisitos do edital.",
+    "video": "memes/2026-10-26-nao-sei-pq-nao-passei.mp4",
+    "capa": "memes/2026-10-26-nao-sei-pq-nao-passei.jpg",
+    "credito": "@grancursosonline",
+    "publicado": "2026-10-26",
+    "publicar_em": "2026-10-26T17:30:00-03:00",
+    "expira": "2026-10-31"
   }
 ]
