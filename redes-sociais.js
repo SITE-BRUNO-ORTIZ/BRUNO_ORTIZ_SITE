@@ -9,6 +9,7 @@
         { id: 'youtube',   nome: 'YouTube',           icone: 'fa-brands fa-youtube',    url: 'https://www.youtube.com/channel/UCFcYFOVcGCRMS1OHLwovt9w' },
         { id: 'google',    nome: 'Google Meu Negócio', icone: 'fa-brands fa-google',    url: 'https://www.google.com/search?q=Bruno+Aprova+Concursos' }
     ];
+    window.BRUNO_REDES = REDES; /* usado também pela página redes.html */
 
     function link(rede, classe, comTexto) {
         var a = document.createElement('a');
@@ -104,7 +105,7 @@
     /* 3. Ícones no rodapé */
     function rodape() {
         var footer = document.querySelector('footer');
-        if (!footer || footer.querySelector('.redes-rodape')) return;
+        if (!footer || footer.hasAttribute('data-sem-redes') || footer.querySelector('.redes-rodape')) return;
         var bloco = document.createElement('div');
         bloco.className = 'redes-rodape';
         var t = document.createElement('span');

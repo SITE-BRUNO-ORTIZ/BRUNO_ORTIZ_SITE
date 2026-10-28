@@ -39,4 +39,12 @@
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- Página de Redes Sociais -->
+  <url>
+    <loc>https://brunoaprovaconcursos.com.br/redes.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
