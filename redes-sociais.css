@@ -103,3 +103,11 @@
 .redes-icone:focus-visible i { outline: 2px solid rgba(255,255,255,0.7); outline-offset: 3px; }
 .redes-rodape + div { margin-top: 30px !important; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.05); }
 .redes-copy { margin-top: 24px; }
+
+/* ---------- Menu recolhido: itens nunca são espremidos e o botão "Análise de Perfil" fica inteiro ---------- */
+.site-header.nav-compacta .nav-links > * { flex-shrink: 0; }
+.site-header.nav-compacta .nav-links a.btn-destaque {
+    width: 85%; margin: 1.2rem auto 0.5rem; padding: 0.9rem 1.4rem !important;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    text-align: center; line-height: 1.3; white-space: normal; overflow: visible;
+}
