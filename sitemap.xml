@@ -1,50 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Página Principal -->
-  <url>
-    <loc>https://brunoaprovaconcursos.com.br/</loc>
-    <lastmod>2026-10-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Página Diploma Reconhecido -->
-  <url>
-    <loc>https://brunoaprovaconcursos.com.br/diploma.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Página Aprovação Fácil -->
-  <url>
-    <loc>https://brunoaprovaconcursos.com.br/aprovacao.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Página Editorial SEO -->
-  <url>
-    <loc>https://brunoaprovaconcursos.com.br/artigo.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Página de Memes -->
-  <url>
-    <loc>https://brunoaprovaconcursos.com.br/memes.html</loc>
-    <lastmod>2026-10-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Página de Redes Sociais -->
-  <url>
-    <loc>https://brunoaprovaconcursos.com.br/redes.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <url><loc>https://brunoaprovaconcursos.com.br/</loc><lastmod>2026-10-29</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://brunoaprovaconcursos.com.br/diploma.html</loc><lastmod>2026-10-29</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://brunoaprovaconcursos.com.br/aprovacao.html</loc><lastmod>2026-10-29</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://brunoaprovaconcursos.com.br/ensino-medio.html</loc><lastmod>2026-10-29</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brunoaprovaconcursos.com.br/servicos-academicos.html</loc><lastmod>2026-10-29</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brunoaprovaconcursos.com.br/artigo.html</loc><lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://brunoaprovaconcursos.com.br/memes.html</loc><lastmod>2026-10-29</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://brunoaprovaconcursos.com.br/redes.html</loc><lastmod>2026-10-29</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 </urlset>
