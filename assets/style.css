@@ -295,3 +295,96 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .js-motion .reveal.in{opacity:1;transform:none}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.ticker ul{width:auto;flex-wrap:wrap}}
+
+/* =====================================================================
+   CAMADA BRUNO ORTIZ — traços próprios da marca (v2)
+   Tudo aqui é visual: não muda posição, ordem, textos, botões nem medição.
+   Motivos tirados do logo: a serifa do nome, o check, o capelo,
+   a linha dourada e o selo de diploma.
+   ===================================================================== */
+:root{
+  --serif:"Lora",Georgia,"Times New Roman",serif;
+  --check:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12.5l5 5L20 6.5'/%3E%3C/svg%3E");
+  --linha-ouro:linear-gradient(90deg,transparent,rgba(218,177,95,.75) 22%,rgba(227,192,111,.95) 50%,rgba(218,177,95,.75) 78%,transparent);
+}
+
+/* Serifa do logo nas palavras de destaque */
+h1 em,h2 em,h3 em,.foot-big span,.hero h1 .sol{font-family:var(--serif);font-style:italic;font-weight:600;letter-spacing:-.01em;color:var(--ouro-2)}
+.hl{background:none;font-family:var(--serif);font-style:italic;font-weight:600;color:var(--ouro-2);text-decoration:underline;text-decoration-color:rgba(218,177,95,.55);text-decoration-thickness:.06em;text-underline-offset:.16em;padding:0}
+
+/* Check do logo no lugar dos pontos */
+.eyebrow::before{width:14px;height:14px;border-radius:0;background:var(--ouro);box-shadow:none;-webkit-mask:var(--check) center/contain no-repeat;mask:var(--check) center/contain no-repeat}
+.trust li::before{width:12px;height:12px;border-radius:0;-webkit-mask:var(--check) center/contain no-repeat;mask:var(--check) center/contain no-repeat}
+.prose ul li::before{width:14px;height:14px;top:.38em;border:0;border-radius:0;background:var(--ouro);-webkit-mask:var(--check) center/contain no-repeat;mask:var(--check) center/contain no-repeat}
+.prose ul li:hover::before{background:var(--ouro-2)}
+.ticker li::after{width:16px;height:16px;border-radius:0;background:#030811;-webkit-mask:var(--check) center/contain no-repeat;mask:var(--check) center/contain no-repeat}
+.hero h1 .sol::after{width:.34em;height:.34em;margin-left:.06em;vertical-align:.42em;border-radius:0;background:var(--ouro);box-shadow:none;-webkit-mask:var(--check) center/contain no-repeat;mask:var(--check) center/contain no-repeat}
+
+/* Linha dourada do logo: topo, rodapé e barra de leitura */
+.site-head{border-bottom:0}
+.site-head::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--linha-ouro);pointer-events:none}
+@supports (animation-timeline: scroll()){
+  .site-head::before{content:"";position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:linear-gradient(90deg,var(--ouro-3),var(--ouro-2));transform-origin:0 50%;transform:scaleX(0);animation:leitura linear both;animation-timeline:scroll(root);z-index:1;pointer-events:none}
+  @keyframes leitura{to{transform:scaleX(1)}}
+}
+.site-foot{border-top:0;position:relative}
+.site-foot::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--linha-ouro)}
+
+/* Selo com o capelo entre as faixas (fica sobre a divisa, não ocupa espaço) */
+main > .band{position:relative}
+main > .band + .band::before{content:"";position:absolute;left:50%;top:0;width:min(560px,70vw);height:1px;transform:translateX(-50%);background:var(--linha-ouro);opacity:.7;pointer-events:none;z-index:2}
+main > .band + .band::after{content:"";position:absolute;left:50%;top:0;width:44px;height:44px;transform:translate(-50%,-50%);border-radius:50%;background:#071224 url("logo-simbolo.png") center 46%/28px auto no-repeat;box-shadow:0 0 0 1px rgba(218,177,95,.7),0 0 0 5px #071224,0 0 0 6px rgba(218,177,95,.25);pointer-events:none;z-index:3}
+
+/* Topo da página inicial: selo de diploma no lugar do "sol" do modelo + marca d'água do capelo (como no site antigo) */
+.hero::after{width:min(66vw,780px);right:-16%;top:-30%;background:repeating-radial-gradient(circle at 50% 50%,rgba(218,177,95,.20) 0 1px,transparent 1.6px 13px);-webkit-mask:radial-gradient(circle closest-side,#000 0 62%,transparent 100%);mask:radial-gradient(circle closest-side,#000 0 62%,transparent 100%);opacity:.75;animation:nasce 1.6s cubic-bezier(.2,.8,.2,1) both,gira 120s linear infinite}
+@keyframes gira{to{rotate:360deg}}
+.hero::before{content:"";position:absolute;z-index:-1;right:3%;top:50%;width:min(46vw,520px);aspect-ratio:144/132;transform:translateY(-50%) rotate(-8deg);background:url("logo-simbolo.png") center/contain no-repeat;opacity:.05;pointer-events:none}
+@media (max-width:900px){.hero::before{right:-18%;top:16%;width:80vw;opacity:.045}}
+
+/* Cartão-resposta com moldura de diploma */
+.gabarito::before{inset:9px;border:1px solid rgba(218,177,95,.42);border-radius:18px;box-shadow:inset 0 0 0 3px var(--card),inset 0 0 0 4px rgba(218,177,95,.18)}
+.gabarito::after{content:"";position:absolute;inset:15px;pointer-events:none;border-radius:0;background:
+  linear-gradient(var(--ouro),var(--ouro)) left 0 top 0/18px 2px no-repeat,linear-gradient(var(--ouro),var(--ouro)) left 0 top 0/2px 18px no-repeat,
+  linear-gradient(var(--ouro),var(--ouro)) right 0 top 0/18px 2px no-repeat,linear-gradient(var(--ouro),var(--ouro)) right 0 top 0/2px 18px no-repeat,
+  linear-gradient(var(--ouro),var(--ouro)) left 0 bottom 0/18px 2px no-repeat,linear-gradient(var(--ouro),var(--ouro)) left 0 bottom 0/2px 18px no-repeat,
+  linear-gradient(var(--ouro),var(--ouro)) right 0 bottom 0/18px 2px no-repeat,linear-gradient(var(--ouro),var(--ouro)) right 0 bottom 0/2px 18px no-repeat}
+.gabarito h2 em{font-size:1.06em}
+
+/* Vídeo: moldura com cantos dourados */
+.tela{position:relative;background:linear-gradient(var(--card),var(--card)) padding-box,linear-gradient(140deg,rgba(227,192,111,.85),rgba(30,54,87,1) 38%,rgba(30,54,87,1) 70%,rgba(218,177,95,.6)) border-box;border:1px solid transparent}
+
+/* Áreas: selo na letra e capelo d'água no lugar do círculo do modelo */
+.area .letra{box-shadow:0 0 0 4px var(--card),0 0 0 5.5px var(--c);font:italic 600 1.15rem var(--serif)}
+.area::after{width:150px;height:138px;right:-16px;bottom:-12px;border-radius:0;background:url("logo-simbolo.png") center/contain no-repeat;opacity:.07;transform:rotate(-12deg);transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .3s}
+.area:hover::after{transform:rotate(-4deg) scale(1.12);opacity:.12}
+.area h3{position:relative}
+
+/* Passos: numeração na serifa do logo e check no canto */
+.steps li{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025));border-color:rgba(218,177,95,.22)}
+.steps li::before{font:italic 600 3rem/1 var(--serif);letter-spacing:0}
+.steps li::after{content:"";position:absolute;top:22px;right:22px;width:22px;height:22px;background:rgba(218,177,95,.55);-webkit-mask:var(--check) center/contain no-repeat;mask:var(--check) center/contain no-repeat}
+
+/* Compromisso com borda de certificado */
+.pledge{background:linear-gradient(var(--card),var(--card)) padding-box,linear-gradient(135deg,rgba(227,192,111,.8),var(--linha) 35%,var(--linha) 75%,rgba(218,177,95,.45)) border-box;border:1px solid transparent}
+.svc{background:linear-gradient(var(--card),var(--card)) padding-box,linear-gradient(160deg,rgba(218,177,95,.45),var(--linha) 30%) border-box;border:1px solid transparent}
+.faq details[open]{box-shadow:inset 3px 0 0 var(--ouro)}
+
+/* Chamada final: arcos de selo + capelo no lugar do "sol nascendo" do modelo */
+.cta::before{width:min(540px,92vw);aspect-ratio:1;left:50%;bottom:calc(-1 * clamp(72px,10vw,128px));transform:translate(-50%,50%);border-radius:50%;opacity:1;
+  background:radial-gradient(circle closest-side,rgba(218,177,95,.22),transparent 46%),
+  radial-gradient(circle closest-side,transparent 0 47%,rgba(227,192,111,.95) 47% 47.7%,transparent 47.7% 61%,rgba(218,177,95,.6) 61% 61.5%,transparent 61.5% 75%,rgba(218,177,95,.38) 75% 75.4%,transparent 75.4% 89%,rgba(218,177,95,.85) 89% 90%,transparent 90%);
+  clip-path:inset(0 0 50% 0)}
+.cta::after{content:"";position:absolute;z-index:-1;left:50%;bottom:calc(-1 * clamp(72px,10vw,128px) + 10px);width:clamp(84px,12vw,118px);aspect-ratio:144/132;transform:translateX(-50%);background:url("logo-simbolo.png") center/contain no-repeat;pointer-events:none}
+
+/* Páginas internas: o círculo vira selo de diploma, com a letra na serifa do logo */
+.page-hero::after{font:italic 600 clamp(4rem,9vw,8rem)/1 var(--serif);
+  background:radial-gradient(circle closest-side,var(--c) 0 68%,transparent 68.6%),repeating-radial-gradient(circle closest-side,color-mix(in srgb,var(--c) 42%,transparent) 0 1px,transparent 1.6px 7px);
+  box-shadow:0 0 0 1.5px rgba(218,177,95,.55),0 0 90px color-mix(in srgb,var(--c) 26%,transparent)}
+.crumbs{display:inline-flex;gap:.4em;align-items:center}
+
+/* Botões: anel dourado ao passar o dedo/mouse */
+.btn--wa:hover,.btn--wa:focus-visible{box-shadow:inset 0 -3px 0 rgba(0,0,0,.12),0 0 0 2px rgba(218,177,95,.75),0 14px 30px -12px rgba(255,255,255,.25)}
+.btn--ghost:hover{box-shadow:inset 0 0 0 1.5px var(--ouro);color:var(--ouro-2)}
+
+@media (prefers-reduced-motion:reduce){.hero::after{animation:none}.site-head::before{display:none}}
+.area > .stack{align-content:start}

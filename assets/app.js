@@ -90,6 +90,7 @@ window.HG = {
   var novoId = function () { return 'wa_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 8); };
   var dentroDe = function (k, dias) { var t = parseInt(store.get(k) || '0', 10); return t && (Date.now() - t) < dias * 864e5; };
   window.HG_interesse = function (i) { if (i) store.set(INT_KEY, i, true); };
+  window.HG_estado = function (uf) { if (uf) store.set('hg_estado', uf, true); };
 
   document.addEventListener('click', function (ev) {
     var a = ev.target.closest && ev.target.closest('a[href*="wa.me/"], a[href*="api.whatsapp.com"]');
@@ -99,8 +100,11 @@ window.HG = {
     var interesse = a.getAttribute('data-interesse') || interesseAtual();
     var pagina = location.pathname;
     var info = { content_name: origem, content_category: interesse };
+    var estado = store.get('hg_estado', true);              /* estado escolhido no balão de estados (se houver) */
+    var comEstado = function (o) { if (estado) o.estado = estado; return o; };
+    if (estado) info.estado = estado;
 
-    try { if (window.gtag) gtag('event', 'whatsapp_click', { origem: origem, interesse: interesse, pagina: pagina, transport_type: 'beacon' }); } catch (e) {}
+    try { if (window.gtag) gtag('event', 'whatsapp_click', comEstado({ origem: origem, interesse: interesse, pagina: pagina, transport_type: 'beacon' })); } catch (e) {}
 
     var primeiroContato = !dentroDe(CONTATO_KEY, CONTATO_DIAS);
     if (primeiroContato) store.set(CONTATO_KEY, String(Date.now()));
@@ -116,7 +120,7 @@ window.HG = {
     if (!dentroDe(LEAD_KEY, LEAD_DIAS) && interesse !== 'ensino-medio') {
       store.set(LEAD_KEY, String(Date.now()));
       try { if (window.fbq) fbq('track', 'Lead', info, { eventID: novoId() }); } catch (e) {}
-      try { if (window.gtag) gtag('event', 'generate_lead', { method: 'whatsapp', origem: origem, interesse: interesse, pagina: pagina, transport_type: 'beacon' }); } catch (e) {}
+      try { if (window.gtag) gtag('event', 'generate_lead', comEstado({ method: 'whatsapp', origem: origem, interesse: interesse, pagina: pagina, transport_type: 'beacon' })); } catch (e) {}
     }
   }, true);
 
@@ -190,7 +194,7 @@ window.HG = {
   if (document.querySelector('.wa-float')) {
     var proprio = document.querySelector('script[src*="assets/app.js"]');
     var at = document.createElement('script');
-    at.src = (proprio ? proprio.src.replace(/app\.js(\?.*)?$/, 'atendimento.js') : 'assets/atendimento.js') + '?v=20261029';
+    at.src = (proprio ? proprio.src.replace(/app\.js(\?.*)?$/, 'atendimento.js') : 'assets/atendimento.js') + '?v=20261029c';
     at.defer = true;
     document.body.appendChild(at);
   }

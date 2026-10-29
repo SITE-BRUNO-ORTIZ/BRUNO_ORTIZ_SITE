@@ -1,6 +1,8 @@
 /* Balão de atendimento: pré-cadastro rápido antes do WhatsApp.
    Abre no lugar do botão verde flutuante, faz 3 perguntas + nome
-   e envia tudo pronto na mensagem do WhatsApp. Não guarda dados no site. */
+   e envia tudo pronto na mensagem do WhatsApp. Não guarda dados no site.
+   Balão de estados (v2): aparece sobre o botão verde com os estados; tocar no
+   estado abre a conversa já com o estado anotado, e a mensagem leva "• Estado". */
 (function () {
   var C = window.HG || {};
   var NUM = C.whatsapp || '5531996077793';
@@ -23,6 +25,18 @@
     'servicos-academicos': { txt: 'Entendi. Com o que você precisa de ajuda?', ops: ['Matrícula ou transferência', 'Aproveitamento de disciplinas', 'TCC e normas ABNT', 'Pós-graduação', 'Diploma e registro'] },
     'ensino-medio': { txt: 'Certo! Você já sabe qual caminho quer seguir?', ops: ['ENCCEJA', 'EJA a distância', 'Ainda não sei'] },
     prazo: { txt: 'E para quando você precisa resolver isso?', ops: ['O quanto antes', 'Nos próximos meses', 'Só estou pesquisando'] }
+  };
+
+  var UFS = { AC: 'Acre', AL: 'Alagoas', AP: 'Amapá', AM: 'Amazonas', BA: 'Bahia', CE: 'Ceará', DF: 'Distrito Federal', ES: 'Espírito Santo', GO: 'Goiás', MA: 'Maranhão', MT: 'Mato Grosso', MS: 'Mato Grosso do Sul', MG: 'Minas Gerais', PA: 'Pará', PB: 'Paraíba', PR: 'Paraná', PE: 'Pernambuco', PI: 'Piauí', RJ: 'Rio de Janeiro', RN: 'Rio Grande do Norte', RS: 'Rio Grande do Sul', RO: 'Rondônia', RR: 'Roraima', SC: 'Santa Catarina', SP: 'São Paulo', SE: 'Sergipe', TO: 'Tocantins' };
+  var UFS_TOPO = ['SP', 'MG', 'RJ', 'PR', 'SC', 'RS', 'DF', 'GO', 'BA', 'PE', 'CE'];
+  var sess = {
+    get: function (k) { try { return sessionStorage.getItem(k) || ''; } catch (e) { return ''; } },
+    set: function (k, v) { try { sessionStorage.setItem(k, v); } catch (e) {} }
+  };
+  var estadoAtual = UFS[sess.get('hg_estado')] ? sess.get('hg_estado') : '';
+  var guardarEstado = function (uf) {
+    estadoAtual = uf;
+    if (window.HG_estado) window.HG_estado(uf); else sess.set('hg_estado', uf);
   };
 
   var css = '' +
@@ -49,8 +63,22 @@
   '#hg-chat .hc-pe a,#hg-chat .hc-pe button{color:inherit;background:none;border:0;padding:0;font:inherit;text-decoration:underline;cursor:pointer}' +
   '.wa-float .hc-ping{position:absolute;top:-4px;right:-4px;width:18px;height:18px;border-radius:50%;background:var(--ouro,#DAB15F);border:2px solid var(--papel,#030811)}' +
   '@keyframes hcIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}' +
+  '#hg-estados{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(90px + env(safe-area-inset-bottom,0px));z-index:79;width:min(332px,calc(100vw - 32px));padding:16px 16px 14px;border-radius:20px;color:var(--grafite,#F8FAFC);font:400 .95rem/1.4 var(--body,system-ui);background:linear-gradient(var(--card,#102A4A),var(--card,#102A4A)) padding-box,linear-gradient(135deg,var(--ouro-2,#E3C06F),rgba(30,54,87,1) 45%,rgba(218,177,95,.6)) border-box;border:1px solid transparent;box-shadow:0 22px 50px -16px rgba(0,0,0,.85);transform-origin:calc(100% - 28px) 100%;animation:heIn .35s cubic-bezier(.2,.8,.2,1) both}' +
+  '#hg-estados[hidden]{display:none}' +
+  '#hg-estados::after{content:"";position:absolute;right:26px;bottom:-8px;width:16px;height:16px;transform:rotate(45deg);background:var(--card,#102A4A);border-right:1px solid rgba(218,177,95,.55);border-bottom:1px solid rgba(218,177,95,.55)}' +
+  '#hg-estados .he-top{display:flex;align-items:center;gap:12px;padding-right:30px;margin-bottom:12px}' +
+  '#hg-estados .he-selo{width:40px;height:40px;flex:none;border-radius:50%;background:#071224;display:grid;place-items:center;box-shadow:0 0 0 1px var(--ouro,#DAB15F)}#hg-estados .he-selo img{width:27px;height:auto}' +
+  '#hg-estados .he-top b{display:block;font:800 .98rem/1.2 var(--display,system-ui);color:#fff}#hg-estados .he-top small{display:block;font-size:.86rem;color:var(--texto-2,#CBD5E1)}' +
+  '#hg-estados .he-ufs{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}' +
+  '#hg-estados .he-uf{appearance:none;border:1px solid rgba(218,177,95,.55);background:rgba(3,8,17,.35);color:var(--ouro-2,#E3C06F);border-radius:10px;min-height:38px;padding:0;font:600 .82rem var(--mono,monospace);letter-spacing:.04em;cursor:pointer;transition:background .15s,color .15s,transform .15s}' +
+  '#hg-estados .he-uf:hover,#hg-estados .he-uf:focus-visible{background:var(--ouro,#DAB15F);color:#030811;outline:none;transform:translateY(-1px)}' +
+  '#hg-estados .he-uf.he-outro{font:600 .74rem var(--body,system-ui);letter-spacing:0}' +
+  '#hg-estados .he-pe{display:block;margin-top:10px;font:500 .72rem/1.3 var(--mono,monospace);letter-spacing:.06em;text-transform:uppercase;color:var(--grafite-2,#94A3B8)}' +
+  '#hg-estados .he-x{position:absolute;top:8px;right:8px;width:36px;height:36px;border:0;border-radius:50%;background:none;color:#fff;font-size:1.4rem;line-height:1;cursor:pointer}#hg-estados .he-x:hover{background:rgba(255,255,255,.1)}' +
+  '#hg-chat .hc-ops.hc-ufs{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}#hg-chat .hc-ufs .hc-op{padding:9px 0;text-align:center;font-family:var(--mono,monospace)}' +
+  '@keyframes heIn{from{opacity:0;transform:translateY(10px) scale(.94)}to{opacity:1;transform:none}}' +
   '@media (max-width:520px){#hg-chat{right:0;left:0;bottom:0;width:100%;max-height:82vh;border-radius:20px 20px 0 0;padding-bottom:env(safe-area-inset-bottom,0px)}}' +
-  '@media (prefers-reduced-motion:reduce){#hg-chat,#hg-chat *{animation:none!important;transition:none!important}}';
+  '@media (prefers-reduced-motion:reduce){#hg-chat,#hg-chat *,#hg-estados,#hg-estados *{animation:none!important;transition:none!important}}';
   var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
 
   var WA_ICO = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg>';
@@ -86,10 +114,22 @@
     });
     corpo.appendChild(w); rolar();
     var f = w.querySelector('button'); if (f) f.focus({ preventScroll: true });
+    return w;
   };
 
-  var passoObjetivo = function () {
-    fala(PERGUNTAS.inicio.txt, 'bot');
+  var passoEstado = function () {
+    fala('Sem problema, a gente atende todo o Brasil. Qual é o seu estado?', 'bot');
+    var resto = Object.keys(UFS).filter(function (u) { return UFS_TOPO.indexOf(u) < 0; });
+    var grade = opcoes(resto.map(function (u) { return { r: u, v: u }; }), function (o) {
+      guardarEstado(o.v);
+      ga('estado_escolhido', { estado: o.v, origem: 'chat' });
+      passoObjetivo('Anotado: ' + UFS[o.v] + '. Do que você precisa?');
+    });
+    grade.classList.add('hc-ufs');
+    grade.querySelectorAll('.hc-op').forEach(function (bt) { bt.title = UFS[bt.textContent] || ''; bt.setAttribute('aria-label', UFS[bt.textContent] || bt.textContent); });
+  };
+  var passoObjetivo = function (abertura) {
+    fala(abertura || PERGUNTAS.inicio.txt, 'bot');
     opcoes(PERGUNTAS.inicio.ops, function (o) {
       resp.obj = o.v; resp.int = o.i;
       if (window.HG_interesse) window.HG_interesse(o.i);
@@ -126,6 +166,7 @@
     fala((nome ? 'Prontinho, ' + nome + '! ' : 'Prontinho! ') + 'Sua mensagem já está montada. Toque no botão e envie no WhatsApp; a equipe continua de lá.', 'bot');
     var msg = OLA + ' ' + (resp.nome ? 'Sou ' + resp.nome + '. ' : '') + 'Vim pelo site.\n' +
       '• Quero: ' + resp.obj + '\n• Situação: ' + resp.sit + '\n• Prazo: ' + resp.prazo + '\n' +
+      (estadoAtual ? '• Estado: ' + UFS[estadoAtual] + ' (' + estadoAtual + ')\n' : '') +
       'Pode me passar o diagnóstico gratuito?';
     var a = document.createElement('a');
     a.className = 'hc-wa'; a.target = '_blank'; a.rel = 'noopener';
@@ -135,13 +176,25 @@
     a.innerHTML = WA_ICO + '<span>Enviar no WhatsApp</span>';
     corpo.appendChild(a); rolar(); a.focus({ preventScroll: true });
   };
-  var comecar = function () { corpo.innerHTML = ''; resp = {}; passoObjetivo(); };
+  var comecar = function (uf) {
+    corpo.innerHTML = ''; resp = {};
+    if (uf === 'OUTRO') { fala('Sou de outro estado', 'eu', passoEstado); return; }
+    if (uf && UFS[uf]) {
+      fala('Sou de ' + UFS[uf] + ' (' + uf + ')', 'eu', function () {
+        passoObjetivo('Que bom! Atendemos ' + UFS[uf] + ' on-line, com o mesmo acompanhamento individual. Do que você precisa?');
+      });
+      return;
+    }
+    passoObjetivo();
+  };
 
-  var abrir = function () {
+  var abrir = function (uf) {
     ultimoFoco = document.activeElement;
+    esconderEstados();
     box.hidden = false; flt.setAttribute('aria-expanded', 'true');
     var p = flt.querySelector('.hc-ping'); if (p) p.remove();
-    if (!iniciado) { iniciado = true; comecar(); ga('chat_aberto', { pagina: location.pathname }); }
+    if (uf) { iniciado = true; comecar(uf); ga('chat_aberto', { pagina: location.pathname, origem: 'balao-estados' }); }
+    else if (!iniciado) { iniciado = true; comecar(); ga('chat_aberto', { pagina: location.pathname }); }
     else { var f = corpo.querySelector('button, input, a'); if (f) f.focus({ preventScroll: true }); }
   };
   var fechar = function () {
@@ -159,5 +212,50 @@
   }, true);
   box.querySelector('.hc-x').addEventListener('click', fechar);
   box.querySelector('.hc-rec').addEventListener('click', function () { ga('chat_passo', { passo: 'recomecar' }); comecar(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !box.hidden) fechar(); });
+
+  /* ===== Balão de estados ===== */
+  var est = document.createElement('div');
+  est.id = 'hg-estados'; est.hidden = true;
+  est.setAttribute('role', 'dialog'); est.setAttribute('aria-label', 'Escolha o seu estado');
+  est.innerHTML = '<button type="button" class="he-x" aria-label="Fechar">×</button>' +
+    '<div class="he-top"><span class="he-selo"><img src="' + simbolo + '" alt=""></span><div><b>Atendemos todo o Brasil</b><small>De qual estado você é?</small></div></div>' +
+    '<div class="he-ufs">' + UFS_TOPO.map(function (u) { return '<button type="button" class="he-uf" data-uf="' + u + '" title="' + UFS[u] + '" aria-label="' + UFS[u] + '">' + u + '</button>'; }).join('') +
+    '<button type="button" class="he-uf he-outro" data-uf="OUTRO">Outro</button></div>' +
+    '<span class="he-pe">Toque no seu estado e siga a conversa</span>';
+  document.body.appendChild(est);
+  var estMostrado = false;
+  var esconderEstados = function () { est.hidden = true; };
+  var mostrarEstados = function () {
+    if (estMostrado || estadoAtual || sess.get('hg_estados_off') || !box.hidden) return;
+    estMostrado = true; est.hidden = false;
+    ga('balao_estados', { acao: 'mostrado', pagina: location.pathname });
+  };
+  est.querySelector('.he-x').addEventListener('click', function () {
+    esconderEstados(); sess.set('hg_estados_off', '1');
+    ga('balao_estados', { acao: 'fechado', pagina: location.pathname });
+  });
+  est.querySelector('.he-ufs').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-uf]'); if (!b) return;
+    var uf = b.getAttribute('data-uf');
+    if (uf !== 'OUTRO') { guardarEstado(uf); ga('estado_escolhido', { estado: uf, origem: 'balao-estados' }); }
+    sess.set('hg_estados_off', '1');
+    abrir(uf);
+  });
+  /* Aparece depois de 4 s na página e só quando a pessoa já passou da primeira tela,
+     para nunca cobrir os botões do topo nem o cartão-resposta. */
+  var inicioPagina = Date.now();
+  var talvezMostrar = function () {
+    if (estMostrado) return;
+    if (Date.now() - inicioPagina < 4000) return;
+    if (window.scrollY < window.innerHeight * 0.9) return;
+    window.removeEventListener('scroll', aoRolar);
+    mostrarEstados();
+  };
+  var aoRolar = function () { talvezMostrar(); };
+  window.addEventListener('scroll', aoRolar, { passive: true });
+  setTimeout(talvezMostrar, 4100);
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (!box.hidden) fechar(); else if (!est.hidden) { esconderEstados(); sess.set('hg_estados_off', '1'); }
+  });
 })();
