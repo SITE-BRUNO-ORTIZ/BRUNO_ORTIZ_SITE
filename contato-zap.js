@@ -1,4 +1,4 @@
-/* Registro do clique no WhatsApp (Pixel Meta + Google Ads)
+/* Registro do clique no WhatsApp (Pixel Meta + Google Ads + Google Analytics)
    - Envia só o evento "Contact" ao Pixel (o mesmo que a campanha de Leads otimiza).
    - Conta cada visitante uma única vez a cada 30 dias, mesmo que clique várias vezes
      ou em páginas diferentes. O WhatsApp abre normalmente em todos os cliques. */
@@ -27,6 +27,7 @@
         if (typeof fbq === 'function') { fbq('track', 'Contact', {}, { eventID: id }); }
         if (typeof gtag === 'function') {
             gtag('event', 'conversion', { 'send_to': 'AW-18076144707/9ODvCJ2AnZ0dEMOosKtD', 'transaction_id': id });
+            gtag('event', 'clique_whatsapp', { 'send_to': 'G-M4WXYDKMWW', 'pagina': location.pathname });
         }
     };
 })();
