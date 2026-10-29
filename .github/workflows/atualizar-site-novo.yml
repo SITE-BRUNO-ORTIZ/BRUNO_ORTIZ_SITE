@@ -1,0 +1,31 @@
+name: "ATUALIZAR o site novo"
+# Um clique: Actions > "ATUALIZAR o site novo" > Run workflow.
+# Ou um comando: gh workflow run atualizar-site-novo.yml -R SITE-BRUNO-ORTIZ/BRUNO_ORTIZ_SITE
+# Publica no ar a versão mais recente do site novo (branch site-novo). Antes, guarda a versão que estava no ar em backup/site-novo-anterior.
+
+on:
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: "Só testar, sem mudar o site (sim/nao)"
+        default: "nao"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: troca-de-site
+  cancel-in-progress: false
+
+jobs:
+  trocar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: "ATUALIZAR o site novo"
+        env:
+          TESTE: ${{ github.event.inputs.teste == 'sim' && '1' || '0' }}
+        run: bash .github/scripts/trocar_site.sh atualizar
