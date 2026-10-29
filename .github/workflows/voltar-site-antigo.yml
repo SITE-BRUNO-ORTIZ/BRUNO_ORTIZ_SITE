@@ -1,0 +1,31 @@
+name: "VOLTAR o site antigo"
+# Um clique: Actions > "VOLTAR o site antigo" > Run workflow.
+# Ou um comando: gh workflow run voltar-site-antigo.yml -R SITE-BRUNO-ORTIZ/BRUNO_ORTIZ_SITE
+# Põe no ar exatamente o site que estava antes do site novo (guardado na branch backup/site-antigo).
+
+on:
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: "Só testar, sem mudar o site (sim/nao)"
+        default: "nao"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: troca-de-site
+  cancel-in-progress: false
+
+jobs:
+  voltar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Voltar o site antigo
+        env:
+          TESTE: ${{ github.event.inputs.teste == 'sim' && '1' || '0' }}
+        run: bash .github/scripts/trocar_site.sh antigo

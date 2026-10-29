@@ -1,0 +1,31 @@
+name: "PUBLICAR o site novo"
+# Um clique: Actions > "PUBLICAR o site novo" > Run workflow.
+# Ou um comando: gh workflow run publicar-site-novo.yml -R SITE-BRUNO-ORTIZ/BRUNO_ORTIZ_SITE
+# Antes de trocar, guarda o site que está no ar na branch backup/site-antigo e numa tag com data.
+
+on:
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: "Só testar, sem mudar o site (sim/nao)"
+        default: "nao"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: troca-de-site
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Publicar o site novo
+        env:
+          TESTE: ${{ github.event.inputs.teste == 'sim' && '1' || '0' }}
+        run: bash .github/scripts/trocar_site.sh novo
