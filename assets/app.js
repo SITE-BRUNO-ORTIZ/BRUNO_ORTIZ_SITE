@@ -8,10 +8,10 @@ window.HG = {
   googleAdsId: "AW-18076144707",             // Google Ads
   googleAdsConversao: "AW-18076144707/9ODvCJ2AnZ0dEMOosKtD",
   dominio: "brunoaprovaconcursos.com.br",    // medição só liga neste domínio (prévias não sujam os dados)
-  /* A campanha de Leads da Meta hoje otimiza o evento "Contato".
-     true  = Contato conta cada pessoa 1x a cada 30 dias (igual ao site antigo, a campanha continua medindo certo).
-     false = Contato em todo clique (como no modelo). Só mude para false quando a campanha passar a otimizar "Lead". */
-  contatoUmaVez: true,
+  /* As campanhas de Leads da Meta otimizam o evento "Lead" (1º contato da pessoa em 7 dias).
+     false = Contato em todo clique, como no modelo (padrão).
+     true  = Contato só 1x por pessoa a cada 30 dias (use só se alguma campanha voltar a otimizar "Contato"). */
+  contatoUmaVez: false,
   social: {                                  // vazio = some do site
     facebook: "https://www.facebook.com/1110130492177431",
     youtube: "https://www.youtube.com/channel/UCFcYFOVcGCRMS1OHLwovt9w",
