@@ -119,6 +119,7 @@
             .cta-btn { width: 100%; }
         }
     </style>
+    <script src="contato-zap.js"></script>
 </head>
 <body>
     <main>
@@ -218,8 +219,8 @@
             if (!btnZap) return;
             e.preventDefault();
             var msg = btnZap.getAttribute('data-msg') || 'Olá! Vim pelo site da Bruno Ortiz e quero atendimento.';
-            if (typeof fbq === 'function') { fbq('track', 'Lead'); }
-            if (typeof gtag === 'function') { gtag('event', 'conversion', { 'send_to': 'AW-18076144707/9ODvCJ2AnZ0dEMOosKtD' }); }
+            /* Clique no WhatsApp: conta 1x por visitante (contato-zap.js) */
+                    if (typeof registrarContatoZap === 'function') { registrarContatoZap(); }
             window.open(atob("aHR0cHM6Ly93YS5tZS81NTMxOTk2MDc3NzkzP3RleHQ9") + encodeURIComponent(msg), '_blank');
         });
     </script>

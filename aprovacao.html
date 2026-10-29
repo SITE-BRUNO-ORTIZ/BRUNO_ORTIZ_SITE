@@ -101,6 +101,7 @@
         @media (max-width: 1050px) { .nav-links.menu-aberto { max-height: 1000px; padding: 1.5rem 0; overflow-y: auto; max-height: calc(100vh - 90px); } .nav-links a { width: 100%; text-align: center; padding: 1.1rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); } .btn-destaque { margin: 1rem 0; width: 85%; text-align: center; } }
     </style>
     <link rel="stylesheet" href="redes-sociais.css?v=2">
+    <script src="contato-zap.js"></script>
 </head>
 <body oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
 
@@ -198,15 +199,8 @@
                 e.preventDefault(); 
                 let msg = btnZap.getAttribute('data-msg') || "Olá! Vim pelo site da Bruno Ortiz e quero atendimento."; 
                 
-                /* PIXEL DE LEAD */
-                if (typeof fbq === 'function') {
-                    fbq('track', 'Lead');
-                }
-                
-                /* CONVERSÃO GOOGLE ADS NOVA */
-                if (typeof gtag === 'function') {
-                    gtag('event', 'conversion', {'send_to': 'AW-18076144707/9ODvCJ2AnZ0dEMOosKtD'});
-                }
+                /* Clique no WhatsApp: conta 1x por visitante (contato-zap.js) */
+                    if (typeof registrarContatoZap === 'function') { registrarContatoZap(); }
                 
                 window.open(atob("aHR0cHM6Ly93YS5tZS81NTMxOTk2MDc3NzkzP3RleHQ9") + encodeURIComponent(msg), '_blank'); 
             } 
