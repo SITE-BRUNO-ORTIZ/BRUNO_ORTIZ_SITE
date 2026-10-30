@@ -4,7 +4,7 @@ Uso:  python .github/scripts/metricool_para_memes.py posts.json [--remover-sumid
 
 - posts.json: lista de posts como o Metricool devolve (getScheduledPosts -> "data").
 - Cada post vira um item com título, legenda, vídeo ou imagens, crédito e datas.
-- Aparece no site no horário de publicação (publicar_em) e sai 5 dias depois (expira).
+- Aparece no site no horário de publicação (publicar_em) e sai 3 dias depois (expira).
 - Posts que já estão na lista são atualizados (texto, data, mídia), sem duplicar.
 - Mídia já baixada para memes/ continua sendo usada (não volta para o link externo).
 - --remover-sumidos DE ATE: tira da lista os posts ainda NÃO publicados desse período
@@ -18,7 +18,7 @@ from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
 ARQUIVO = "memes/memes.json"
-DIAS_NO_SITE = 5
+DIAS_NO_SITE = 3
 SP = ZoneInfo("America/Sao_Paulo")
 
 
@@ -128,7 +128,7 @@ def main():
         it = item_do_post(p)
         vistos.add(it["metricool_id"])
         if it["expira"] <= hoje:
-            continue  # já passou dos 5 dias: não entra
+            continue  # já passou dos 3 dias: não entra
         atual = por_mid.get(it["metricool_id"]) or por_hora.get(it["publicar_em"])
         if atual:
             antes = json.dumps(atual, sort_keys=True, ensure_ascii=False)
