@@ -46,7 +46,8 @@ body.lk{background:radial-gradient(120% 60% at 50% 0%,#0B1E36 0%,var(--papel) 70
 .ic--wa{background:#1FA855}.ic--fb{background:#1877F2}.ic--yt{background:#FF0000}.ic--g{background:#fff;color:#4285F4!important}.ic--site{background:var(--ouro);color:#030811!important}
 .lk-memes{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;-webkit-overflow-scrolling:touch}
 .lk-memes a{flex:0 0 38%;scroll-snap-align:start;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:var(--card);position:relative;display:block}
-.lk-memes img{width:100%;height:100%;object-fit:cover;display:block}
+.lk-memes img,.lk-memes video{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.lk-memes a.is-foto::after{display:none}
 .lk-memes a::after{content:"▶";position:absolute;inset:auto auto 10px 10px;width:30px;height:30px;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;font-size:.75rem;display:grid;place-items:center}
 .lk-menu{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .lk-menu a{display:block;text-decoration:none;color:var(--grafite);background:var(--card);border:1px solid var(--linha);border-radius:16px;padding:14px;font:600 .95rem/1.2 var(--body);border-left:5px solid var(--c,var(--ouro))}
@@ -84,7 +85,7 @@ body.lk{background:radial-gradient(120% 60% at 50% 0%,#0B1E36 0%,var(--papel) 70
     <p class="lk-label">Memes da semana</p>
     <div class="lk-memes" id="lk-memes"></div>
     <div class="lk-list" style="margin-top:10px">
-      <a class="lk-btn" href="memes.html"><span class="tx">Ver todos os memes<small>cada vídeo fica 5 dias no site</small></span><span class="go">→</span></a>
+      <a class="lk-btn" href="memes.html"><span class="tx">Ver todos os memes<small>cada post fica 5 dias no site</small></span><span class="go">→</span></a>
     </div>
   </div>
 
@@ -108,10 +109,14 @@ document.addEventListener('DOMContentLoaded', function () {
   function hojeSP(){try{return new Intl.DateTimeFormat('en-CA',{timeZone:'America/Sao_Paulo'}).format(new Date())}catch(e){return new Date().toISOString().slice(0,10)}}
   fetch('memes/memes.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (lista) {
     var hoje = hojeSP(), agora = Date.now();
-    var ativos = (lista || []).filter(function (m) { return m.capa && (!m.expira || m.expira > hoje) && (!m.publicar_em || Date.parse(m.publicar_em) <= agora); })
+    var ativos = (lista || []).filter(function (m) { return (m.capa || (m.imagens && m.imagens.length) || m.video) && (!m.expira || m.expira > hoje) && (!m.publicar_em || Date.parse(m.publicar_em) <= agora); })
       .sort(function (a, b) { return String(b.publicar_em || b.publicado || '').localeCompare(String(a.publicar_em || a.publicado || '')); }).slice(0, 8);
     if (!ativos.length) return;
-    box.innerHTML = ativos.map(function (m) { return '<a href="memes.html" aria-label="' + esc(m.titulo) + '"><img loading="lazy" src="' + esc(m.capa) + '" alt=""></a>'; }).join('');
+    box.innerHTML = ativos.map(function (m) {
+      var img = m.capa || (m.imagens && m.imagens[0]);
+      var dentro = img ? '<img loading="lazy" src="' + esc(img) + '" alt="">' : '<video muted playsinline preload="metadata" src="' + esc(m.video + '#t=0.5') + '"></video>';
+      return '<a href="memes.html" class="' + (m.video ? 'is-video' : 'is-foto') + '" aria-label="' + esc(m.titulo) + '">' + dentro + '</a>';
+    }).join('');
     wrap.hidden = false;
   }).catch(function () {});
   var btn = document.getElementById('lk-share'), url = 'https://brunoaprovaconcursos.com.br/redes.html';

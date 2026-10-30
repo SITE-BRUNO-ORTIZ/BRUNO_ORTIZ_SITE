@@ -1,4 +1,4 @@
-"""Remove da página de memes os vídeos cuja data de expiração já chegou.
+"""Remove da página de memes os posts (vídeos e imagens) cuja data de expiração já chegou.
 
 Lê memes/memes.json, apaga do repositório o vídeo e a capa de cada meme
 vencido e regrava a lista só com os que continuam no ar.
@@ -20,9 +20,9 @@ for meme in memes:
     (saem if meme.get("expira") and meme["expira"] <= hoje else ficam).append(meme)
 
 for meme in saem:
-    for campo in ("video", "capa"):
-        caminho = meme.get(campo)
-        if caminho and os.path.exists(caminho):
+    caminhos = [meme.get("video"), meme.get("capa")] + list(meme.get("imagens") or [])
+    for caminho in caminhos:
+        if isinstance(caminho, str) and caminho.startswith("memes/") and os.path.exists(caminho):
             os.remove(caminho)
             print(f"Apagado: {caminho}")
 

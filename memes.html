@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Memes de Concursos e Graduações | Bruno Ortiz</title>
-<meta name="description" content="Os memes da semana da Bruno Ortiz sobre faculdade e concurso. Cada vídeo fica 5 dias no site. Diagnóstico grátis no WhatsApp.">
+<meta name="description" content="Memes, dicas e carrosséis da Bruno Ortiz sobre faculdade e concurso. Cada post fica 5 dias no site. Diagnóstico grátis no WhatsApp.">
 <link rel="canonical" href="https://brunoaprovaconcursos.com.br/memes.html">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#071224">
@@ -13,7 +13,7 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Bruno Ortiz">
 <meta property="og:title" content="Memes de Concursos e Graduações | Bruno Ortiz">
-<meta property="og:description" content="Os memes da semana da Bruno Ortiz sobre faculdade e concurso. Cada vídeo fica 5 dias no site. Diagnóstico grátis no WhatsApp.">
+<meta property="og:description" content="Memes, dicas e carrosséis da Bruno Ortiz sobre faculdade e concurso. Cada post fica 5 dias no site. Diagnóstico grátis no WhatsApp.">
 <meta property="og:url" content="https://brunoaprovaconcursos.com.br/memes.html">
 <meta property="og:image" content="https://brunoaprovaconcursos.com.br/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -21,7 +21,7 @@
 <meta property="og:image:alt" content="Bruno Ortiz · Graduações e Concursos">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Memes de Concursos e Graduações | Bruno Ortiz">
-<meta name="twitter:description" content="Os memes da semana da Bruno Ortiz sobre faculdade e concurso. Cada vídeo fica 5 dias no site. Diagnóstico grátis no WhatsApp.">
+<meta name="twitter:description" content="Memes, dicas e carrosséis da Bruno Ortiz sobre faculdade e concurso. Cada post fica 5 dias no site. Diagnóstico grátis no WhatsApp.">
 <meta name="twitter:image" content="https://brunoaprovaconcursos.com.br/assets/og-image.jpg">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
@@ -47,16 +47,16 @@
 
 <section class="page-hero" data-letra="M"><div class="wrap">
   <nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a> / Memes</nav>
-  <span class="eyebrow">Memes · vídeos da semana</span>
+  <span class="eyebrow">Memes · posts da semana</span>
   <h1>Uma pausa para rir antes de voltar a <em>estudar</em></h1>
-  <p class="lead">Faculdade e concurso têm dor, mas também têm graça. Cada vídeo fica 5 dias aqui e depois dá lugar aos novos; nas nossas redes eles continuam.</p>
+  <p class="lead">Faculdade e concurso têm dor, mas também têm graça. Tudo o que publicamos nas redes aparece aqui: memes, dicas e carrosséis. Cada post fica 5 dias e depois dá lugar aos novos; nas nossas redes eles continuam.</p>
   <div class="redes-memes" aria-label="Nossas redes"><a data-social="facebook" href="https://www.facebook.com/1110130492177431" target="_blank" rel="noopener">Facebook</a><a data-social="youtube" href="https://www.youtube.com/channel/UCFcYFOVcGCRMS1OHLwovt9w" target="_blank" rel="noopener">YouTube</a><a href="https://wa.me/5531996077793" data-wa="Olá, equipe Bruno Ortiz! Vim pela página de memes e quero orientação." data-wa-label="memes-redes">WhatsApp</a><a href="redes.html">Todos os links →</a></div>
 </div></section>
 <section class="band"><div class="wrap">
   <div class="memes" id="memes" aria-live="polite"><p class="lead">Carregando os memes...</p></div>
   <div class="memes-vazio" id="memes-vazio" hidden>
     <h2>Nenhum meme novo por aqui agora</h2>
-    <p class="lead">Cada vídeo passa 5 dias no site. Os mais antigos seguem no nosso Facebook e no YouTube.</p>
+    <p class="lead">Cada post passa 5 dias no site. Os mais antigos seguem no nosso Facebook e no YouTube.</p>
     <div class="actions"><a class="btn btn--ink" data-social="facebook" href="https://www.facebook.com/1110130492177431" rel="noopener">Ver no Facebook</a> <a class="btn btn--ghost" data-social="youtube" href="https://www.youtube.com/channel/UCFcYFOVcGCRMS1OHLwovt9w" rel="noopener">Ver no YouTube</a></div>
   </div>
 </div></section>
@@ -64,6 +64,17 @@
 .memes{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px}
 .meme{background:var(--card);border:1px solid var(--linha);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
 .meme video{display:block;width:100%;aspect-ratio:9/16;background:#000;object-fit:cover}
+.meme-galeria{position:relative;background:#0f1a2b}
+.meme-fotos{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;aspect-ratio:4/5}
+.meme-fotos::-webkit-scrollbar{display:none}
+.meme-fotos img{flex:0 0 100%;width:100%;height:100%;object-fit:contain;scroll-snap-align:start;display:block}
+.meme-cont{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.6);color:#fff;font:600 .72rem/1 var(--mono);padding:6px 9px;border-radius:999px;pointer-events:none}
+.meme-seta{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;border:0;background:rgba(255,255,255,.88);color:#111;font-size:1.1rem;line-height:1;cursor:pointer;display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.meme-seta[data-dir="-1"]{left:8px}.meme-seta[data-dir="1"]{right:8px}
+.meme-seta:disabled{opacity:0;pointer-events:none}
+.meme-body p.meme-legenda{white-space:pre-line}
+.meme-legenda.curta{display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.meme-mais{justify-self:start;background:none;border:0;padding:0;color:var(--grafite);font:600 .85rem/1.2 var(--body);text-decoration:underline;cursor:pointer}
 .meme-body{padding:16px 18px 20px;display:grid;gap:8px}
 .meme-body h2{font-size:1.1rem;line-height:1.25;margin:0;letter-spacing:-.01em}
 .meme-body p{margin:0;color:var(--texto-2);font-size:.95rem;line-height:1.45}
@@ -87,14 +98,40 @@ document.addEventListener('DOMContentLoaded', function () {
     var ativos = (lista || []).filter(function (m) { return (!m.expira || m.expira > hoje) && (!m.publicar_em || Date.parse(m.publicar_em) <= agora); })
       .sort(function (a, b) { return String(b.publicar_em || b.publicado || '').localeCompare(String(a.publicar_em || a.publicado || '')); });
     if (!ativos.length) { box.innerHTML = ''; vazio.hidden = false; return; }
+    function midia(m) {
+      if (m.imagens && m.imagens.length) {
+        var n = m.imagens.length;
+        return '<div class="meme-galeria"><div class="meme-fotos">' + m.imagens.map(function (u, i) {
+          return '<img src="' + esc(u) + '" alt="' + esc(m.titulo) + (n > 1 ? ' (' + (i + 1) + ' de ' + n + ')' : '') + '"' + (i ? ' loading="lazy"' : '') + '>';
+        }).join('') + '</div>' + (n > 1 ? '<span class="meme-cont">1/' + n + '</span><button type="button" class="meme-seta" data-dir="-1" aria-label="Anterior" disabled>‹</button><button type="button" class="meme-seta" data-dir="1" aria-label="Próxima">›</button>' : '') + '</div>';
+      }
+      if (m.video) return '<video controls playsinline preload="' + (m.capa ? 'none' : 'metadata') + '"' + (m.capa ? ' poster="' + esc(m.capa) + '"' : '') + ' src="' + esc(m.video + (m.capa ? '' : '#t=0.5')) + '"></video>';
+      return m.capa ? '<img src="' + esc(m.capa) + '" alt="" style="width:100%;display:block">' : '';
+    }
     box.innerHTML = ativos.map(function (m) {
       var pub = String(m.publicado || '').split('-'), dia = pub.length === 3 ? pub[2] + '/' + pub[1] : '';
       var resta = m.expira ? Math.max(1, Math.round((Date.parse(m.expira + 'T00:00:00-03:00') - agora) / 864e5)) : 0;
-      return '<article class="meme"><video controls playsinline preload="none"' + (m.capa ? ' poster="' + esc(m.capa) + '"' : '') + ' src="' + esc(m.video) + '"></video>' +
+      var longa = String(m.legenda || '').length > 240 || String(m.legenda || '').split('\n').length > 6;
+      return '<article class="meme">' + midia(m) +
         '<div class="meme-body"><div class="meme-meta"><span>' + dia + '</span>' + (resta ? '<span>sai em ' + resta + ' dia' + (resta > 1 ? 's' : '') + '</span>' : '') + '</div>' +
-        '<h2>' + esc(m.titulo) + '</h2><p>' + esc(m.legenda) + '</p>' + (m.credito ? '<p class="meme-meta">Créditos: ' + esc(m.credito) + '</p>' : '') +
-        '<a class="btn btn--wa btn--sm" target="_blank" rel="noopener" data-wa-label="memes-card" href="' + esc(wa(OLA + ' Vi um meme no site e quero orientação.')) + '">Diagnóstico grátis</a></div></article>';
+        '<h2>' + esc(m.titulo) + '</h2>' + (m.legenda ? '<p class="meme-legenda' + (longa ? ' curta' : '') + '">' + esc(m.legenda) + '</p>' + (longa ? '<button type="button" class="meme-mais">ver mais</button>' : '') : '') +
+        (m.credito ? '<p class="meme-meta">Créditos: ' + esc(m.credito) + '</p>' : '') +
+        '<a class="btn btn--wa btn--sm" target="_blank" rel="noopener" data-wa-label="memes-card" href="' + esc(wa(OLA + ' Vi um post no site e quero orientação.')) + '">Diagnóstico grátis</a></div></article>';
     }).join('');
+    box.addEventListener('click', function (e) {
+      var mais = e.target.closest('.meme-mais');
+      if (mais) { var p = mais.previousElementSibling; var abriu = p.classList.toggle('curta') === false; mais.textContent = abriu ? 'ver menos' : 'ver mais'; return; }
+      var seta = e.target.closest('.meme-seta');
+      if (seta) { var f = seta.parentNode.querySelector('.meme-fotos'); f.scrollBy({ left: f.clientWidth * Number(seta.getAttribute('data-dir')), behavior: 'smooth' }); }
+    });
+    box.querySelectorAll('.meme-fotos').forEach(function (f) {
+      var g = f.parentNode, cont = g.querySelector('.meme-cont'), ant = g.querySelector('[data-dir="-1"]'), prox = g.querySelector('[data-dir="1"]'), n = f.children.length;
+      if (!cont) return;
+      f.addEventListener('scroll', function () {
+        var i = Math.round(f.scrollLeft / Math.max(1, f.clientWidth));
+        cont.textContent = (i + 1) + '/' + n; ant.disabled = i <= 0; prox.disabled = i >= n - 1;
+      }, { passive: true });
+    });
   }).catch(function () { box.innerHTML = ''; vazio.hidden = false; });
 });
 </script>

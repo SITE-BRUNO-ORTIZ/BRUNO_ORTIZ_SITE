@@ -8,6 +8,25 @@
     "credito": "@ln_educacional_brasil",
     "publicado": "2026-10-26",
     "publicar_em": "2026-10-26T10:30:00-03:00",
+    "expira": "2026-10-31",
+    "metricool_id": 405789852
+  },
+  {
+    "id": "2026-10-26-passou-no-concurso-mas-e-o-diploma",
+    "metricool_id": 405797254,
+    "titulo": "Passou no concurso. Mas e o diploma? 🤔",
+    "legenda": "Muita gente é aprovada e perde a vaga na hora da posse: o edital exige nível superior, às vezes em área específica, e a graduação precisa ser reconhecida pelo MEC.\n\nE tem a prova de títulos: uma pós-graduação pode somar os pontos que separam a nomeação do cadastro reserva.\n\nNa Bruno Ortiz a gente lê o edital com você, mapeia os requisitos e os títulos que pontuam, indica a graduação ou pós reconhecida pelo MEC e acompanha até a documentação ficar pronta.\n\n⚠️ Não deixe para depois do resultado. É o erro mais comum.\n\n👉 Arraste para o lado e veja como funciona.",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-14284022238570780383.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-9700324375556179762.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-4305956413342451091.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-17303984841825724140.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-13445878397602423057.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-3607696911047921604.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-10-26",
+    "publicar_em": "2026-10-26T12:30:00-03:00",
     "expira": "2026-10-31"
   },
   {
@@ -19,17 +38,527 @@
     "credito": "@grancursosonline",
     "publicado": "2026-10-26",
     "publicar_em": "2026-10-26T17:30:00-03:00",
-    "expira": "2026-10-31"
+    "expira": "2026-10-31",
+    "metricool_id": 405789881
   },
   {
     "id": "2026-10-26-nao-vai-ser-demitido",
     "titulo": "Quando você passa no concurso e sabe que não vai ser demitido",
-    "legenda": "A tal da estabilidade 😎 Passou na prova? Garanta a posse com a documentação acadêmica que o edital exige.",
+    "legenda": "A tal da estabilidade 😎 Passou na prova? Garanta a posse com a documentação acadêmica que o edital exige. A Bruno Ortiz te ajuda.",
     "video": "memes/2026-10-26-nao-vai-ser-demitido.mp4",
     "capa": "memes/2026-10-26-nao-vai-ser-demitido.jpg",
     "credito": "@quebrandoquestoes",
     "publicado": "2026-10-26",
     "publicar_em": "2026-10-26T20:00:00-03:00",
-    "expira": "2026-10-31"
+    "expira": "2026-10-31",
+    "metricool_id": 405792757
+  },
+  {
+    "id": "2026-10-27-3-coisas-para-checar-no-edital-antes-de-estudar",
+    "metricool_id": 405936759,
+    "titulo": "3 coisas para checar no edital ANTES de estudar",
+    "legenda": "Antes de abrir o primeiro PDF de estudo, leia estas 3 partes do edital 👇\n📌 Escolaridade exigida: qual formação o cargo pede na posse e se precisa ser em área específica.\n📌 Conteúdo e pesos: as matérias que valem mais são as primeiras do seu cronograma.\n📌 Prova de títulos: se existe, veja o que pontua. Uma pós-graduação pode mudar sua classificação.\n\nNa Bruno Ortiz a gente faz essa leitura com você e monta o plano de estudos e de requisitos.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-10881633161709819836.mp4",
+    "credito": "",
+    "publicado": "2026-10-27",
+    "publicar_em": "2026-10-27T12:00:00-03:00",
+    "expira": "2026-11-01"
+  },
+  {
+    "id": "2026-10-28-28-de-outubro-dia-do-servidor-publico",
+    "metricool_id": 405922641,
+    "titulo": "28 de outubro, Dia do Servidor Público. 🇧🇷",
+    "legenda": "Nossa homenagem a quem faz o serviço público funcionar todos os dias, e a cada concurseiro que está estudando para ser o próximo servidor.\n\nSe esse é o seu objetivo, conte com a Bruno Ortiz para o plano de estudos e para cumprir os requisitos da posse.",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-2590171475136279687.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-10-28",
+    "publicar_em": "2026-10-28T09:30:00-03:00",
+    "expira": "2026-11-02"
+  },
+  {
+    "id": "2026-10-28-nunca-e-tarde-para-fazer-faculdade",
+    "metricool_id": 405936817,
+    "titulo": "Nunca é tarde para fazer faculdade",
+    "legenda": "\"Já passou da hora de eu fazer faculdade.\" Não passou. 🎓\nNão existe idade limite para começar uma graduação. E as desculpas mais comuns têm resposta:\n\n⏰ Sem tempo? A graduação EAD se adapta à sua rotina.\n🧭 Medo de ficar perdido? Na tutoria, alguém estuda com você e acompanha cada etapa.\n💼 Vale a pena? Promoção, concurso de nível superior e pós-graduação dependem do diploma.\n\nO melhor momento para começar é agora.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-7399368585490294405.mp4",
+    "credito": "",
+    "publicado": "2026-10-28",
+    "publicar_em": "2026-10-28T18:00:00-03:00",
+    "expira": "2026-11-02"
+  },
+  {
+    "id": "2026-10-29-graduacao-ead-vale-o-mesmo-que-a-presencial-sim",
+    "metricool_id": 405922700,
+    "titulo": "Graduação EAD vale o mesmo que a presencial? Sim. 🎓",
+    "legenda": "O diploma de um curso a distância de instituição credenciada pelo MEC tem a mesma validade legal do presencial, inclusive para concursos que pedem nível superior.\n\nO cuidado: antes de se matricular, confira no site e-MEC se a instituição é credenciada e se o curso é autorizado ou reconhecido.\n\nO desafio do EAD não é o diploma, é a constância. É aí que a tutoria Bruno Ortiz entra: a gente estuda com você e acompanha até a formatura.",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-307872853986109689.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-14022702425590795463.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-16756802033379385407.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-4765723283564486205.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-16271032901799984270.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-18208439451618633895.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-10-29",
+    "publicar_em": "2026-10-29T12:00:00-03:00",
+    "expira": "2026-11-03"
+  },
+  {
+    "id": "2026-10-30-poucos-pontos-separam-a-nomeacao-do-cadastro-res",
+    "metricool_id": 405922742,
+    "titulo": "Poucos pontos separam a nomeação do cadastro reserva. 📊",
+    "legenda": "Em concursos com prova de títulos, uma especialização concluída a tempo pode ser exatamente o que falta para subir na classificação.\n\nO detalhe: o título precisa estar pronto até a data que o edital define. Quem deixa para depois do resultado, perde a chance.\n\nA Bruno Ortiz indica a pós reconhecida pelo MEC e acompanha você até a conclusão.",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-7132420566169770017.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-10-30",
+    "publicar_em": "2026-10-30T10:00:00-03:00",
+    "expira": "2026-11-04"
+  },
+  {
+    "id": "2026-10-31-como-funciona-a-tutoria-bruno-ortiz-em-4-passos",
+    "metricool_id": 405936878,
+    "titulo": "Como funciona a tutoria Bruno Ortiz em 4 passos",
+    "legenda": "Como funciona a tutoria Bruno Ortiz? Em 4 passos 👇\n1️⃣ Conversa e diagnóstico: entendemos seu objetivo, seu histórico e quanto tempo você tem.\n2️⃣ Plano sob medida: cronograma de estudos e o caminho acadêmico certo para o seu caso.\n3️⃣ Estudo acompanhado: dúvidas, revisões e preparação para cada prova.\n4️⃣ Até o fim: da matrícula ao diploma, do edital à posse.\n\nQuem estuda é você. A gente garante que você não estude sozinho.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-7113851272139480673.mp4",
+    "credito": "",
+    "publicado": "2026-10-31",
+    "publicar_em": "2026-10-31T10:00:00-03:00",
+    "expira": "2026-11-05"
+  },
+  {
+    "id": "2026-11-02-faltam-2-meses-para-2027",
+    "metricool_id": 405922777,
+    "titulo": "Faltam 2 meses para 2027. 📅",
+    "legenda": "Todo ano é a mesma promessa: \"ano que vem eu começo a faculdade\". Que tal começar 2027 com a graduação ou a pós já planejada?\n\nNovembro é o mês ideal para escolher o curso, conferir a instituição no MEC e organizar a rotina. A Bruno Ortiz faz esse planejamento com você.",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-4794820563269055720.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-11-02",
+    "publicar_em": "2026-11-02T10:00:00-03:00",
+    "expira": "2026-11-07"
+  },
+  {
+    "id": "2026-11-03-concurseiro-iniciante-por-onde-comecar",
+    "metricool_id": 405936946,
+    "titulo": "Concurseiro iniciante: por onde começar?",
+    "legenda": "Vai começar a estudar para concurso? Comece por aqui 👇\n1️⃣ Escolha a área: policial, tribunais, fiscal, administrativo. Foco vence dispersão.\n2️⃣ Leia o último edital: as matérias tendem a se repetir.\n3️⃣ Confira a escolaridade: se o cargo exige graduação, comece a resolver isso agora, não depois da aprovação.\n4️⃣ Monte a rotina: horário fixo, metas semanais e revisão.\n\nQuer ajuda para dar o primeiro passo? A Bruno Ortiz monta o plano com você.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-15469243369496973677.mp4",
+    "credito": "",
+    "publicado": "2026-11-03",
+    "publicar_em": "2026-11-03T12:00:00-03:00",
+    "expira": "2026-11-08"
+  },
+  {
+    "id": "2026-11-05-checklist-da-posse-o-que-ninguem-te-conta",
+    "metricool_id": 405922869,
+    "titulo": "Checklist da posse: o que ninguém te conta 📋",
+    "legenda": "Ser aprovado é uma etapa. Tomar posse é outra, e ela tem lista de exigências:\n\n✅ Escolaridade exigida, de instituição reconhecida pelo MEC\n✅ Registro em conselho, quando o cargo pede\n✅ Exames e avaliações\n✅ Documentos pessoais e certidões\n\nO erro mais comum é deixar a parte acadêmica para depois do resultado. Os prazos da posse são curtos.\n\nArraste para o lado e salve este post. 📌",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-12239242824247860064.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-18333787150112021580.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-15145018732441734186.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-14867400985632994837.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-29700995668589743.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-11386574871609308044.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-8489685458988006882.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-11-05",
+    "publicar_em": "2026-11-05T12:00:00-03:00",
+    "expira": "2026-11-10"
+  },
+  {
+    "id": "2026-11-07-segunda-graduacao-quando-vale-a-pena",
+    "metricool_id": 405937018,
+    "titulo": "Segunda graduação: quando vale a pena?",
+    "legenda": "Já é formado? Talvez você precise de uma segunda graduação. 🎓\nEla vale a pena quando você quer:\n\n🔁 Mudar de área e de carreira\n🎯 Prestar concurso que exige formação em um curso específico\n⏱️ Aproveitar o que já estudou: disciplinas cursadas podem ser aproveitadas, conforme as regras de cada instituição\n\nA Bruno Ortiz analisa o seu histórico e indica o caminho mais curto dentro da lei.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-12744155300677971533.mp4",
+    "credito": "",
+    "publicado": "2026-11-07",
+    "publicar_em": "2026-11-07T10:00:00-03:00",
+    "expira": "2026-11-12"
+  },
+  {
+    "id": "2026-11-09-3-erros-de-quem-estuda-sozinho",
+    "metricool_id": 405937064,
+    "titulo": "3 erros de quem estuda sozinho",
+    "legenda": "3 erros de quem estuda sozinho (e que talvez você esteja cometendo) 👇\n❌ Estudar sem plano: abrir o material e estudar o que dá vontade.\n❌ Não revisar: aprender hoje e esquecer em um mês.\n❌ Desistir no meio: sem ninguém cobrando, a constância vai embora.\n\nOs três têm a mesma solução: acompanhamento. Na tutoria Bruno Ortiz, você tem plano, revisão e alguém do seu lado até o fim.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-15078718492610397076.mp4",
+    "credito": "",
+    "publicado": "2026-11-09",
+    "publicar_em": "2026-11-09T12:00:00-03:00",
+    "expira": "2026-11-14"
+  },
+  {
+    "id": "2026-11-10-1-hora-por-dia-todo-dia-vence-8-horas-no-domingo",
+    "metricool_id": 405922930,
+    "titulo": "1 hora por dia, todo dia, vence 8 horas no domingo. ⏳",
+    "legenda": "O cérebro aprende com repetição e descanso. Estudar um pouco todos os dias fixa mais conteúdo do que um único dia de maratona, e cansa muito menos.\n\nSe a dificuldade é manter a constância, a tutoria Bruno Ortiz ajuda: plano, metas semanais e alguém acompanhando.",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-18279734232135766599.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-11-10",
+    "publicar_em": "2026-11-10T10:00:00-03:00",
+    "expira": "2026-11-15"
+  },
+  {
+    "id": "2026-11-12-tecnologo-licenciatura-ou-bacharelado-qual-escol",
+    "metricool_id": 405937118,
+    "titulo": "Tecnólogo, licenciatura ou bacharelado: qual escolher?",
+    "legenda": "Tecnólogo, licenciatura ou bacharelado: qual escolher? 🤔\n🔹 Tecnólogo: graduação de nível superior, mais curta e focada no mercado.\n🔹 Licenciatura: forma professores para a educação básica.\n🔹 Bacharelado: formação mais ampla, exigida em algumas profissões e cargos.\n\nTodos são graduações de nível superior. Mas se o objetivo é concurso, confira no edital qual formação o cargo aceita: alguns pedem \"qualquer nível superior\", outros um curso específico.\n\nA Bruno Ortiz te ajuda a escolher o curso certo para o seu objetivo.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-15569212526477341061.mp4",
+    "credito": "",
+    "publicado": "2026-11-12",
+    "publicar_em": "2026-11-12T17:30:00-03:00",
+    "expira": "2026-11-17"
+  },
+  {
+    "id": "2026-11-14-pos-graduacao-lato-sensu-ou-stricto-sensu",
+    "metricool_id": 405922993,
+    "titulo": "Pós-graduação: lato sensu ou stricto sensu? 🎓",
+    "legenda": "📘 Lato sensu: especializações e MBAs, com no mínimo 360 horas e foco no mercado.\n📗 Stricto sensu: mestrado e doutorado, com foco em pesquisa.\n\nPara a carreira, a especialização é o caminho mais comum. Para concursos, muitos editais pontuam especialização, mestrado e doutorado na prova de títulos.\n\nEm qualquer caso: faça a pós em instituição credenciada pelo MEC.",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-4837917418938197248.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-9199440233136011483.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-7971259512632640027.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-7884767899767119330.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-2978738820940120341.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-7606184521106056928.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-11-14",
+    "publicar_em": "2026-11-14T10:00:00-03:00",
+    "expira": "2026-11-19"
+  },
+  {
+    "id": "2026-11-16-como-estudar-com-questoes-da-banca",
+    "metricool_id": 405937162,
+    "titulo": "Como estudar com questões da banca",
+    "legenda": "Quem faz questões da banca estuda o que cai. 🎯\n1️⃣ Resolva por assunto, logo depois da teoria, para fixar.\n2️⃣ Entenda o padrão: cada banca tem um jeito de cobrar o mesmo conteúdo.\n3️⃣ Refaça os erros: monte um caderno de erros e revise o que você errou.\n\nNa tutoria Bruno Ortiz, as questões entram no seu cronograma desde a primeira semana.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-9297577209158615546.mp4",
+    "credito": "",
+    "publicado": "2026-11-16",
+    "publicar_em": "2026-11-16T12:00:00-03:00",
+    "expira": "2026-11-21"
+  },
+  {
+    "id": "2026-11-17-o-diploma-que-voce-adia-hoje-e-a-promocao-que-vo",
+    "metricool_id": 405923038,
+    "titulo": "O diploma que você adia hoje é a promoção que você perde amanhã. 🎓",
+    "legenda": "Vagas internas, aumentos, concursos de nível superior, pós-graduação: muitas portas pedem a graduação concluída.\n\nCom a tutoria Bruno Ortiz você começa com plano, estuda com acompanhamento e chega ao diploma reconhecido pelo MEC.",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-8556214539241427307.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-11-17",
+    "publicar_em": "2026-11-17T10:00:00-03:00",
+    "expira": "2026-11-22"
+  },
+  {
+    "id": "2026-11-19-revisao-espacada-o-segredo-de-quem-nao-esquece",
+    "metricool_id": 405937219,
+    "titulo": "Revisão espaçada: o segredo de quem não esquece",
+    "legenda": "Você estuda, esquece tudo e recomeça? O problema não é você, é a falta de revisão. 🧠\nUse a revisão espaçada:\n\n📅 Depois de 1 dia: revisão rápida\n📅 Depois de 7 dias: resumo e questões\n📅 Depois de 30 dias: questões novas para testar a memória\n\nNa tutoria Bruno Ortiz, as revisões já vêm programadas no seu cronograma.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-3967719031579027832.mp4",
+    "credito": "",
+    "publicado": "2026-11-19",
+    "publicar_em": "2026-11-19T12:00:00-03:00",
+    "expira": "2026-11-24"
+  },
+  {
+    "id": "2026-11-21-do-edital-a-posse-as-6-etapas-do-concurso",
+    "metricool_id": 405923152,
+    "titulo": "Do edital à posse: as 6 etapas do concurso 🗺️",
+    "legenda": "1️⃣ Edital publicado\n2️⃣ Inscrição\n3️⃣ Provas\n4️⃣ Títulos\n5️⃣ Resultado e nomeação\n6️⃣ Posse\n\nArraste para entender cada uma. E repare: a escolaridade exigida aparece no começo e no fim. Quem resolve isso cedo, chega tranquilo na posse.\n\nA Bruno Ortiz acompanha você em todas as etapas.",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-15299199333603636798.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-1722889163172487457.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-14251378713447348409.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-9054776131629737662.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-8593239489971585245.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-488690323509222447.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-12143457874283066893.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-10683191981329778728.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-11-21",
+    "publicar_em": "2026-11-21T10:00:00-03:00",
+    "expira": "2026-11-26"
+  },
+  {
+    "id": "2026-11-23-voltar-a-estudar-depois-dos-30-40-50",
+    "metricool_id": 405937279,
+    "titulo": "Voltar a estudar depois dos 30, 40, 50",
+    "legenda": "Voltar a estudar depois dos 30, 40 ou 50 anos? É mais comum do que você imagina. 💪\nE você tem uma vantagem que o aluno de 18 anos não tem: experiência e clareza do que quer.\n\n🎯 Objetivo definido\n🏠 Rotina flexível com o EAD\n🤝 Apoio da tutoria para não ficar perdido\n\nNunca é tarde para o diploma que você sempre quis.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-1638020077020664664.mp4",
+    "credito": "",
+    "publicado": "2026-11-23",
+    "publicar_em": "2026-11-23T12:00:00-03:00",
+    "expira": "2026-11-28"
+  },
+  {
+    "id": "2026-11-24-voce-nao-precisa-fazer-isso-sozinho",
+    "metricool_id": 405923199,
+    "titulo": "Você não precisa fazer isso sozinho. 🤝",
+    "legenda": "Seja para passar no concurso ou para terminar a faculdade, a tutoria Bruno Ortiz te dá:\n\n✅ Plano de estudos sob medida\n✅ Dúvidas e revisões com a nossa equipe\n✅ Acompanhamento até a aprovação ou o diploma",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-9341031699650657976.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-11-24",
+    "publicar_em": "2026-11-24T10:00:00-03:00",
+    "expira": "2026-11-29"
+  },
+  {
+    "id": "2026-11-26-monte-seu-cronograma-de-estudos-em-4-passos",
+    "metricool_id": 405937377,
+    "titulo": "Monte seu cronograma de estudos em 4 passos",
+    "legenda": "Monte seu cronograma de estudos em 4 passos 🗓️\n1️⃣ Conte suas horas reais: quanto tempo você tem de verdade em cada dia.\n2️⃣ Priorize pelo peso: matérias que valem mais ganham mais horas.\n3️⃣ Divida em blocos: uma matéria por bloco, alternando teoria e questões.\n4️⃣ Reserve a revisão: um horário fixo na semana só para revisar.\n\nQuer o seu pronto e ajustado à sua rotina? A tutoria Bruno Ortiz monta com você.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-16201807423671040767.mp4",
+    "credito": "",
+    "publicado": "2026-11-26",
+    "publicar_em": "2026-11-26T17:30:00-03:00",
+    "expira": "2026-12-01"
+  },
+  {
+    "id": "2026-11-28-5-motivos-para-estudar-com-tutoria",
+    "metricool_id": 405923342,
+    "titulo": "5 motivos para estudar com tutoria 👇",
+    "legenda": "1️⃣ Plano feito para a sua rotina\n2️⃣ Dúvida não acumula\n3️⃣ Constância com metas e acompanhamento\n4️⃣ Preparação para cada prova\n5️⃣ Matrícula, prazos e requisitos acompanhados\n\nVale para quem vai prestar concurso e para quem quer terminar a faculdade. Quem estuda é você. A gente garante que não seja sozinho.",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-15263887406020318223.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-1568651121631662183.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-16458957194445633338.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-13879814349335637993.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-9004147434889527001.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-15835064883734665113.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-1594890179045350417.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-11-28",
+    "publicar_em": "2026-11-28T10:00:00-03:00",
+    "expira": "2026-12-03"
+  },
+  {
+    "id": "2026-12-01-dezembro-planeje-2027-em-3-passos",
+    "metricool_id": 405937424,
+    "titulo": "Dezembro: planeje 2027 em 3 passos",
+    "legenda": "Dezembro separa quem planeja de quem promete. 📅\nPlaneje 2027 em 3 passos:\n\n1️⃣ Escolha UM objetivo: um concurso ou uma graduação.\n2️⃣ Defina a data: quando é a prova? Quando você quer o diploma?\n3️⃣ Volte o calendário: divida o caminho em metas mensais a partir de hoje.\n\nQuer montar esse plano com quem entende? Fale com a Bruno Ortiz.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-8764148529825783508.mp4",
+    "credito": "",
+    "publicado": "2026-12-01",
+    "publicar_em": "2026-12-01T12:00:00-03:00",
+    "expira": "2026-12-06"
+  },
+  {
+    "id": "2026-12-03-a-aprovacao-de-2027-comeca-a-ser-construida-em-d",
+    "metricool_id": 405923384,
+    "titulo": "A aprovação de 2027 começa a ser construída em dezembro de 2026. 🏆",
+    "legenda": "Quando o edital sai, quem já estava estudando tem meses de vantagem. E quem já resolveu a escolaridade exigida chega na posse sem susto.\n\nComece agora com a Bruno Ortiz: plano de estudos e requisitos acadêmicos no mesmo acompanhamento.",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-8792596244186307601.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-12-03",
+    "publicar_em": "2026-12-03T10:00:00-03:00",
+    "expira": "2026-12-08"
+  },
+  {
+    "id": "2026-12-05-como-escolher-o-curso-certo-responda-estas-5-per",
+    "metricool_id": 405923466,
+    "titulo": "Como escolher o curso certo? Responda estas 5 perguntas antes de se matricular 👇",
+    "legenda": "1️⃣ Para que eu quero o diploma?\n2️⃣ Do que eu gosto?\n3️⃣ Presencial ou EAD?\n4️⃣ Quanto tempo eu tenho por semana?\n5️⃣ O curso é reconhecido pelo MEC?\n\nArraste para ver cada uma. E se quiser responder com quem entende, fale com a Bruno Ortiz.",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-416483844777939764.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-1748109769186503219.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-7173528720354599016.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-10404162165636985583.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-7529775976654850972.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-4615981284246646612.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-9158072782779195826.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-12-05",
+    "publicar_em": "2026-12-05T10:00:00-03:00",
+    "expira": "2026-12-10"
+  },
+  {
+    "id": "2026-12-07-fim-de-ano-como-estudar-sem-perder-o-ritmo",
+    "metricool_id": 405937472,
+    "titulo": "Fim de ano: como estudar sem perder o ritmo",
+    "legenda": "Fim de ano chegando. Vai parar de estudar? Não precisa parar, precisa ajustar. 🎄📚\n1️⃣ Menos horas, mais revisão: consolide o que já estudou.\n2️⃣ Faça simulados: descubra seus pontos fracos para 2027.\n3️⃣ Descanse de verdade: folga planejada é estratégia, não culpa.\n\nQuem mantém o ritmo em dezembro volta em janeiro na frente.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-8624600135139760435.mp4",
+    "credito": "",
+    "publicado": "2026-12-07",
+    "publicar_em": "2026-12-07T12:00:00-03:00",
+    "expira": "2026-12-12"
+  },
+  {
+    "id": "2026-12-08-como-saber-se-a-faculdade-e-reconhecida-pelo-mec",
+    "metricool_id": 405937530,
+    "titulo": "Como saber se a faculdade é reconhecida pelo MEC",
+    "legenda": "Sua faculdade é reconhecida pelo MEC? Confira em 2 minutos 🔎\n1️⃣ Acesse emec.mec.gov.br, o cadastro oficial do Ministério da Educação.\n2️⃣ Pesquise a instituição e veja se é credenciada, inclusive para EAD.\n3️⃣ Pesquise o curso e confira se está autorizado ou reconhecido.\n\nFaça isso antes de qualquer matrícula ou pagamento. Na Bruno Ortiz, essa conferência faz parte do acompanhamento.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-5424001750416109947.mp4",
+    "credito": "",
+    "publicado": "2026-12-08",
+    "publicar_em": "2026-12-08T17:30:00-03:00",
+    "expira": "2026-12-13"
+  },
+  {
+    "id": "2026-12-10-metas-2027",
+    "metricool_id": 405923515,
+    "titulo": "Metas 2027 ✅",
+    "legenda": "☑️ Aprovação no concurso\n☑️ Graduação ou pós concluída\n☑️ Posse tomada\n\nQual delas é a sua? Conta aqui nos comentários 👇\n\nSeja qual for, a Bruno Ortiz monta o plano com você e acompanha até o fim.",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-3548549671027078368.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-12-10",
+    "publicar_em": "2026-12-10T10:00:00-03:00",
+    "expira": "2026-12-15"
+  },
+  {
+    "id": "2026-12-12-simulados-por-que-fazer-e-como",
+    "metricool_id": 405937578,
+    "titulo": "Simulados: por que fazer e como",
+    "legenda": "Estuda muito, mas trava na hora da prova? Faltam simulados. ⏱️\nEles treinam o que o estudo sozinho não treina:\n\n🕐 Tempo de prova\n😮‍💨 Controle da ansiedade\n🎯 Pontos fracos para a revisão\n\nNa tutoria Bruno Ortiz, os simulados entram no seu cronograma.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-14412997694399737644.mp4",
+    "credito": "",
+    "publicado": "2026-12-12",
+    "publicar_em": "2026-12-12T10:00:00-03:00",
+    "expira": "2026-12-17"
+  },
+  {
+    "id": "2026-12-14-seu-plano-de-estudos-para-2027-em-4-fases",
+    "metricool_id": 405923602,
+    "titulo": "Seu plano de estudos para 2027 em 4 fases 🗓️",
+    "legenda": "1️⃣ Base: matérias que caem em quase todo concurso\n2️⃣ Aprofundamento: específicas do cargo\n3️⃣ Questões: banca, caderno de erros e revisões\n4️⃣ Reta final: simulados e revisão intensa\n\nE em paralelo, o tempo todo: escolaridade e títulos resolvidos, para a aprovação virar posse.\n\nSalve este post e monte seu plano 2027 com a Bruno Ortiz. 📌",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-1288538487365753662.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-6679498870244937459.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-2552054987093377112.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-12159572329246884226.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-12690686697441315565.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-14228319893073019559.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-14463836274212850661.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-12-14",
+    "publicar_em": "2026-12-14T12:00:00-03:00",
+    "expira": "2026-12-19"
+  },
+  {
+    "id": "2026-12-15-tcc-sem-desespero-em-4-passos",
+    "metricool_id": 405937630,
+    "titulo": "TCC sem desespero em 4 passos",
+    "legenda": "TCC sem desespero em 4 passos 📝\n1️⃣ Tema viável: algo que dá para pesquisar no prazo.\n2️⃣ Cronograma: capítulos com datas de entrega.\n3️⃣ Escreva todo dia: uma página por dia vira um trabalho inteiro.\n4️⃣ Revise e formate: normas e referências antes da entrega.\n\nNa tutoria Bruno Ortiz, a gente orienta você da escolha do tema à formatação final. Quem escreve é você, mas não sozinho.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-4687133765266622680.mp4",
+    "credito": "",
+    "publicado": "2026-12-15",
+    "publicar_em": "2026-12-15T12:00:00-03:00",
+    "expira": "2026-12-20"
+  },
+  {
+    "id": "2026-12-17-a-tutoria-bruno-ortiz-em-20-segundos",
+    "metricool_id": 405937697,
+    "titulo": "A tutoria Bruno Ortiz em 20 segundos",
+    "legenda": "A tutoria Bruno Ortiz em 20 segundos ⏱️\n🎯 Para quem vai prestar concurso: leitura do edital, plano de estudos, revisões, simulados e requisitos da posse.\n🎓 Para quem quer a graduação: escolha do curso, estudo acompanhado, preparação para as provas, TCC e diploma.\n\nQuem estuda é você. A gente garante que não seja sozinho.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-16741713909459558864.mp4",
+    "credito": "",
+    "publicado": "2026-12-17",
+    "publicar_em": "2026-12-17T17:30:00-03:00",
+    "expira": "2026-12-22"
+  },
+  {
+    "id": "2026-12-19-4-mitos-sobre-graduacao-ead",
+    "metricool_id": 405923667,
+    "titulo": "4 mitos sobre graduação EAD ❌✅",
+    "legenda": "❌ EAD é mais fácil → exige mais disciplina\n❌ O diploma vale menos → tem a mesma validade legal, se a instituição é credenciada\n❌ Não serve para concurso → serve, se for a formação exigida e o curso estiver regular\n❌ Você estuda sozinho → com tutoria, não\n\nArraste para ver cada um e marque quem precisa ver este post. 👇",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-6813325878547440298.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-15266676614799441408.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-17939430851384884962.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-14878225935634799668.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-1050349950382699377.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-7369068845565651560.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-12-19",
+    "publicar_em": "2026-12-19T10:00:00-03:00",
+    "expira": "2026-12-24"
+  },
+  {
+    "id": "2026-12-21-4-dicas-para-a-ansiedade-antes-da-prova",
+    "metricool_id": 405937763,
+    "titulo": "4 dicas para a ansiedade antes da prova",
+    "legenda": "Ansiedade antes da prova? 4 dicas que ajudam 👇\n😴 Durma bem: a memória se consolida no sono.\n📖 Revisão leve: véspera é para resumos, não para conteúdo novo.\n⏰ Chegue cedo: confira local, documento e horário antes.\n🌬️ Respire: travou em uma questão? Pule e volte depois.\n\nE o melhor remédio para a ansiedade é a preparação. A tutoria Bruno Ortiz te ajuda a chegar pronto.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-16755087178876883119.mp4",
+    "credito": "",
+    "publicado": "2026-12-21",
+    "publicar_em": "2026-12-21T12:00:00-03:00",
+    "expira": "2026-12-26"
+  },
+  {
+    "id": "2026-12-24-feliz-natal",
+    "metricool_id": 405923726,
+    "titulo": "Feliz Natal! 🎄",
+    "legenda": "A equipe Bruno Ortiz deseja a você e à sua família um Natal de paz, descanso e boas energias.\n\nQue 2027 traga a aprovação e o diploma que você tanto merece. A gente vai estar do seu lado nessa jornada.",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-5613238054744306109.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-12-24",
+    "publicar_em": "2026-12-24T10:00:00-03:00",
+    "expira": "2026-12-29"
+  },
+  {
+    "id": "2026-12-26-o-que-voce-vai-fazer-diferente-em-2027",
+    "metricool_id": 405937801,
+    "titulo": "O que você vai fazer diferente em 2027?",
+    "legenda": "Se 2026 não foi o ano da aprovação ou do diploma, o que vai ser diferente em 2027? 🤔\n1️⃣ Objetivo único: pare de dividir energia entre dez metas.\n2️⃣ Rotina real: um plano que cabe na sua vida.\n3️⃣ Acompanhamento: alguém do seu lado para não desistir em março.\n\n2027 pode ser o seu ano. Comece com a Bruno Ortiz.",
+    "video": "https://static.metricool.com/planner/202610/7646463-file-14310484939995540807.mp4",
+    "credito": "",
+    "publicado": "2026-12-26",
+    "publicar_em": "2026-12-26T10:00:00-03:00",
+    "expira": "2026-12-31"
+  },
+  {
+    "id": "2026-12-29-checklist-para-comecar-2027-com-o-pe-direito",
+    "metricool_id": 405923794,
+    "titulo": "Checklist para começar 2027 com o pé direito ✅",
+    "legenda": "☑️ Escolha o objetivo\n☑️ Confira os requisitos\n☑️ Monte a rotina\n☑️ Defina as revisões\n☑️ Garanta apoio\n\nSalve este post e faça na primeira semana do ano. Se quiser fazer junto com a gente, chama no WhatsApp. 📌",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-6464057485750995326.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-10075351839561128658.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-16590244421695870171.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-16202616656577482223.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-10243197465846331776.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-14920049480620179871.jpeg",
+      "https://static.metricool.com/planner/202610/7646463-file-5166651761011642837.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-12-29",
+    "publicar_em": "2026-12-29T12:00:00-03:00",
+    "expira": "2027-01-03"
+  },
+  {
+    "id": "2026-12-31-feliz-2027",
+    "metricool_id": 405923839,
+    "titulo": "Feliz 2027! 🎆",
+    "legenda": "Que este seja o ano da sua aprovação, do seu diploma e da sua posse.\n\nObrigado por acompanhar a Bruno Ortiz em 2026. Em 2027, a gente segue do seu lado, estudando com você.",
+    "imagens": [
+      "https://static.metricool.com/planner/202610/7646463-file-1779586093467776795.jpeg"
+    ],
+    "credito": "",
+    "publicado": "2026-12-31",
+    "publicar_em": "2026-12-31T10:00:00-03:00",
+    "expira": "2027-01-05"
   }
 ]
