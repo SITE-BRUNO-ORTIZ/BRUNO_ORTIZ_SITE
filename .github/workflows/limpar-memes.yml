@@ -24,6 +24,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Preparar ffmpeg (capas dos vídeos)
+        run: command -v ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
       - name: Apagar posts com mais de 5 dias
         run: python .github/scripts/limpar_memes.py
       - name: Baixar para o site a mídia dos posts de hoje e de amanhã
