@@ -1,33 +1,5 @@
 [
   {
-    "id": "2026-10-29-graduacao-ead-vale-o-mesmo-que-a-presencial-sim",
-    "metricool_id": 405922700,
-    "titulo": "Graduação EAD vale o mesmo que a presencial? Sim. 🎓",
-    "legenda": "O diploma de um curso a distância de instituição credenciada pelo MEC tem a mesma validade legal do presencial, inclusive para concursos que pedem nível superior.\n\nO cuidado: antes de se matricular, confira no site e-MEC se a instituição é credenciada e se o curso é autorizado ou reconhecido.\n\nO desafio do EAD não é o diploma, é a constância. É aí que a tutoria Bruno Ortiz entra: a gente estuda com você e acompanha até a formatura.",
-    "imagens": [
-      "memes/2026-10-29-graduacao-ead-vale-o-mesmo-que-a-presencial-sim-1.jpg",
-      "memes/2026-10-29-graduacao-ead-vale-o-mesmo-que-a-presencial-sim-2.jpg",
-      "memes/2026-10-29-graduacao-ead-vale-o-mesmo-que-a-presencial-sim-3.jpg",
-      "memes/2026-10-29-graduacao-ead-vale-o-mesmo-que-a-presencial-sim-4.jpg",
-      "memes/2026-10-29-graduacao-ead-vale-o-mesmo-que-a-presencial-sim-5.jpg",
-      "memes/2026-10-29-graduacao-ead-vale-o-mesmo-que-a-presencial-sim-6.jpg"
-    ],
-    "credito": "",
-    "publicado": "2026-10-29",
-    "publicar_em": "2026-10-29T12:00:00-03:00",
-    "expira": "2026-11-01",
-    "origem": {
-      "imagens": [
-        "https://static.metricool.com/planner/202610/7646463-file-307872853986109689.jpeg",
-        "https://static.metricool.com/planner/202610/7646463-file-14022702425590795463.jpeg",
-        "https://static.metricool.com/planner/202610/7646463-file-16756802033379385407.jpeg",
-        "https://static.metricool.com/planner/202610/7646463-file-4765723283564486205.jpeg",
-        "https://static.metricool.com/planner/202610/7646463-file-16271032901799984270.jpeg",
-        "https://static.metricool.com/planner/202610/7646463-file-18208439451618633895.jpeg"
-      ]
-    }
-  },
-  {
     "id": "2026-10-30-poucos-pontos-separam-a-nomeacao-do-cadastro-res",
     "metricool_id": 405922742,
     "titulo": "Poucos pontos separam a nomeação do cadastro reserva. 📊",
@@ -66,12 +38,17 @@
     "titulo": "Faltam 2 meses para 2027. 📅",
     "legenda": "Todo ano é a mesma promessa: \"ano que vem eu começo a faculdade\". Que tal começar 2027 com a graduação ou a pós já planejada?\n\nNovembro é o mês ideal para escolher o curso, conferir a instituição no MEC e organizar a rotina. A Bruno Ortiz faz esse planejamento com você.",
     "imagens": [
-      "https://static.metricool.com/planner/202610/7646463-file-4794820563269055720.jpeg"
+      "memes/2026-11-02-faltam-2-meses-para-2027-1.jpg"
     ],
     "credito": "",
     "publicado": "2026-11-02",
     "publicar_em": "2026-11-02T10:00:00-03:00",
-    "expira": "2026-11-05"
+    "expira": "2026-11-05",
+    "origem": {
+      "imagens": [
+        "https://static.metricool.com/planner/202610/7646463-file-4794820563269055720.jpeg"
+      ]
+    }
   },
   {
     "id": "2026-11-03-concurseiro-iniciante-por-onde-comecar",
