@@ -1,23 +1,5 @@
 [
   {
-    "id": "2026-10-30-poucos-pontos-separam-a-nomeacao-do-cadastro-res",
-    "metricool_id": 405922742,
-    "titulo": "Poucos pontos separam a nomeação do cadastro reserva. 📊",
-    "legenda": "Em concursos com prova de títulos, uma especialização concluída a tempo pode ser exatamente o que falta para subir na classificação.\n\nO detalhe: o título precisa estar pronto até a data que o edital define. Quem deixa para depois do resultado, perde a chance.\n\nA Bruno Ortiz indica a pós reconhecida pelo MEC e acompanha você até a conclusão.",
-    "imagens": [
-      "memes/2026-10-30-poucos-pontos-separam-a-nomeacao-do-cadastro-res-1.jpg"
-    ],
-    "credito": "",
-    "publicado": "2026-10-30",
-    "publicar_em": "2026-10-30T10:00:00-03:00",
-    "expira": "2026-11-02",
-    "origem": {
-      "imagens": [
-        "https://static.metricool.com/planner/202610/7646463-file-7132420566169770017.jpeg"
-      ]
-    }
-  },
-  {
     "id": "2026-10-31-como-funciona-a-tutoria-bruno-ortiz-em-4-passos",
     "metricool_id": 405936878,
     "titulo": "Como funciona a tutoria Bruno Ortiz em 4 passos",
@@ -55,11 +37,15 @@
     "metricool_id": 405936946,
     "titulo": "Concurseiro iniciante: por onde começar?",
     "legenda": "Vai começar a estudar para concurso? Comece por aqui 👇\n1️⃣ Escolha a área: policial, tribunais, fiscal, administrativo. Foco vence dispersão.\n2️⃣ Leia o último edital: as matérias tendem a se repetir.\n3️⃣ Confira a escolaridade: se o cargo exige graduação, comece a resolver isso agora, não depois da aprovação.\n4️⃣ Monte a rotina: horário fixo, metas semanais e revisão.\n\nQuer ajuda para dar o primeiro passo? A Bruno Ortiz monta o plano com você.",
-    "video": "https://static.metricool.com/planner/202610/7646463-file-15469243369496973677.mp4",
+    "video": "memes/2026-11-03-concurseiro-iniciante-por-onde-comecar.mp4",
     "credito": "",
     "publicado": "2026-11-03",
     "publicar_em": "2026-11-03T12:00:00-03:00",
-    "expira": "2026-11-06"
+    "expira": "2026-11-06",
+    "capa": "memes/2026-11-03-concurseiro-iniciante-por-onde-comecar.jpg",
+    "origem": {
+      "video": "https://static.metricool.com/planner/202610/7646463-file-15469243369496973677.mp4"
+    }
   },
   {
     "id": "2026-11-05-checklist-da-posse-o-que-ninguem-te-conta",
