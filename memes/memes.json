@@ -1,20 +1,5 @@
 [
   {
-    "id": "2026-11-03-concurseiro-iniciante-por-onde-comecar",
-    "metricool_id": 405936946,
-    "titulo": "Concurseiro iniciante: por onde começar?",
-    "legenda": "Vai começar a estudar para concurso? Comece por aqui 👇\n1️⃣ Escolha a área: policial, tribunais, fiscal, administrativo. Foco vence dispersão.\n2️⃣ Leia o último edital: as matérias tendem a se repetir.\n3️⃣ Confira a escolaridade: se o cargo exige graduação, comece a resolver isso agora, não depois da aprovação.\n4️⃣ Monte a rotina: horário fixo, metas semanais e revisão.\n\nQuer ajuda para dar o primeiro passo? A Bruno Ortiz monta o plano com você.",
-    "video": "memes/2026-11-03-concurseiro-iniciante-por-onde-comecar.mp4",
-    "credito": "",
-    "publicado": "2026-11-03",
-    "publicar_em": "2026-11-03T12:00:00-03:00",
-    "expira": "2026-11-06",
-    "capa": "memes/2026-11-03-concurseiro-iniciante-por-onde-comecar.jpg",
-    "origem": {
-      "video": "https://static.metricool.com/planner/202610/7646463-file-15469243369496973677.mp4"
-    }
-  },
-  {
     "id": "2026-11-05-checklist-da-posse-o-que-ninguem-te-conta",
     "metricool_id": 405922869,
     "titulo": "Checklist da posse: o que ninguém te conta 📋",
@@ -49,11 +34,15 @@
     "metricool_id": 405937018,
     "titulo": "Segunda graduação: quando vale a pena?",
     "legenda": "Já é formado? Talvez você precise de uma segunda graduação. 🎓\nEla vale a pena quando você quer:\n\n🔁 Mudar de área e de carreira\n🎯 Prestar concurso que exige formação em um curso específico\n⏱️ Aproveitar o que já estudou: disciplinas cursadas podem ser aproveitadas, conforme as regras de cada instituição\n\nA Bruno Ortiz analisa o seu histórico e indica o caminho mais curto dentro da lei.",
-    "video": "https://static.metricool.com/planner/202610/7646463-file-12744155300677971533.mp4",
+    "video": "memes/2026-11-07-segunda-graduacao-quando-vale-a-pena.mp4",
     "credito": "",
     "publicado": "2026-11-07",
     "publicar_em": "2026-11-07T10:00:00-03:00",
-    "expira": "2026-11-10"
+    "expira": "2026-11-10",
+    "capa": "memes/2026-11-07-segunda-graduacao-quando-vale-a-pena.jpg",
+    "origem": {
+      "video": "https://static.metricool.com/planner/202610/7646463-file-12744155300677971533.mp4"
+    }
   },
   {
     "id": "2026-11-09-3-erros-de-quem-estuda-sozinho",
