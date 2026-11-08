@@ -1,35 +1,5 @@
 [
   {
-    "id": "2026-11-05-checklist-da-posse-o-que-ninguem-te-conta",
-    "metricool_id": 405922869,
-    "titulo": "Checklist da posse: o que ninguém te conta 📋",
-    "legenda": "Ser aprovado é uma etapa. Tomar posse é outra, e ela tem lista de exigências:\n\n✅ Escolaridade exigida, de instituição reconhecida pelo MEC\n✅ Registro em conselho, quando o cargo pede\n✅ Exames e avaliações\n✅ Documentos pessoais e certidões\n\nO erro mais comum é deixar a parte acadêmica para depois do resultado. Os prazos da posse são curtos.\n\nArraste para o lado e salve este post. 📌",
-    "imagens": [
-      "memes/2026-11-05-checklist-da-posse-o-que-ninguem-te-conta-1.jpg",
-      "memes/2026-11-05-checklist-da-posse-o-que-ninguem-te-conta-2.jpg",
-      "memes/2026-11-05-checklist-da-posse-o-que-ninguem-te-conta-3.jpg",
-      "memes/2026-11-05-checklist-da-posse-o-que-ninguem-te-conta-4.jpg",
-      "memes/2026-11-05-checklist-da-posse-o-que-ninguem-te-conta-5.jpg",
-      "memes/2026-11-05-checklist-da-posse-o-que-ninguem-te-conta-6.jpg",
-      "memes/2026-11-05-checklist-da-posse-o-que-ninguem-te-conta-7.jpg"
-    ],
-    "credito": "",
-    "publicado": "2026-11-05",
-    "publicar_em": "2026-11-05T12:00:00-03:00",
-    "expira": "2026-11-08",
-    "origem": {
-      "imagens": [
-        "https://static.metricool.com/planner/202610/7646463-file-12239242824247860064.jpeg",
-        "https://static.metricool.com/planner/202610/7646463-file-18333787150112021580.jpeg",
-        "https://static.metricool.com/planner/202610/7646463-file-15145018732441734186.jpeg",
-        "https://static.metricool.com/planner/202610/7646463-file-14867400985632994837.jpeg",
-        "https://static.metricool.com/planner/202610/7646463-file-29700995668589743.jpeg",
-        "https://static.metricool.com/planner/202610/7646463-file-11386574871609308044.jpeg",
-        "https://static.metricool.com/planner/202610/7646463-file-8489685458988006882.jpeg"
-      ]
-    }
-  },
-  {
     "id": "2026-11-07-segunda-graduacao-quando-vale-a-pena",
     "metricool_id": 405937018,
     "titulo": "Segunda graduação: quando vale a pena?",
@@ -49,11 +19,15 @@
     "metricool_id": 405937064,
     "titulo": "3 erros de quem estuda sozinho",
     "legenda": "3 erros de quem estuda sozinho (e que talvez você esteja cometendo) 👇\n❌ Estudar sem plano: abrir o material e estudar o que dá vontade.\n❌ Não revisar: aprender hoje e esquecer em um mês.\n❌ Desistir no meio: sem ninguém cobrando, a constância vai embora.\n\nOs três têm a mesma solução: acompanhamento. Na tutoria Bruno Ortiz, você tem plano, revisão e alguém do seu lado até o fim.",
-    "video": "https://static.metricool.com/planner/202610/7646463-file-15078718492610397076.mp4",
+    "video": "memes/2026-11-09-3-erros-de-quem-estuda-sozinho.mp4",
     "credito": "",
     "publicado": "2026-11-09",
     "publicar_em": "2026-11-09T12:00:00-03:00",
-    "expira": "2026-11-12"
+    "expira": "2026-11-12",
+    "capa": "memes/2026-11-09-3-erros-de-quem-estuda-sozinho.jpg",
+    "origem": {
+      "video": "https://static.metricool.com/planner/202610/7646463-file-15078718492610397076.mp4"
+    }
   },
   {
     "id": "2026-11-10-1-hora-por-dia-todo-dia-vence-8-horas-no-domingo",
