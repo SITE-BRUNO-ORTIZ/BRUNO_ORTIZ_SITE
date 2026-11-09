@@ -35,12 +35,17 @@
     "titulo": "1 hora por dia, todo dia, vence 8 horas no domingo. ⏳",
     "legenda": "O cérebro aprende com repetição e descanso. Estudar um pouco todos os dias fixa mais conteúdo do que um único dia de maratona, e cansa muito menos.\n\nSe a dificuldade é manter a constância, a tutoria Bruno Ortiz ajuda: plano, metas semanais e alguém acompanhando.",
     "imagens": [
-      "https://static.metricool.com/planner/202610/7646463-file-18279734232135766599.jpeg"
+      "memes/2026-11-10-1-hora-por-dia-todo-dia-vence-8-horas-no-domingo-1.jpg"
     ],
     "credito": "",
     "publicado": "2026-11-10",
     "publicar_em": "2026-11-10T10:00:00-03:00",
-    "expira": "2026-11-13"
+    "expira": "2026-11-13",
+    "origem": {
+      "imagens": [
+        "https://static.metricool.com/planner/202610/7646463-file-18279734232135766599.jpeg"
+      ]
+    }
   },
   {
     "id": "2026-11-12-tecnologo-licenciatura-ou-bacharelado-qual-escol",
