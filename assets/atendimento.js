@@ -172,12 +172,21 @@
     a.className = 'hc-wa'; a.target = '_blank'; a.rel = 'noopener';
     a.setAttribute('data-wa-label', 'balao');
     a.setAttribute('data-interesse', resp.int || 'geral');
+    if (!/pesquisando/i.test(resp.prazo || '')) a.setAttribute('data-qualificado', '1'); /* só este vira "Lead" no Meta */
     a.href = 'https://wa.me/' + NUM + '?text=' + encodeURIComponent(msg);
     a.innerHTML = WA_ICO + '<span>Enviar no WhatsApp</span>';
     corpo.appendChild(a); rolar(); a.focus({ preventScroll: true });
   };
-  var comecar = function (uf) {
+  var NOMES = { graduacao: 'graduação', concursos: 'concurso público', 'servicos-academicos': 'serviço acadêmico', 'ensino-medio': 'ensino médio' };
+  var comecar = function (uf, interesse) {
     corpo.innerHTML = ''; resp = {};
+    if (interesse && PERGUNTAS[interesse] && NOMES[interesse]) {
+      resp.obj = NOMES[interesse]; resp.int = interesse;
+      if (window.HG_interesse) window.HG_interesse(interesse);
+      fala('Oi! 👋 Aqui é o atendimento da Bruno Ortiz. Com 3 perguntas rápidas eu deixo a sua mensagem pronta para a equipe no WhatsApp e você já é atendido no ponto certo.', 'bot');
+      passoSituacao();
+      return;
+    }
     if (uf === 'OUTRO') { fala('Sou de outro estado', 'eu', passoEstado); return; }
     if (uf && UFS[uf]) {
       fala('Sou de ' + UFS[uf] + ' (' + uf + ')', 'eu', function () {
@@ -188,12 +197,13 @@
     passoObjetivo();
   };
 
-  var abrir = function (uf) {
+  var abrir = function (uf, interesse) {
     ultimoFoco = document.activeElement;
     esconderEstados();
     box.hidden = false; flt.setAttribute('aria-expanded', 'true');
     var p = flt.querySelector('.hc-ping'); if (p) p.remove();
-    if (uf) { iniciado = true; comecar(uf); ga('chat_aberto', { pagina: location.pathname, origem: 'balao-estados' }); }
+    if (interesse) { iniciado = true; comecar('', interesse); ga('chat_aberto', { pagina: location.pathname, origem: 'botao-filtro' }); }
+    else if (uf) { iniciado = true; comecar(uf); ga('chat_aberto', { pagina: location.pathname, origem: 'balao-estados' }); }
     else if (!iniciado) { iniciado = true; comecar(); ga('chat_aberto', { pagina: location.pathname }); }
     else { var f = corpo.querySelector('button, input, a'); if (f) f.focus({ preventScroll: true }); }
   };
@@ -209,6 +219,14 @@
   flt.addEventListener('click', function (e) {
     e.preventDefault(); e.stopImmediatePropagation();
     if (box.hidden) abrir(); else fechar();
+  }, true);
+  /* Botões principais das páginas dos anúncios (data-filtro="area"): abrem o balão já na área,
+     em vez de ir direto ao WhatsApp. Sem JS, o link continua indo direto ao WhatsApp. */
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('a[data-filtro]');
+    if (!b) return;
+    e.preventDefault(); e.stopImmediatePropagation();
+    abrir('', b.getAttribute('data-filtro'));
   }, true);
   box.querySelector('.hc-x').addEventListener('click', fechar);
   box.querySelector('.hc-rec').addEventListener('click', function () { ga('chat_passo', { passo: 'recomecar' }); comecar(); });

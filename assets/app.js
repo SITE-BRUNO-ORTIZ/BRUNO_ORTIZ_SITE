@@ -65,8 +65,10 @@ window.HG = {
      - "whatsapp_click" (GA4): todo clique em qualquer botão de WhatsApp.
      - "Contact" (Meta): todo clique, ou 1x por pessoa a cada 30 dias enquanto contatoUmaVez = true.
        Junto com ele vão a conversão do Google Ads e o "clique_whatsapp" do GA4 (os mesmos do site antigo).
-     - "Lead" (Meta) e "generate_lead" (GA4): só o 1º contato da pessoa em 7 dias
-       e só quando o interesse é graduação, concurso ou serviço acadêmico (nunca ensino médio).
+     - "Lead" (Meta) e "generate_lead" (GA4): só contato QUALIFICADO (link com data-qualificado="1":
+       a pessoa respondeu o balão de perguntas ou o cartão-resposta e não marcou "só estou pesquisando"),
+       1x por pessoa a cada 7 dias e nunca ensino médio. Clique direto no WhatsApp conta só como "Contact".
+       Assim as campanhas de Leads aprendem a buscar quem quer resolver, não curiosos.
      - Toda medição leva a área de interesse. */
   var LEAD_KEY = 'hg_lead_ts', INT_KEY = 'hg_interesse', LEAD_DIAS = 7;
   var CONTATO_KEY = 'bo_contato_zap', CONTATO_DIAS = 30;   /* mesma chave do site antigo: quem já contou não conta de novo */
@@ -95,7 +97,7 @@ window.HG = {
   document.addEventListener('click', function (ev) {
     var a = ev.target.closest && ev.target.closest('a[href*="wa.me/"], a[href*="api.whatsapp.com"]');
     if (!a) return;
-    if (a.classList.contains('wa-float') && document.getElementById('hg-chat')) return; /* abre o balão, não é contato */
+    if ((a.classList.contains('wa-float') || a.hasAttribute('data-filtro')) && document.getElementById('hg-chat')) return; /* abre o balão, não é contato */
     var origem = a.getAttribute('data-wa-label') || document.body.getAttribute('data-area') || 'site';
     var interesse = a.getAttribute('data-interesse') || interesseAtual();
     var pagina = location.pathname;
@@ -117,7 +119,8 @@ window.HG = {
       try { if (window.gtag && C.ga4Id) gtag('event', 'clique_whatsapp', { send_to: C.ga4Id, pagina: pagina, interesse: interesse }); } catch (e) {}
     }
 
-    if (!dentroDe(LEAD_KEY, LEAD_DIAS) && interesse !== 'ensino-medio') {
+    var qualificado = a.getAttribute('data-qualificado') === '1';
+    if (qualificado && !dentroDe(LEAD_KEY, LEAD_DIAS) && interesse !== 'ensino-medio') {
       store.set(LEAD_KEY, String(Date.now()));
       try { if (window.fbq) fbq('track', 'Lead', info, { eventID: novoId() }); } catch (e) {}
       try { if (window.gtag) gtag('event', 'generate_lead', comEstado({ method: 'whatsapp', origem: origem, interesse: interesse, pagina: pagina, transport_type: 'beacon' })); } catch (e) {}
@@ -154,6 +157,7 @@ window.HG = {
       var msg = C.saudacao + ' Vim pelo site e quero ' + (o ? o.value : 'orientação') + (p ? ', ' + p.value : '') + '. Pode me passar o diagnóstico gratuito?';
       env.setAttribute('data-wa', msg);
       env.setAttribute('data-interesse', interessePorObjetivo(o && o.value) || 'geral');
+      env.setAttribute('data-qualificado', '1');
       env.href = window.HG_wa(msg);
       return o;
     };
@@ -194,7 +198,7 @@ window.HG = {
   if (document.querySelector('.wa-float')) {
     var proprio = document.querySelector('script[src*="assets/app.js"]');
     var at = document.createElement('script');
-    at.src = (proprio ? proprio.src.replace(/app\.js(\?.*)?$/, 'atendimento.js') : 'assets/atendimento.js') + '?v=20261029c';
+    at.src = (proprio ? proprio.src.replace(/app\.js(\?.*)?$/, 'atendimento.js') : 'assets/atendimento.js') + '?v=20261110a';
     at.defer = true;
     document.body.appendChild(at);
   }
