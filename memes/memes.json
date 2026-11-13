@@ -1,23 +1,5 @@
 [
   {
-    "id": "2026-11-10-1-hora-por-dia-todo-dia-vence-8-horas-no-domingo",
-    "metricool_id": 405922930,
-    "titulo": "1 hora por dia, todo dia, vence 8 horas no domingo. ⏳",
-    "legenda": "O cérebro aprende com repetição e descanso. Estudar um pouco todos os dias fixa mais conteúdo do que um único dia de maratona, e cansa muito menos.\n\nSe a dificuldade é manter a constância, a tutoria Bruno Ortiz ajuda: plano, metas semanais e alguém acompanhando.",
-    "imagens": [
-      "memes/2026-11-10-1-hora-por-dia-todo-dia-vence-8-horas-no-domingo-1.jpg"
-    ],
-    "credito": "",
-    "publicado": "2026-11-10",
-    "publicar_em": "2026-11-10T10:00:00-03:00",
-    "expira": "2026-11-13",
-    "origem": {
-      "imagens": [
-        "https://static.metricool.com/planner/202610/7646463-file-18279734232135766599.jpeg"
-      ]
-    }
-  },
-  {
     "id": "2026-11-12-tecnologo-licenciatura-ou-bacharelado-qual-escol",
     "metricool_id": 405937118,
     "titulo": "Tecnólogo, licenciatura ou bacharelado: qual escolher?",
@@ -38,17 +20,27 @@
     "titulo": "Pós-graduação: lato sensu ou stricto sensu? 🎓",
     "legenda": "📘 Lato sensu: especializações e MBAs, com no mínimo 360 horas e foco no mercado.\n📗 Stricto sensu: mestrado e doutorado, com foco em pesquisa.\n\nPara a carreira, a especialização é o caminho mais comum. Para concursos, muitos editais pontuam especialização, mestrado e doutorado na prova de títulos.\n\nEm qualquer caso: faça a pós em instituição credenciada pelo MEC.",
     "imagens": [
-      "https://static.metricool.com/planner/202610/7646463-file-4837917418938197248.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-9199440233136011483.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-7971259512632640027.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-7884767899767119330.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-2978738820940120341.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-7606184521106056928.jpeg"
+      "memes/2026-11-14-pos-graduacao-lato-sensu-ou-stricto-sensu-1.jpg",
+      "memes/2026-11-14-pos-graduacao-lato-sensu-ou-stricto-sensu-2.jpg",
+      "memes/2026-11-14-pos-graduacao-lato-sensu-ou-stricto-sensu-3.jpg",
+      "memes/2026-11-14-pos-graduacao-lato-sensu-ou-stricto-sensu-4.jpg",
+      "memes/2026-11-14-pos-graduacao-lato-sensu-ou-stricto-sensu-5.jpg",
+      "memes/2026-11-14-pos-graduacao-lato-sensu-ou-stricto-sensu-6.jpg"
     ],
     "credito": "",
     "publicado": "2026-11-14",
     "publicar_em": "2026-11-14T10:00:00-03:00",
-    "expira": "2026-11-17"
+    "expira": "2026-11-17",
+    "origem": {
+      "imagens": [
+        "https://static.metricool.com/planner/202610/7646463-file-4837917418938197248.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-9199440233136011483.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-7971259512632640027.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-7884767899767119330.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-2978738820940120341.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-7606184521106056928.jpeg"
+      ]
+    }
   },
   {
     "id": "2026-11-16-como-estudar-com-questoes-da-banca",
