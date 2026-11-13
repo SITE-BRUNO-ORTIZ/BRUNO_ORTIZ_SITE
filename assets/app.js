@@ -8,10 +8,10 @@ window.HG = {
   googleAdsId: "AW-18076144707",             // Google Ads
   googleAdsConversao: "AW-18076144707/9ODvCJ2AnZ0dEMOosKtD",
   dominio: "brunoaprovaconcursos.com.br",    // medição só liga neste domínio (prévias não sujam os dados)
-  /* As campanhas de Leads da Meta otimizam o evento "Lead" (1º contato da pessoa em 7 dias).
-     false = Contato em todo clique, como no modelo (padrão).
-     true  = Contato só 1x por pessoa a cada 30 dias (use só se alguma campanha voltar a otimizar "Contato"). */
-  contatoUmaVez: false,
+  /* Desde 13/11/2026 a campanha do site otimiza o evento "Contato" (clique no WhatsApp).
+     true  = Contato só 1x por pessoa a cada 30 dias (a mesma pessoa não conta várias vezes).
+     false = Contato em todo clique. */
+  contatoUmaVez: true,
   social: {                                  // vazio = some do site
     facebook: "https://www.facebook.com/1110130492177431",
     youtube: "https://www.youtube.com/channel/UCFcYFOVcGCRMS1OHLwovt9w",
@@ -28,6 +28,22 @@ window.HG = {
   var medir = host === C.dominio;
   window.HG_medindo = medir;
 
+  /* Correspondência avançada do pixel: ajuda a Meta a reconhecer quem clicou (o pixel criptografa antes de enviar).
+     País sempre; id anônimo fixo do navegador; estado e primeiro nome só se a pessoa informou no balão. */
+  window.HG_dadosPixel = function () {
+    var d = { country: 'br' };
+    try {
+      var eid = localStorage.getItem('hg_eid');
+      if (!eid) { eid = 'hg' + Date.now().toString(36) + Math.random().toString(36).slice(2, 10); localStorage.setItem('hg_eid', eid); }
+      d.external_id = eid;
+    } catch (e) {}
+    try {
+      var uf = sessionStorage.getItem('hg_estado'); if (uf && /^[A-Za-z]{2}$/.test(uf)) d.st = uf.toLowerCase();
+      var nm = sessionStorage.getItem('hg_nome'); if (nm) d.fn = nm.toLowerCase();
+    } catch (e) {}
+    return d;
+  };
+
   /* Meta Pixel */
   if (medir && C.metaPixelId) {
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -35,7 +51,7 @@ window.HG = {
     n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
     document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', C.metaPixelId);
+    fbq('init', C.metaPixelId, window.HG_dadosPixel());
     fbq('track', 'PageView');
     var area = document.body.getAttribute('data-area');
     if (area) fbq('track', 'ViewContent', { content_name: area, content_category: 'tutoria-academica' });
@@ -106,6 +122,7 @@ window.HG = {
     var comEstado = function (o) { if (estado) o.estado = estado; return o; };
     if (estado) info.estado = estado;
 
+    try { if (window.fbq) fbq('init', C.metaPixelId, window.HG_dadosPixel()); } catch (e) {} /* atualiza estado/nome do balão antes de medir */
     try { if (window.gtag) gtag('event', 'whatsapp_click', comEstado({ origem: origem, interesse: interesse, pagina: pagina, transport_type: 'beacon' })); } catch (e) {}
 
     var primeiroContato = !dentroDe(CONTATO_KEY, CONTATO_DIAS);
@@ -198,7 +215,7 @@ window.HG = {
   if (document.querySelector('.wa-float')) {
     var proprio = document.querySelector('script[src*="assets/app.js"]');
     var at = document.createElement('script');
-    at.src = (proprio ? proprio.src.replace(/app\.js(\?.*)?$/, 'atendimento.js') : 'assets/atendimento.js') + '?v=20261110a';
+    at.src = (proprio ? proprio.src.replace(/app\.js(\?.*)?$/, 'atendimento.js') : 'assets/atendimento.js') + '?v=20261113a';
     at.defer = true;
     document.body.appendChild(at);
   }

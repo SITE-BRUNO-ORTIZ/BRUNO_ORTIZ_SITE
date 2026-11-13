@@ -157,6 +157,7 @@
       var n = inp.value.trim().replace(/\s+/g, ' ');
       f.remove();
       resp.nome = n;
+      if (n) sess.set('hg_nome', n.split(' ')[0]); /* só para a medição (correspondência avançada do pixel) */
       fala(n || 'Prefiro não dizer', 'eu', fim);
     });
   };
