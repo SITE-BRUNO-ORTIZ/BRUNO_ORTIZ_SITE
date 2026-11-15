@@ -1,20 +1,5 @@
 [
   {
-    "id": "2026-11-12-tecnologo-licenciatura-ou-bacharelado-qual-escol",
-    "metricool_id": 405937118,
-    "titulo": "Tecnólogo, licenciatura ou bacharelado: qual escolher?",
-    "legenda": "Tecnólogo, licenciatura ou bacharelado: qual escolher? 🤔\n🔹 Tecnólogo: graduação de nível superior, mais curta e focada no mercado.\n🔹 Licenciatura: forma professores para a educação básica.\n🔹 Bacharelado: formação mais ampla, exigida em algumas profissões e cargos.\n\nTodos são graduações de nível superior. Mas se o objetivo é concurso, confira no edital qual formação o cargo aceita: alguns pedem \"qualquer nível superior\", outros um curso específico.\n\nA Bruno Ortiz te ajuda a escolher o curso certo para o seu objetivo.",
-    "video": "memes/2026-11-12-tecnologo-licenciatura-ou-bacharelado-qual-escol.mp4",
-    "credito": "",
-    "publicado": "2026-11-12",
-    "publicar_em": "2026-11-12T17:30:00-03:00",
-    "expira": "2026-11-15",
-    "capa": "memes/2026-11-12-tecnologo-licenciatura-ou-bacharelado-qual-escol.jpg",
-    "origem": {
-      "video": "https://static.metricool.com/planner/202610/7646463-file-15569212526477341061.mp4"
-    }
-  },
-  {
     "id": "2026-11-14-pos-graduacao-lato-sensu-ou-stricto-sensu",
     "metricool_id": 405922993,
     "titulo": "Pós-graduação: lato sensu ou stricto sensu? 🎓",
@@ -47,11 +32,15 @@
     "metricool_id": 405937162,
     "titulo": "Como estudar com questões da banca",
     "legenda": "Quem faz questões da banca estuda o que cai. 🎯\n1️⃣ Resolva por assunto, logo depois da teoria, para fixar.\n2️⃣ Entenda o padrão: cada banca tem um jeito de cobrar o mesmo conteúdo.\n3️⃣ Refaça os erros: monte um caderno de erros e revise o que você errou.\n\nNa tutoria Bruno Ortiz, as questões entram no seu cronograma desde a primeira semana.",
-    "video": "https://static.metricool.com/planner/202610/7646463-file-9297577209158615546.mp4",
+    "video": "memes/2026-11-16-como-estudar-com-questoes-da-banca.mp4",
     "credito": "",
     "publicado": "2026-11-16",
     "publicar_em": "2026-11-16T12:00:00-03:00",
-    "expira": "2026-11-19"
+    "expira": "2026-11-19",
+    "capa": "memes/2026-11-16-como-estudar-com-questoes-da-banca.jpg",
+    "origem": {
+      "video": "https://static.metricool.com/planner/202610/7646463-file-9297577209158615546.mp4"
+    }
   },
   {
     "id": "2026-11-17-o-diploma-que-voce-adia-hoje-e-a-promocao-que-vo",
