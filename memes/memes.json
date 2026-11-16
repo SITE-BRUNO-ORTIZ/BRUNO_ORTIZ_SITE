@@ -48,12 +48,17 @@
     "titulo": "O diploma que você adia hoje é a promoção que você perde amanhã. 🎓",
     "legenda": "Vagas internas, aumentos, concursos de nível superior, pós-graduação: muitas portas pedem a graduação concluída.\n\nCom a tutoria Bruno Ortiz você começa com plano, estuda com acompanhamento e chega ao diploma reconhecido pelo MEC.",
     "imagens": [
-      "https://static.metricool.com/planner/202610/7646463-file-8556214539241427307.jpeg"
+      "memes/2026-11-17-o-diploma-que-voce-adia-hoje-e-a-promocao-que-vo-1.jpg"
     ],
     "credito": "",
     "publicado": "2026-11-17",
     "publicar_em": "2026-11-17T10:00:00-03:00",
-    "expira": "2026-11-20"
+    "expira": "2026-11-20",
+    "origem": {
+      "imagens": [
+        "https://static.metricool.com/planner/202610/7646463-file-8556214539241427307.jpeg"
+      ]
+    }
   },
   {
     "id": "2026-11-19-revisao-espacada-o-segredo-de-quem-nao-esquece",
