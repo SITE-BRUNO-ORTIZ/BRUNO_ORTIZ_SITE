@@ -37,11 +37,15 @@
     "metricool_id": 405937219,
     "titulo": "Revisão espaçada: o segredo de quem não esquece",
     "legenda": "Você estuda, esquece tudo e recomeça? O problema não é você, é a falta de revisão. 🧠\nUse a revisão espaçada:\n\n📅 Depois de 1 dia: revisão rápida\n📅 Depois de 7 dias: resumo e questões\n📅 Depois de 30 dias: questões novas para testar a memória\n\nNa tutoria Bruno Ortiz, as revisões já vêm programadas no seu cronograma.",
-    "video": "https://static.metricool.com/planner/202610/7646463-file-3967719031579027832.mp4",
+    "video": "memes/2026-11-19-revisao-espacada-o-segredo-de-quem-nao-esquece.mp4",
     "credito": "",
     "publicado": "2026-11-19",
     "publicar_em": "2026-11-19T12:00:00-03:00",
-    "expira": "2026-11-22"
+    "expira": "2026-11-22",
+    "capa": "memes/2026-11-19-revisao-espacada-o-segredo-de-quem-nao-esquece.jpg",
+    "origem": {
+      "video": "https://static.metricool.com/planner/202610/7646463-file-3967719031579027832.mp4"
+    }
   },
   {
     "id": "2026-11-21-do-edital-a-posse-as-6-etapas-do-concurso",
