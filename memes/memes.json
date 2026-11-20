@@ -1,23 +1,5 @@
 [
   {
-    "id": "2026-11-17-o-diploma-que-voce-adia-hoje-e-a-promocao-que-vo",
-    "metricool_id": 405923038,
-    "titulo": "O diploma que você adia hoje é a promoção que você perde amanhã. 🎓",
-    "legenda": "Vagas internas, aumentos, concursos de nível superior, pós-graduação: muitas portas pedem a graduação concluída.\n\nCom a tutoria Bruno Ortiz você começa com plano, estuda com acompanhamento e chega ao diploma reconhecido pelo MEC.",
-    "imagens": [
-      "memes/2026-11-17-o-diploma-que-voce-adia-hoje-e-a-promocao-que-vo-1.jpg"
-    ],
-    "credito": "",
-    "publicado": "2026-11-17",
-    "publicar_em": "2026-11-17T10:00:00-03:00",
-    "expira": "2026-11-20",
-    "origem": {
-      "imagens": [
-        "https://static.metricool.com/planner/202610/7646463-file-8556214539241427307.jpeg"
-      ]
-    }
-  },
-  {
     "id": "2026-11-19-revisao-espacada-o-segredo-de-quem-nao-esquece",
     "metricool_id": 405937219,
     "titulo": "Revisão espaçada: o segredo de quem não esquece",
@@ -38,19 +20,31 @@
     "titulo": "Do edital à posse: as 6 etapas do concurso 🗺️",
     "legenda": "1️⃣ Edital publicado\n2️⃣ Inscrição\n3️⃣ Provas\n4️⃣ Títulos\n5️⃣ Resultado e nomeação\n6️⃣ Posse\n\nArraste para entender cada uma. E repare: a escolaridade exigida aparece no começo e no fim. Quem resolve isso cedo, chega tranquilo na posse.\n\nA Bruno Ortiz acompanha você em todas as etapas.",
     "imagens": [
-      "https://static.metricool.com/planner/202610/7646463-file-15299199333603636798.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-1722889163172487457.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-14251378713447348409.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-9054776131629737662.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-8593239489971585245.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-488690323509222447.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-12143457874283066893.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-10683191981329778728.jpeg"
+      "memes/2026-11-21-do-edital-a-posse-as-6-etapas-do-concurso-1.jpg",
+      "memes/2026-11-21-do-edital-a-posse-as-6-etapas-do-concurso-2.jpg",
+      "memes/2026-11-21-do-edital-a-posse-as-6-etapas-do-concurso-3.jpg",
+      "memes/2026-11-21-do-edital-a-posse-as-6-etapas-do-concurso-4.jpg",
+      "memes/2026-11-21-do-edital-a-posse-as-6-etapas-do-concurso-5.jpg",
+      "memes/2026-11-21-do-edital-a-posse-as-6-etapas-do-concurso-6.jpg",
+      "memes/2026-11-21-do-edital-a-posse-as-6-etapas-do-concurso-7.jpg",
+      "memes/2026-11-21-do-edital-a-posse-as-6-etapas-do-concurso-8.jpg"
     ],
     "credito": "",
     "publicado": "2026-11-21",
     "publicar_em": "2026-11-21T10:00:00-03:00",
-    "expira": "2026-11-24"
+    "expira": "2026-11-24",
+    "origem": {
+      "imagens": [
+        "https://static.metricool.com/planner/202610/7646463-file-15299199333603636798.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-1722889163172487457.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-14251378713447348409.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-9054776131629737662.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-8593239489971585245.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-488690323509222447.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-12143457874283066893.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-10683191981329778728.jpeg"
+      ]
+    }
   },
   {
     "id": "2026-11-23-voltar-a-estudar-depois-dos-30-40-50",
