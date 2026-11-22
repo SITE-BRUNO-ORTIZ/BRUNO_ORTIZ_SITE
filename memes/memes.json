@@ -1,20 +1,5 @@
 [
   {
-    "id": "2026-11-19-revisao-espacada-o-segredo-de-quem-nao-esquece",
-    "metricool_id": 405937219,
-    "titulo": "Revisão espaçada: o segredo de quem não esquece",
-    "legenda": "Você estuda, esquece tudo e recomeça? O problema não é você, é a falta de revisão. 🧠\nUse a revisão espaçada:\n\n📅 Depois de 1 dia: revisão rápida\n📅 Depois de 7 dias: resumo e questões\n📅 Depois de 30 dias: questões novas para testar a memória\n\nNa tutoria Bruno Ortiz, as revisões já vêm programadas no seu cronograma.",
-    "video": "memes/2026-11-19-revisao-espacada-o-segredo-de-quem-nao-esquece.mp4",
-    "credito": "",
-    "publicado": "2026-11-19",
-    "publicar_em": "2026-11-19T12:00:00-03:00",
-    "expira": "2026-11-22",
-    "capa": "memes/2026-11-19-revisao-espacada-o-segredo-de-quem-nao-esquece.jpg",
-    "origem": {
-      "video": "https://static.metricool.com/planner/202610/7646463-file-3967719031579027832.mp4"
-    }
-  },
-  {
     "id": "2026-11-21-do-edital-a-posse-as-6-etapas-do-concurso",
     "metricool_id": 405923152,
     "titulo": "Do edital à posse: as 6 etapas do concurso 🗺️",
@@ -51,11 +36,15 @@
     "metricool_id": 405937279,
     "titulo": "Voltar a estudar depois dos 30, 40, 50",
     "legenda": "Voltar a estudar depois dos 30, 40 ou 50 anos? É mais comum do que você imagina. 💪\nE você tem uma vantagem que o aluno de 18 anos não tem: experiência e clareza do que quer.\n\n🎯 Objetivo definido\n🏠 Rotina flexível com o EAD\n🤝 Apoio da tutoria para não ficar perdido\n\nNunca é tarde para o diploma que você sempre quis.",
-    "video": "https://static.metricool.com/planner/202610/7646463-file-1638020077020664664.mp4",
+    "video": "memes/2026-11-23-voltar-a-estudar-depois-dos-30-40-50.mp4",
     "credito": "",
     "publicado": "2026-11-23",
     "publicar_em": "2026-11-23T12:00:00-03:00",
-    "expira": "2026-11-26"
+    "expira": "2026-11-26",
+    "capa": "memes/2026-11-23-voltar-a-estudar-depois-dos-30-40-50.jpg",
+    "origem": {
+      "video": "https://static.metricool.com/planner/202610/7646463-file-1638020077020664664.mp4"
+    }
   },
   {
     "id": "2026-11-24-voce-nao-precisa-fazer-isso-sozinho",
