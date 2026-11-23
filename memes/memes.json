@@ -52,12 +52,17 @@
     "titulo": "Você não precisa fazer isso sozinho. 🤝",
     "legenda": "Seja para passar no concurso ou para terminar a faculdade, a tutoria Bruno Ortiz te dá:\n\n✅ Plano de estudos sob medida\n✅ Dúvidas e revisões com a nossa equipe\n✅ Acompanhamento até a aprovação ou o diploma",
     "imagens": [
-      "https://static.metricool.com/planner/202610/7646463-file-9341031699650657976.jpeg"
+      "memes/2026-11-24-voce-nao-precisa-fazer-isso-sozinho-1.jpg"
     ],
     "credito": "",
     "publicado": "2026-11-24",
     "publicar_em": "2026-11-24T10:00:00-03:00",
-    "expira": "2026-11-27"
+    "expira": "2026-11-27",
+    "origem": {
+      "imagens": [
+        "https://static.metricool.com/planner/202610/7646463-file-9341031699650657976.jpeg"
+      ]
+    }
   },
   {
     "id": "2026-11-26-monte-seu-cronograma-de-estudos-em-4-passos",
