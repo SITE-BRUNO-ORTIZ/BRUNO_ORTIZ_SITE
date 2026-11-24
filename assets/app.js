@@ -54,7 +54,7 @@ window.HG = {
     fbq('init', C.metaPixelId, window.HG_dadosPixel());
     fbq('track', 'PageView');
     var area = document.body.getAttribute('data-area');
-    if (area) fbq('track', 'ViewContent', { content_name: area, content_category: 'tutoria-academica' });
+    if (area) fbq('track', 'ViewContent', { content_name: area, content_category: 'graduacoes-concursos' });
   }
 
   /* Google Analytics 4 + Google Ads */
