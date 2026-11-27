@@ -1,38 +1,5 @@
 [
   {
-    "id": "2026-11-24-voce-nao-precisa-fazer-isso-sozinho",
-    "metricool_id": 405923199,
-    "titulo": "Você não precisa fazer isso sozinho. 🤝",
-    "legenda": "Seja para passar no concurso ou para terminar a faculdade, a tutoria Bruno Ortiz te dá:\n\n✅ Plano de estudos sob medida\n✅ Dúvidas e revisões com a nossa equipe\n✅ Acompanhamento até a aprovação ou o diploma",
-    "imagens": [
-      "memes/2026-11-24-voce-nao-precisa-fazer-isso-sozinho-1.jpg"
-    ],
-    "credito": "",
-    "publicado": "2026-11-24",
-    "publicar_em": "2026-11-24T10:00:00-03:00",
-    "expira": "2026-11-27",
-    "origem": {
-      "imagens": [
-        "https://static.metricool.com/planner/202610/7646463-file-9341031699650657976.jpeg"
-      ]
-    }
-  },
-  {
-    "id": "2026-11-24-na-reta-final-do-curso-a-gente-cuida-da-burocrac",
-    "metricool_id": 440257886,
-    "titulo": "Na reta final do curso? A gente cuida da burocracia | Bruno Ortiz",
-    "legenda": "Na reta final do curso e travado na burocracia? 🎓\nTCC, estágio, horas complementares, histórico... a gente cuida das etapas para você pegar o seu diploma e disputar as melhores vagas no mercado e nos concursos.",
-    "video": "memes/2026-11-24-na-reta-final-do-curso-a-gente-cuida-da-burocrac.mp4",
-    "credito": "",
-    "publicado": "2026-11-24",
-    "publicar_em": "2026-11-24T10:25:00-03:00",
-    "expira": "2026-11-27",
-    "capa": "memes/2026-11-24-na-reta-final-do-curso-a-gente-cuida-da-burocrac.jpg",
-    "origem": {
-      "video": "https://static.metricool.com/planner/202611/7646463-file-6459047368649658228.mp4"
-    }
-  },
-  {
     "id": "2026-11-26-monte-seu-cronograma-de-estudos-em-4-passos",
     "metricool_id": 440285041,
     "titulo": "Monte seu cronograma de estudos em 4 passos",
@@ -53,18 +20,29 @@
     "titulo": "5 motivos para ter acompanhamento na graduação ou no concurso 👇",
     "legenda": "1️⃣ Plano feito para a sua rotina\n2️⃣ Dúvida não acumula\n3️⃣ Constância com metas e acompanhamento\n4️⃣ Preparação para cada prova\n5️⃣ Matrícula, prazos e requisitos acompanhados\n\nVale para quem vai prestar concurso e para quem quer terminar a faculdade. A gente garante que você não fique sozinho.",
     "imagens": [
-      "https://static.metricool.com/planner/202610/7646463-file-15263887406020318223.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-1568651121631662183.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-16458957194445633338.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-13879814349335637993.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-9004147434889527001.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-15835064883734665113.jpeg",
-      "https://static.metricool.com/planner/202610/7646463-file-1594890179045350417.jpeg"
+      "memes/2026-11-28-5-motivos-para-estudar-com-tutoria-1.jpg",
+      "memes/2026-11-28-5-motivos-para-estudar-com-tutoria-2.jpg",
+      "memes/2026-11-28-5-motivos-para-estudar-com-tutoria-3.jpg",
+      "memes/2026-11-28-5-motivos-para-estudar-com-tutoria-4.jpg",
+      "memes/2026-11-28-5-motivos-para-estudar-com-tutoria-5.jpg",
+      "memes/2026-11-28-5-motivos-para-estudar-com-tutoria-6.jpg",
+      "memes/2026-11-28-5-motivos-para-estudar-com-tutoria-7.jpg"
     ],
     "credito": "",
     "publicado": "2026-11-28",
     "publicar_em": "2026-11-28T10:00:00-03:00",
-    "expira": "2026-12-01"
+    "expira": "2026-12-01",
+    "origem": {
+      "imagens": [
+        "https://static.metricool.com/planner/202610/7646463-file-15263887406020318223.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-1568651121631662183.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-16458957194445633338.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-13879814349335637993.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-9004147434889527001.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-15835064883734665113.jpeg",
+        "https://static.metricool.com/planner/202610/7646463-file-1594890179045350417.jpeg"
+      ]
+    }
   },
   {
     "id": "2026-12-01-dezembro-planeje-2027-em-3-passos",
